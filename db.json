@@ -2,25 +2,108 @@
   "products": [
     {
       "id": "1",
-      "title": "Crochet Tote Bag",
+      "name": "Crochet Tote Bag",
       "price": 899,
       "category": "Bags",
-      "image": "https://placehold.co/300x300"
+      "image": "https://placehold.co/300x300",
+      "description":""
     },
     {
       "id": "2",
-      "title": "Crochet Flower Dress",
+      "name": "Crochet Flower Dress",
       "price": 1499,
       "category": "Dresses",
-      "image": "https://placehold.co/300x300"
+      "image": "https://placehold.co/300x300",
+      "description":""
     },
     {
       "id": "3",
-      "title": "Crochet Teddy Bear",
+      "name": "Crochet Teddy Bear",
       "price": 699,
       "category": "Toys",
-      "image": "https://placehold.co/300x300"
+      "image": "https://placehold.co/300x300",
+      "description":""
+    },
+    {
+      "id":"4",
+      "name":"shibili",
+      "price":"",
+      "category":"",
+      "image":"/shibili.jpeg",
+      "description":""
+    },
+       {
+      "id":"5",
+      "name":"Hair Band",
+      "price":"449",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 1.jpg",
+      "description":""
+    },
+       {
+      "id":"6",
+      "name":"Bracelet",
+      "price":"499",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 2.jpg",
+      "description":""
+    },
+       {
+      "id":"7",
+      "name":"Hair Clip",
+      "price":"399",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 3.jpg",
+      "description":""
+    },
+       {
+      "id":"8",
+      "name":"Tulip Bracelet",
+      "price":"499",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 4.jpg",
+      "description":""
+    },
+       {
+      "id":"9",
+      "name":"key Chain",
+      "price":"299",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 5.jpg",
+      "description":""
+    },
+       {
+      "id":"10",
+      "name":"Key Chain",
+      "price":"299",
+      "category":"Accessories",
+      "image":"/images/Accessories/Accessories 6.jpg",
+      "description":""
+    },
+       {
+      "id":"",
+      "name":"",
+      "price":"",
+      "category":"",
+      "image":"",
+      "description":""
+    },
+       {
+      "id":"",
+      "name":"",
+      "price":"",
+      "category":"",
+      "image":"",
+      "description":""
+    },   {
+      "id":"",
+      "name":"",
+      "price":"",
+      "category":"",
+      "image":"",
+      "description":""
     }
+
   ],
   "users": [
     {

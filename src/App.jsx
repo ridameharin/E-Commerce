@@ -11,6 +11,7 @@ import Order from './pages/order'
 import Wishlist from './pages/wishlist'
 import Productdetails from './pages/productdetails'
 import Collections from'./pages/collections'
+import Shop from './pages/shop'
 
 
 function App(){
@@ -26,6 +27,7 @@ function App(){
       <Route path='/cart' element={<Cart />} />
       <Route path='/order' element={<Order />} />
       <Route path='/productdetails' element={<Productdetails />} />
+      <Route path='/shop' element={<Shop/>}/>
       <Route path='/collections' element={<Collections />}/>
     </Routes>
     <Footer/>
