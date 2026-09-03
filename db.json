@@ -1,0 +1,27 @@
+{
+    "products":[
+        {
+      "id": 1,
+      "title": "Crochet Tote Bag",
+      "price": 899,
+      "category": "Bags",
+      "image": "https://placehold.co/300x300"
+    },
+    {
+      "id": 2,
+      "title": "Crochet Flower Dress",
+      "price": 1499,
+      "category": "Dresses",
+      "image": "https://placehold.co/300x300"
+    },
+    {
+      "id": 3,
+      "title": "Crochet Teddy Bear",
+      "price": 699,
+      "category": "Toys",
+      "image": "https://placehold.co/300x300"
+    }
+    ],
+    "users":[],
+    "orders":[]
+}
