@@ -3,34 +3,34 @@
     {
       "id": "1",
       "name": "Crochet Tote Bag",
-      "price": 899,
+      "price": 1899,
       "category": "Bags",
-      "image": "https://placehold.co/300x300",
-      "description":""
+      "image": "/images/Bags/Bags 1.jpg",
+      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
       "id": "2",
-      "name": "Crochet Flower Dress",
+      "name": "Crochet Tote Side Bag",
       "price": 1499,
-      "category": "Dresses",
-      "image": "https://placehold.co/300x300",
-      "description":""
+      "category": "bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
       "id": "3",
-      "name": "Crochet Teddy Bear",
-      "price": 699,
-      "category": "Toys",
-      "image": "https://placehold.co/300x300",
-      "description":""
+      "name": "Crochet Tote Bag",
+      "price": 1699,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 3.jpg",
+      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
       "id":"4",
-      "name":"shibili",
-      "price":"",
-      "category":"",
-      "image":"/shibili.jpeg",
-      "description":""
+      "name":"Check Tote Bag",
+      "price":"1999",
+      "category":"Bags",
+      "image":"/images/Bags/Bags 5.jpg",
+      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
        {
       "id":"5",

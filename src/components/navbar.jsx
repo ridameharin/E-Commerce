@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ShoppingCart,Search,Heart,User } from "lucide-react";
 
 function Navbar(){
 
@@ -12,22 +13,23 @@ function Navbar(){
                 </h4> */}
             </div>
          {/* <div>
-            <h1 className="text-3xl font-serif">CROCHETTELLA</h1>
-            <br/>
             <p className="mt-3 text-sm text-gray-600">Handmade with love</p>
          </div> */}
             
             <div className="flex justify-center gap-10">
                 <Link to='/'>Home</Link>
                 <Link to='/shop'>Shop</Link>
-                <Link to='/collection'>Collections</Link>
+                <Link to='/collections'>Collections</Link>
             </div>
-            <div className="flex items-center justify-between gap-5">
-                <input className="w-full border border-gray-300 p-3 outline-none rounded-full"
+            <div className="flex items-center gap-5">
+                <div className="flex items-center border border-gray-300 rounded-full px-4 py-2">
+                <Search className="w-5 h-5 text-[#5A4030] bg-transparent" />
+                <input className="outline-none w-full bg-transparent"
                 type="text" placeholder="Search..."/>
-                <Link to="/wishlist">♡</Link>
-                <Link to="/cart">🛒</Link>
-                <Link to="/login">👤</Link>
+                </div>
+                <Link to="/wishlist"><Heart className="w-5 h-5"/></Link>
+                <Link to="/cart"><ShoppingCart className="w-5 h-5"/></Link>
+                <Link to="/login"><User className="w-5 h-5"/></Link>
             </div>
         </nav>
    
