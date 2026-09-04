@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom"
 import axios from 'axios'
 import { useContext } from "react"
 import { cartContext } from "../contexts/cartContext"
-import { Link } from "react-router-dom"
 
 function Productdetails(){
 
@@ -15,11 +14,13 @@ function Productdetails(){
             try{
                 const response=await axios.get(`http://localhost:3000/products/${id}`)
                 setProduct(response.data);
+               
             }
             catch(error){
                 console.log(error);
                 
             }
+            
          }
 
          useEffect(()=>{
@@ -46,11 +47,11 @@ function Productdetails(){
 
                <div className="border-t border-gray-200 my-6">
                  <p className="text-gray-600 leading-7">{product.description}</p>
-                <Link to='/cart'>
+               
                  <button onClick={()=>addtocart(product)} 
                 className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
                  Add to Cart</button>
-                </Link>
+
                </div>
             </div>
         </div>

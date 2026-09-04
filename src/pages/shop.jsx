@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { cartContext } from "../contexts/cartContext";
+import { cartContext } from "../contexts/cartContext";
 
 function Shop(){
 
     const [products,setProducts]=useState([])
+    const {addtocart}=useContext(cartContext)
     
         const fetchProducts=async()=>{
             try{
@@ -38,6 +39,10 @@ function Shop(){
                     <p className="font-semibold mt-1">₹{product.price}</p>
 
                     </Link>
+                    
+                    <button onClick={()=>addtocart(product)} 
+                    className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
+                     Add to Cart</button>
                     </div>
                     
                     
