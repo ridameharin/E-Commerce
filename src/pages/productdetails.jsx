@@ -49,7 +49,7 @@ function Productdetails(){
                  <p className="text-gray-600 leading-7">{product.description}</p>
                
                  <button onClick={()=>addtocart(product)} 
-                className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
+                className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
                  Add to Cart</button>
 
                </div>

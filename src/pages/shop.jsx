@@ -1,12 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+// import { useContext, useEffect, useState } from "react";
+// import { cartContext } from "../contexts/cartContext";
+import { useState,useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { cartContext } from "../contexts/cartContext";
+import { useDispatch,useSelector } from "react-redux";
+import { addtoCart } from "../redux/cartSlice";
 
 function Shop(){
 
     const [products,setProducts]=useState([])
-    const {addtocart}=useContext(cartContext)
+    // const {addtocart}=useContext(cartContext)
+    const dispatch=useDispatch()
     
         const fetchProducts=async()=>{
             try{
@@ -40,7 +44,7 @@ function Shop(){
 
                     </Link>
                     
-                    <button onClick={()=>addtocart(product)} 
+                    <button onClick={()=>dispatch(addtoCart(product))} 
                     className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
                      Add to Cart</button>
                     </div>

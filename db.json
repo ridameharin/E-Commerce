@@ -6,7 +6,7 @@
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
-      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "price": 1499,
       "category": "bags",
       "image": "/images/Bags/Bags 2.jpg",
-      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
       "id": "3",
@@ -22,88 +22,88 @@
       "price": 1699,
       "category": "Bags",
       "image": "/images/Bags/Bags 3.jpg",
-      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
     {
-      "id":"4",
-      "name":"Check Tote Bag",
-      "price":"1999",
-      "category":"Bags",
-      "image":"/images/Bags/Bags 5.jpg",
-      "description":"A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "id": "4",
+      "name": "Check Tote Bag",
+      "price": "1999",
+      "category": "Bags",
+      "image": "/images/Bags/Bags 5.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
     },
-       {
-      "id":"5",
-      "name":"Hair Band",
-      "price":"449",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 1.jpg",
-      "description":""
+    {
+      "id": "5",
+      "name": "Hair Band",
+      "price": "449",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 1.jpg",
+      "description": ""
     },
-       {
-      "id":"6",
-      "name":"Bracelet",
-      "price":"499",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 2.jpg",
-      "description":""
+    {
+      "id": "6",
+      "name": "Bracelet",
+      "price": "499",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 2.jpg",
+      "description": ""
     },
-       {
-      "id":"7",
-      "name":"Hair Clip",
-      "price":"399",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 3.jpg",
-      "description":""
+    {
+      "id": "7",
+      "name": "Hair Clip",
+      "price": "399",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 3.jpg",
+      "description": ""
     },
-       {
-      "id":"8",
-      "name":"Tulip Bracelet",
-      "price":"499",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 4.jpg",
-      "description":""
+    {
+      "id": "8",
+      "name": "Tulip Bracelet",
+      "price": "499",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 4.jpg",
+      "description": ""
     },
-       {
-      "id":"9",
-      "name":"key Chain",
-      "price":"299",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 5.jpg",
-      "description":""
+    {
+      "id": "9",
+      "name": "key Chain",
+      "price": "299",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 5.jpg",
+      "description": ""
     },
-       {
-      "id":"10",
-      "name":"Key Chain",
-      "price":"299",
-      "category":"Accessories",
-      "image":"/images/Accessories/Accessories 6.jpg",
-      "description":""
+    {
+      "id": "10",
+      "name": "Key Chain",
+      "price": "299",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 6.jpg",
+      "description": ""
     },
-       {
-      "id":"",
-      "name":"",
-      "price":"",
-      "category":"",
-      "image":"",
-      "description":""
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "category": "",
+      "image": "",
+      "description": ""
     },
-       {
-      "id":"",
-      "name":"",
-      "price":"",
-      "category":"",
-      "image":"",
-      "description":""
-    },   {
-      "id":"",
-      "name":"",
-      "price":"",
-      "category":"",
-      "image":"",
-      "description":""
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "category": "",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": "",
+      "name": "",
+      "price": "",
+      "category": "",
+      "image": "",
+      "description": ""
     }
-
   ],
   "users": [
     {
@@ -113,6 +113,18 @@
       "id": "g4eyRGw8Pnk"
     }
   ],
-  "orders": [],
+  "cart": [],
+  "orders": [
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "1234",
+      "address": "qwerty",
+      "city": "vgbd",
+      "total": 0,
+      "id": "gH15TrudKJc"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

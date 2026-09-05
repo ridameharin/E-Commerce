@@ -1,11 +1,27 @@
-import { createContext,useState } from "react";
+import { createContext,useState,useEffect } from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 export const cartContext=createContext()
 
 function Addcart({children}){
 
     const [cart,setCart]=useState([])
+
+    const fetchingCart=async()=>{
+        try{
+            const response=await axios.get("http://localhost:3000/cart")
+            setCart(response.data)
+        }
+        catch(error){
+            console.log(error);
+            
+        }
+    }
+
+    useEffect(()=>{
+        fetchingCart();
+    },[])
 
     const addtocart=(product)=>{
          toast.success("Item added to Cart")
@@ -39,8 +55,12 @@ function Addcart({children}){
        {...item,quantity:item.quantity-1}:item))
     }
 
+    const clearCart=async()=>{
+            setCart([])
+    }
+
     return(
-        <cartContext.Provider value={{cart,setCart,addtocart,remove,increase,decrease}}>
+        <cartContext.Provider value={{cart,setCart,addtocart,remove,increase,decrease,clearCart}}>
             {children}
         </cartContext.Provider>
     )

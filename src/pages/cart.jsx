@@ -1,9 +1,17 @@
-import { useContext } from "react";
-import { cartContext } from "../contexts/cartContext";
+// import { useContext } from "react";
+// import { cartContext } from "../contexts/cartContext";
+// import { Link } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { removefromCart,increasing,decreasing } from "../redux/cartSlice";
 
 function Cart(){
 
-    const {cart,remove,increase,decrease}=useContext(cartContext)
+    // const {cart,remove,increase,decrease}=useContext(cartContext)
+    const cart=useSelector((state)=>state.cart)
+    const dispatch=useDispatch();
+    const navigate=useNavigate()
+
     const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0)
     if(cart.length===0){
         return(
@@ -29,18 +37,22 @@ function Cart(){
                             <p className="font-semibold text-[#5A4030] mt-2">₹{item.price}</p>
 
                             <div className="flex items-center gap-4 mt-4">
-                                <button onClick={()=>decrease(item.id)}
+                                <button onClick={()=>dispatch(decreasing(item.id))}
                                 className="w-8 h-8 border rounded-full">
                                     -
                                 </button>
                                 <span>{item.quantity}</span>
-                                <button onClick={()=>increase(item.id)}
+                                <button onClick={()=>dispatch(increasing(item.id))}
                                 className="w-8 h-8 border rounded-full">
                                     +
                                 </button>
                             </div>
-                            <button onClick={()=>remove(item.id)}
-                            className="text-red-500 text-sm mt-3">Remove</button>
+
+                            {/* <button onClick={()=>remove(item.id)}
+                            className="text-red-500 text-sm mt-3">Remove</button> */}
+                            <button onClick={()=>dispatch(removefromCart(item.id))}
+                            className="text-red-500 text-sm mt-3">
+                                Remove from Cart</button>
                          </div>
                          <div className="font-semibold text-[#5A4030]">
                         ₹{item.price*item.quantity}</div>
@@ -49,7 +61,7 @@ function Cart(){
                
             </div>
         
-        <div className="w-[350px] h-[350px] bg-[#F5EDE2] rounded-xl p-5">
+        <div className="w-[350px] h-[350px] bg-[#F5EDE2] rounded-xl p-5 mb-5">
             <h2 className="text-2xl font-serif text-[#5A4030]">Order Summary</h2>
             <div className="border-t border-gray-300 my-6"></div>
             <div>
@@ -66,7 +78,11 @@ function Cart(){
                     <span>₹{total}</span>
                 </div>
                
-                <button className="mx-10 mt-10 bg-[#6B4632] text-white px-10 py-3 rounded-full hover:bg-[#5A4030]">Proceed to Checkout</button>
+                
+                <button onClick={()=>navigate("/checkout")}
+                className="mx-10 mt-10 bg-[#6B4632] text-white px-10 py-3 rounded-full hover:bg-[#5A4030]">
+                    Proceed to Checkout</button>
+                    
             </div>
         </div>
         </div>
