@@ -110,7 +110,22 @@
       "name": "anb",
       "email": "e@gmail.com",
       "password": "1qaz",
+      "role": "user",
       "id": "g4eyRGw8Pnk"
+    },
+    {
+      "name": "qwe",
+      "email": "ridameharinofficial@gmail.com",
+      "password": "12we",
+      "role": "user",
+      "id": "Pp50k99yLes"
+    },
+    {
+      "name": "amna",
+      "email": "amna@gmail.com",
+      "password": "1qw2",
+      "role": "user",
+      "id": "q6V3XmHxb0M"
     }
   ],
   "cart": [],

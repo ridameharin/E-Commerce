@@ -1,8 +1,12 @@
-import { useContext, useState } from "react";
-import { cartContext } from "../contexts/cartContext";
+// import { useContext, useState } from "react";
+// import { cartContext } from "../contexts/cartContext";
+
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {useState} from "react"
+import { useDispatch,useSelector } from "react-redux";
+import { clearCart } from "../redux/cartSlice";
 
 function Checkout(){
 
@@ -12,7 +16,9 @@ function Checkout(){
     const [city,setCity]=useState("")
     const [pin,setPin]=useState("")
     const [phone,setPhone]=useState("")
-    const {cart,setCart,clearCart}=useContext(cartContext)
+    // const {cart,setCart,clearCart}=useContext(cartContext)
+    const dispatch=useDispatch()
+    const cart=useSelector((state)=>state.cart)
 
     const navigate=useNavigate()
 
@@ -31,7 +37,7 @@ function Checkout(){
             await axios.post("http://localhost:3000/orders",order)
             toast.success("Order Placed")
             navigate("/order")
-            clearCart();
+            dispatch(clearCart())
         }
         catch(error){
             console.log(error);

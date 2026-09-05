@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Navigate, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import axios from "axios"
 
@@ -21,11 +21,11 @@ function Register(){
             toast.error("Incorrect password")
             return;
         }
-        const users={name,email,password}
+        const users={name,email,password,role:"user"}
         try{
             await axios.post(`http://localhost:3000/users`,users)
             toast.success("Registration Successful")
-            Navigate("/")
+            navigate("/login")
         }
         catch(error){
             toast.warning("Something went wrong.Please try again.")
@@ -71,7 +71,7 @@ function Register(){
             </form>
             <p className="text-center mt-6 text-sm text-[#8A6F5C]">Already have an account?</p>
           <button onClick={()=>navigate("/login")}
-            className="px-4 py-3 text-white w-full rhover:bg-[#5A4030] bg-[#6B4632] mt-2">Login</button>
+            className="px-4 py-3 text-white w-full hover:bg-[#5A4030] bg-[#6B4632] mt-2">Login</button>
 
         </div>
         </div>
