@@ -79,56 +79,25 @@
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 6.jpg",
       "description": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "category": "",
-      "image": "",
-      "description": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "category": "",
-      "image": "",
-      "description": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "price": "",
-      "category": "",
-      "image": "",
-      "description": ""
     }
   ],
   "users": [
     {
-      "name": "anb",
-      "email": "e@gmail.com",
-      "password": "1qaz",
-      "role": "user",
-      "id": "g4eyRGw8Pnk"
-    },
-    {
-      "name": "qwe",
-      "email": "ridameharinofficial@gmail.com",
-      "password": "12we",
-      "role": "user",
-      "id": "Pp50k99yLes"
-    },
-    {
       "name": "amna",
       "email": "amna@gmail.com",
       "password": "1qw2",
+      "confirm": "",
       "role": "user",
       "id": "q6V3XmHxb0M"
+    },
+    {
+      "name": "Rinas",
+      "email": "rinu@gmail.com",
+      "password": "9876",
+      "role": "user",
+      "id": "rOBrBxBb1dg"
     }
   ],
-  "cart": [],
   "orders": [
     {
       "name": "rida",
@@ -139,6 +108,42 @@
       "city": "vgbd",
       "total": 0,
       "id": "gH15TrudKJc"
+    }
+  ],
+  "cart": [
+    {
+      "id": "8b5ERhbjE3s",
+      "name": "Crochet Tote Side Bag",
+      "price": 1499,
+      "category": "bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "y85NaCGxGIE",
+      "name": "Hair Band",
+      "price": "449",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 1.jpg",
+      "description": "",
+      "userid": "rOBrBxBb1dg",
+      "productId": "5",
+      "quantity": 1
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "JzKGmXOzUH0",
+      "name": "Crochet Tote Bag",
+      "price": 1899,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 1.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "1"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

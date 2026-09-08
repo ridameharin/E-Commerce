@@ -1,14 +1,19 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
-import { useContext } from "react"
-import { cartContext } from "../contexts/cartContext"
+// import { useContext } from "react"
+// import { cartContext } from "../contexts/cartContext"
+import { useDispatch,useSelector } from "react-redux"
+import { setCart } from "../redux/cartSlice"
+import { addCart,getCart } from "../services/cartService"
 
 function Productdetails(){
 
-         const {addtocart}=useContext(cartContext)
+        //  const {addtocart}=useContext(cartContext)
          const {id}=useParams();
          const [product,setProduct]=useState("")
+         const dispatch=useDispatch()
+         const userid=useSelector((state)=>state.auth.userid)
 
          const fetchProduct=async()=>{
             try{
@@ -26,6 +31,18 @@ function Productdetails(){
          useEffect(()=>{
             fetchProduct()
          },[id])
+
+         const handleCartAdd=async()=>{
+            try{
+             await addCart(product,userid)
+            const data=await getCart(userid)
+            dispatch(setCart(data))
+            }
+            catch(error){
+                console.log(error);
+                
+            }
+         }
 
          if(!product){
             return(
@@ -48,7 +65,7 @@ function Productdetails(){
                <div className="border-t border-gray-200 my-6">
                  <p className="text-gray-600 leading-7">{product.description}</p>
                
-                 <button onClick={()=>addtocart(product)} 
+                 <button onClick={handleCartAdd} 
                 className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
                  Add to Cart</button>
 
@@ -59,3 +76,106 @@ function Productdetails(){
     )
 }
 export default Productdetails
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useParams } from "react-router-dom";
+// import { useDispatch, useSelector } from "react-redux";
+// import { setCart } from "../redux/cartSlice";
+// import { addCart, getCart } from "../services/cartService";
+
+// function ProductDetails() {
+
+//     const { id } = useParams();
+
+//     const [product, setProduct] = useState(null);
+
+//     const dispatch = useDispatch();
+
+//     const userid = useSelector((state) => state.auth.userid);
+
+//     useEffect(() => {
+//         const fetchProduct = async () => {
+//             try {
+//                 const response = await axios.get(
+//                     `http://localhost:3000/products/${id}`
+//                 );
+
+//                 setProduct(response.data);
+
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         };
+
+//         fetchProduct();
+
+//     }, [id]);
+
+
+//     const handleAddToCart = async () => {
+
+//         try {
+
+//             await addCart(product, userid);
+
+//             const data = await getCart(userid);
+
+//             dispatch(setCart(data));
+
+//             console.log("Cart:", data);
+
+//         } catch (error) {
+
+//             console.log("Add to cart error:", error);
+
+//         }
+//     };
+
+
+//     if (!product) {
+//         return <h2>Loading...</h2>;
+//     }
+
+
+//     return (
+//         <div className="grid grid-cols-2 gap-10 p-10">
+
+//             <div>
+//                 <img
+//                     src={product.image}
+//                     alt={product.name}
+//                     className="w-full h-[500px] object-cover"
+//                 />
+//             </div>
+
+
+//             <div className="flex flex-col justify-center">
+
+//                 <h1 className="text-4xl font-bold">
+//                     {product.name}
+//                 </h1>
+
+//                 <p className="text-gray-500 mt-3">
+//                     {product.category}
+//                 </p>
+
+//                 <p className="text-2xl font-semibold mt-5">
+//                     ₹{product.price}
+//                 </p>
+
+
+//                 <button
+//                     type="button"
+//                     onClick={handleAddToCart}
+//                     className="mt-8 bg-[#6B4632] text-white py-3 px-8 rounded-full hover:bg-[#5A4030]"
+//                 >
+//                     Add to Cart
+//                 </button>
+
+//             </div>
+
+//         </div>
+//     );
+// }
+
+// export default ProductDetails;

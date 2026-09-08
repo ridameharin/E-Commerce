@@ -2,21 +2,29 @@
 // import { cartContext } from "../contexts/cartContext";
 import { useState,useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import { addtoCart } from "../redux/cartSlice";
+import { setCart } from "../redux/cartSlice";
+import { addCart,getCart } from "../services/cartService";
+import { removeWishlist, setWishlist } from "../redux/wishlistSlice";
+import { addWishlist,getWishlist,deleteWishlist } from "../services/wishlistService";
+import { Heart } from "lucide-react";
+import { toast } from "react-toastify";
 
 function Shop(){
 
     const [products,setProducts]=useState([])
     // const {addtocart}=useContext(cartContext)
+    const navigate=useNavigate()
     const dispatch=useDispatch()
-    
+    const userid=useSelector((state)=>state.auth.userid)
+    const wishlist=useSelector((state)=>state.wishlist.items)
         const fetchProducts=async()=>{
             try{
             const response=await axios.get("http://localhost:3000/products")
             setProducts(response.data)
-            }catch(error){
+            }
+            catch(error){
             console.log(error)
             }
         }
@@ -24,29 +32,80 @@ function Shop(){
     useEffect(()=>{
          fetchProducts();
     },[])
+
+    const handleAddCart=async(product)=>{
+        try{
+            // const data=await addCart(product,userid)
+            // dispatch(addtoCart(data))
+        await addCart(product, userid);
+        const data = await getCart(userid);
+        dispatch(setCart(data));
+        console.log("Cart:", data);
+        }
+        catch(error){
+            console.log("cart error",error)
+        }
+    }
+
+    const handleWishlist=async(product)=>{
+        if(!userid){
+            navigate("/login")
+            return;
+        }
+       
+        try{
+        const current=await getWishlist(userid)
+        const exist=current.find((prod)=>prod.productId===product.id)
+        if(exist){
+        await deleteWishlist(exist.id)
+         const data=await getWishlist(userid)
+        dispatch(setWishlist(data))
+        toast.info("Removed from Wishlist")
+        }
+        else{
+            await addWishlist(product, userid)
+             const data = await getWishlist(userid)
+            dispatch(setWishlist(data))
+            toast.success("Added to Wishlist")
+        }}
+        catch(error){
+            console.log(error)
+            toast.error("Failed to remove from wishlist")
+        }
+    }
     return(
         <div>
             <h1 className="text-3xl font-bold mb-6">Shop</h1>
             <div className="grid grid-cols-3 gap-6 px-5 py-2">
                 {products.map((product)=>(
                     <div key={product.id}>
+                    <div className="relative">
                     <Link to={`/productdetails/${product.id}`} 
                     className="rounded-lg p-3">
-
                     <img src={product.image} alt={product.image}
                     className="w-full h-80 object-cover mb-6"/>
-
                     <h3 className="font-semibold">{product.name}</h3>
-
                     <p className="text-gray-500">{product.category}</p>
-
                     <p className="font-semibold mt-1">₹{product.price}</p>
-
                     </Link>
+                    <button onClick={()=>handleWishlist(product)} type="button"
+                    className="absolute top-3 right-3 bg-white rounded-full p-2">
+                    <Heart size={25} className={
+                        wishlist.some((item)=>item.productId===product.id)?
+                        "fill-[#6B4632] text-[#6B4632]":"text-[#6B4632]"
+                    }/></button>
+                    </div>
                     
-                    <button onClick={()=>dispatch(addtoCart(product))} 
+                    <button onClick={()=>handleAddCart(product)} type="button"
                     className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
                      Add to Cart</button>
+                     {/* <button
+                     type="button"
+                    onClick={() => handleWishlist(product)}
+                     className="mt-2 w-full border border-[#6B4632] text-[#6B4632] py-2 rounded-full"
+                    >
+                     ❤️ Add to Wishlist
+                    </button> */}
                     </div>
                     
                     

@@ -23,8 +23,19 @@ function Addcart({children}){
         fetchingCart();
     },[])
 
-    const addtocart=(product)=>{
+    const addtocart=async(product)=>{
+        const existing=cart.find((item)=>item.id===product.id)
+        if(!existing){ 
+            await axios.post("http://localhost:3000/cart",{
+            ...product,quantity:1
+         })}
+         else{
+            await axios.patch(`http://localhost:3000/cart/${existing.id}`,{
+                quantity:existing.quantity+1
+            })
+         }
          toast.success("Item added to Cart")
+        
         // setCart([...cart,product])
         setCart((prv)=>{
             const existing=prv.find((item)=>item.id===product.id)

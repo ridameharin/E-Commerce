@@ -2,15 +2,44 @@
 // import { cartContext } from "../contexts/cartContext";
 // import { Link } from "react-router-dom";
 import { useSelector,useDispatch } from "react-redux"
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-import { removefromCart,increasing,decreasing } from "../redux/cartSlice";
+import { removefromCart,increasing,decreasing,setCart } from "../redux/cartSlice";
+import { getCart,updateCart,deleteCart } from "../services/cartService";
 
 function Cart(){
 
     // const {cart,remove,increase,decrease}=useContext(cartContext)
-    const cart=useSelector((state)=>state.cart)
+    const cart=useSelector((state)=>state.cart.items)
+    const userid=useSelector((state)=>state.auth.userid)
     const dispatch=useDispatch();
     const navigate=useNavigate()
+
+    const fetchCart=async()=>{
+        const data=await getCart(userid)
+        dispatch(setCart(data))
+    }
+    useEffect(()=>{
+        if(userid){
+            fetchCart()
+        }
+    },[userid,dispatch])
+
+    const handleDecrease=async(item)=>{
+        if (item.quantity <= 1) return;
+        const newQuantity=item.quantity-1
+        await updateCart(item.id,newQuantity)
+        dispatch(decreasing(item.id))
+    }
+    const handleIncrease=async(item)=>{
+        const newQuantity=item.quantity+1
+        await updateCart(item.id,newQuantity)
+        dispatch(increasing(item.id))
+    }
+    const handleRemove=async(id)=>{
+        await deleteCart(id)
+        dispatch(removefromCart(id))
+    }
 
     const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0)
     if(cart.length===0){
@@ -36,13 +65,22 @@ function Cart(){
                             <h2 className="text-xl font-semibold text-[#5A4030]">{item.name}</h2>
                             <p className="font-semibold text-[#5A4030] mt-2">₹{item.price}</p>
 
-                            <div className="flex items-center gap-4 mt-4">
+                            {/* <div className="flex items-center gap-4 mt-4">
                                 <button onClick={()=>dispatch(decreasing(item.id))}
+                                className="w-8 h-8 border rounded-full">
+                                    -
+                                </button> */}
+                                <div className="flex items-center gap-4 mt-4">
+                                <button onClick={()=>handleDecrease(item)}
                                 className="w-8 h-8 border rounded-full">
                                     -
                                 </button>
                                 <span>{item.quantity}</span>
-                                <button onClick={()=>dispatch(increasing(item.id))}
+                                {/* <button onClick={()=>dispatch(increasing(item.id))}
+                                className="w-8 h-8 border rounded-full">
+                                    +
+                                </button> */}
+                                <button onClick={()=>handleIncrease(item)}
                                 className="w-8 h-8 border rounded-full">
                                     +
                                 </button>
@@ -50,7 +88,10 @@ function Cart(){
 
                             {/* <button onClick={()=>remove(item.id)}
                             className="text-red-500 text-sm mt-3">Remove</button> */}
-                            <button onClick={()=>dispatch(removefromCart(item.id))}
+                            {/* <button onClick={()=>dispatch(removefromCart(item.id))}
+                            className="text-red-500 text-sm mt-3">
+                                Remove from Cart</button> */}
+                            <button onClick={()=>handleRemove(item.id)}
                             className="text-red-500 text-sm mt-3">
                                 Remove from Cart</button>
                          </div>
