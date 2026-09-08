@@ -96,6 +96,13 @@
       "password": "9876",
       "role": "user",
       "id": "rOBrBxBb1dg"
+    },
+    {
+      "name": "afla amj",
+      "email": "afla@gmail.com",
+      "password": "afla",
+      "role": "user",
+      "id": "1YfKLqB9KpQ"
     }
   ],
   "orders": [
@@ -108,11 +115,43 @@
       "city": "vgbd",
       "total": 0,
       "id": "gH15TrudKJc"
+    },
+    {
+      "name": "aflaamj",
+      "email": "afla@gmail.com",
+      "phone": "9702100265",
+      "pin": "676304",
+      "address": "vengara,gandhidashpadi near freddo cakes",
+      "city": "vengara",
+      "total": 5497,
+      "id": "DUL3z9aLJhM"
     }
   ],
   "cart": [
     {
-      "id": "-2uODXDT_9w",
+      "id": "GJy6SAcVLq0",
+      "name": "Crochet Tote Side Bag",
+      "price": 1499,
+      "category": "bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "8mHk29FznQg",
+      "name": "Crochet Tote Bag",
+      "price": 1699,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 3.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "3",
+      "quantity": 1
+    },
+    {
+      "id": "Crn9I6XUPO0",
       "name": "Crochet Tote Bag",
       "price": 1899,
       "category": "Bags",
@@ -121,8 +160,51 @@
       "userid": "rOBrBxBb1dg",
       "productId": "1",
       "quantity": 2
+    },
+    {
+      "id": "VMYCYkQSi-Y",
+      "name": "Check Tote Bag",
+      "price": "1999",
+      "category": "Bags",
+      "image": "/images/Bags/Bags 5.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "1YfKLqB9KpQ",
+      "productId": "4",
+      "quantity": 2
+    },
+    {
+      "id": "XxgxUP3FBlk",
+      "name": "Crochet Tote Side Bag",
+      "price": 1499,
+      "category": "bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "1YfKLqB9KpQ",
+      "productId": "2",
+      "quantity": 1
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "tFGjnRLGiyY",
+      "name": "Hair Band",
+      "price": "449",
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 1.jpg",
+      "description": "",
+      "userid": "1YfKLqB9KpQ",
+      "productId": "5"
+    },
+    {
+      "id": "3BMXzN7e9HQ",
+      "name": "Crochet Tote Bag",
+      "price": 1699,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 3.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "1YfKLqB9KpQ",
+      "productId": "3"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

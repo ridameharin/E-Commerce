@@ -18,12 +18,12 @@ function Checkout(){
     const [phone,setPhone]=useState("")
     // const {cart,setCart,clearCart}=useContext(cartContext)
     const dispatch=useDispatch()
-    const cart=useSelector((state)=>state.cart)
+    const cart=useSelector((state)=>state.cart.items)
 
     const navigate=useNavigate()
-
+    
     const total=cart.reduce((sum,item)=>sum+item.quantity*item.price,0)
-
+    
     const handleCheck=async(e)=>{
         e.preventDefault()
         if(email==="" || name==="" || address==="" || phone==="" || city==="" || pin===""){
@@ -45,7 +45,7 @@ function Checkout(){
             toast.warning("Something went wrong.Please try again.")
         }
     }
-
+    
     return(
         <div className="min-h-screen flex flex-col items-center gap-5 bg-[#F5EDE2]">
         <h2 className="text-3xl font-bold text-[#5A4030] mb-10 mt-10">CHECKOUT</h2>

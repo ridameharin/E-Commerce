@@ -103,7 +103,7 @@ function Shop(){
                     </div>
                     
                     <button onClick={()=>handleAddCart(product)} type="button"
-                    className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">
+                    className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
                      Add to Cart</button>
                      {/* <button
                      type="button"
