@@ -3,11 +3,15 @@ import { ShoppingCart,Search,Heart,User, LogOut } from "lucide-react";
 import { useSelector,useDispatch } from "react-redux";
 import { logoutUser } from "../redux/authSlice";
 import { useNavigate,useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar(){
     const userid=useSelector((state)=>state.auth.userid)
     const dispatch=useDispatch()
-    const [searchParams]=useSearchParams()
+    const navigate=useNavigate()
+  
+    const [search,setSearch]=useState("")
+    const [prdct,setPrdct]=useState([])
 
     const handleLogout=()=>{
         dispatch(logoutUser())
@@ -28,7 +32,7 @@ function Navbar(){
             <div className="flex justify-center gap-10">
                 <Link to='/'>Home</Link>
                 <Link to='/shop'>Shop</Link>
-                <Link to='/collections'>Collections</Link>
+                <Link to='/categories'>Categories</Link>
             </div>
             <div className="flex items-center gap-5">
                 <div className="flex items-center border border-gray-300 rounded-full px-4 py-2">

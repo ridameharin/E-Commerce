@@ -6,14 +6,17 @@ import { Link,useNavigate } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { setCart } from "../redux/cartSlice";
 import { addCart,getCart } from "../services/cartService";
-import { removeWishlist, setWishlist } from "../redux/wishlistSlice";
+import { setWishlist } from "../redux/wishlistSlice";
 import { addWishlist,getWishlist,deleteWishlist } from "../services/wishlistService";
 import { Heart } from "lucide-react";
 import { toast } from "react-toastify";
+//import { useSearchParams } from "react-router-dom";
+
 
 function Shop(){
 
-    const [products,setProducts]=useState([])
+    // const [searchParams]=useSearchParams()
+     const [products,setProducts]=useState([])
     // const {addtocart}=useContext(cartContext)
     const navigate=useNavigate()
     const dispatch=useDispatch()
@@ -41,9 +44,11 @@ function Shop(){
         const data = await getCart(userid);
         dispatch(setCart(data));
         console.log("Cart:", data);
+        toast.success("Item added to Cart")
         }
         catch(error){
             console.log("cart error",error)
+            toast.warning("Item removed from Cart")
         }
     }
 
@@ -73,6 +78,7 @@ function Shop(){
             toast.error("Failed to remove from wishlist")
         }
     }
+    //const filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
     return(
         <div>
             <h1 className="text-3xl font-bold mb-6">Shop</h1>

@@ -10,10 +10,12 @@ import Register from './pages/register'
 import Order from './pages/order'
 import Wishlist from './pages/wishlist'
 import Productdetails from './pages/productdetails'
-import Collections from'./pages/collections'
+import Categories from'./pages/categories'
 import Shop from './pages/shop'
 import Checkout from './pages/checkout'
 import ProtectedRoute from './route/protectedRoute';
+import Category from './components/category';
+import Categorydetails from './pages/categorydetails';
 
 
 function App(){
@@ -25,9 +27,12 @@ function App(){
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
-      <Route path='/wishlist' element={<Wishlist />} />      <Route path='/productdetails/:id' element={<Productdetails />} />
+      <Route path='/wishlist' element={<Wishlist />} />      
+      <Route path='/productdetails/:id' element={<Productdetails />} />
       <Route path='/shop' element={<Shop/>}/>
-      <Route path='/collections' element={<Collections />}/>
+      <Route path='/categories' element={<Categories />}/>
+      <Route path='/categorydetails/:category' element={<Categorydetails />}/>
+      <Route path='/category' element={<Category/>}/>
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/cart' element={<Cart />} />

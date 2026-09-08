@@ -112,39 +112,17 @@
   ],
   "cart": [
     {
-      "id": "8b5ERhbjE3s",
-      "name": "Crochet Tote Side Bag",
-      "price": 1499,
-      "category": "bags",
-      "image": "/images/Bags/Bags 2.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "rOBrBxBb1dg",
-      "productId": "2",
-      "quantity": 1
-    },
-    {
-      "id": "y85NaCGxGIE",
-      "name": "Hair Band",
-      "price": "449",
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 1.jpg",
-      "description": "",
-      "userid": "rOBrBxBb1dg",
-      "productId": "5",
-      "quantity": 1
-    }
-  ],
-  "wishlist": [
-    {
-      "id": "JzKGmXOzUH0",
+      "id": "-2uODXDT_9w",
       "name": "Crochet Tote Bag",
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
       "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
       "userid": "rOBrBxBb1dg",
-      "productId": "1"
+      "productId": "1",
+      "quantity": 2
     }
   ],
+  "wishlist": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
