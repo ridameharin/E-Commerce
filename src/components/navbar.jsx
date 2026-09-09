@@ -31,7 +31,7 @@ function Navbar(){
     }},[searchParams])
     return(
 
-         <nav className="flex w-full items-center justify-between px-8 py-4 text-[#5A4030] sm:px-8">
+         <nav className="flex w-full items-center justify-between px-8 py-4 text-[#5A4030] sm:px-8 border-b border-[#D8C5B3]">
              <div>
                 <h2 className="text-3xl font-serif">CROCHETTELLA</h2>
             </div>

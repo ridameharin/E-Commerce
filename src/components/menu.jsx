@@ -15,20 +15,20 @@ function Menu(){
     }
 
     return(
-        <div className="min-h-screen bg-[#F5EDE2] px-5 sm:px-8 md:px-12 py-5 sm:py-7">
+        <div className="min-h-screen bg-[#E9DCCB] px-5 sm:px-8 md:px-12 py-5 sm:py-7">
 
             <div className="flex items-center justify-between">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#5A4030]">CROCHETELLA</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#5A4030]">CROCHETTELLA</h2>
             <button onClick={() => navigate(-1)}
             className="p-2 hover:opacity-70 transition">
             <X className="w-6 h-6 sm:w-7 sm:h-7 text-[#5A4030]"/></button>
             </div>
 
-            <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 mt-12 
-            sm:mt-16 md:mt-20 text-base sm:text-lg md:text-xl text-[#5A4030] ">
+            <div className="sm:gap-7 md:gap-8 mt-12 sm:mt-16 md:mt-20 text-base sm:text-lg md:text-xl">
+            <div className="flex flex-col items-center gap-6 text-[#5A4030] ">
                 <Link to="/" className="hover:opacity-60 transition">Home</Link>
-                <Link to="/" className="hover:opacity-60 transition">Shop</Link>
-                <Link to="/" className="hover:opacity-60 transition">Categories</Link>
+                <Link to="/shop" className="hover:opacity-60 transition">Shop</Link>
+                <Link to="/categories" className="hover:opacity-60 transition">Categories</Link>
 
                 <Link to="/wishlist"
                  className="flex items-center gap-3 hover:opacity-60 transition">
@@ -57,6 +57,7 @@ function Menu(){
                         Login
                         </Link>
                     )}
+            </div>
             </div>
 
         </div>

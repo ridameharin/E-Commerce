@@ -4,10 +4,10 @@ function Categories(){
 
     return(
         <>
-         <div>
+         <div className="min-h-screen bg-[#EBE2D8]">
 
         <div className="text-center mb-10">
-        <h2 className="font-serif text-2xl text-[#5A4030]">CATEGORIES</h2>
+        <h2 className="font-serif text-2xl text-[#5A4030] py-2">CATEGORIES</h2>
         <p className="text-[#8A6F5C] text-sm mt-2">Explore our handmade crochet pieces</p>
         </div>
 

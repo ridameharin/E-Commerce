@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 function Footer(){
 
     return(
-        <footer className="bg-[#F5EDE2] text-[#5A4030] px-10 py-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-4 gap-10">
+        <footer className="bg-[#F5EDE2] text-[#5A4030] px-6 sm:px-10 py-10 sm:py-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
             <div>
                 <h2 className="text-2xl font-serif">CROCHETTELLA</h2>
@@ -18,7 +18,7 @@ function Footer(){
                 <h3>EXPLORE</h3>
                 <ul className="space-y-3 text-sm text-gray-600">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/productDetails">Shop</Link></li>
+                    <li><Link to="/shop">Shop</Link></li>
                     <li><Link to="/collections">Collections</Link></li>
                     {/* <li>About</li> */}
                 </ul>
@@ -40,8 +40,8 @@ function Footer(){
             </div>
 
           </div>
-           <div className="max-w-7xl flex justify-between text-sm text-gray-500">
-                <p>© 2026 Crochettella</p>
+           <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-[#D8C5B3] flex flex-col sm:flex-row justify-between text-sm text-gray-500 items-center gap-3">
+                <p className="text-sm text-gray-600">© 2026 Crochettella</p>
                 <p>All Rights Reserved</p>
             </div>
         </footer>
