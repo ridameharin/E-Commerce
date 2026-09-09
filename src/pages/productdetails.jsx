@@ -40,14 +40,19 @@ function Productdetails(){
          },[id])
 
          const handleCartAdd=async()=>{
+            if(!userid){
+             navigate("/login")
+             return;
+             }
             try{
              await addCart(product,userid)
             const data=await getCart(userid)
             dispatch(setCart(data))
+            toast.success("Item added to Cart")
             }
             catch(error){
                 console.log(error);
-                
+                toast.error("Failed to add item to Cart")
             }
          }
          const handleWishlist=async(product)=>{
@@ -84,11 +89,11 @@ function Productdetails(){
             )
          }
     return (
-        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 bg-white">
-        <div className="grid grid-cols-2 gap-16 items-center">
+        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 sm:p-6 bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="relative bg-[#F5EDE2] rounded-lg overflow-hidden">
                 <img src={product.image} alt={product.name}
-                className="w-full h-150 object-cover m-auto mt-5 mb-5 px-7"/>
+                className="w-full h-72 sm:h-96 lg:h-[600px] object-cover m-auto my-5 px-4 sm:px-7"/>
                 <button onClick={()=>handleWishlist(product)} type="button"
                 className="absolute top-3 right-3 bg-white rounded-full p-2">
                 <Heart size={25} className={
@@ -98,12 +103,12 @@ function Productdetails(){
             </div>
             <div className="px-2">
                 <div className="flex items-center justify-between">
-                <h1 className="text-4xl font-serif text-[#5A4030] mt-3">{product.name}</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#5A4030] mt-3">{product.name}</h1>
                 
                 </div>
-                <p className="text-2xl font-semibold text-[#5A4030] mt-5">₹{product.price}</p>
+                <p className="text-xl sm:text-2xl font-semibold text-[#5A4030] mt-5">₹{product.price}</p>
 
-               <div className="border-t border-gray-200 my-6">
+               <div className="border-t border-gray-200 my-6 pt-5">
                  <p className="text-gray-600 leading-7">{product.description}</p>
                
                  <button onClick={handleCartAdd} 

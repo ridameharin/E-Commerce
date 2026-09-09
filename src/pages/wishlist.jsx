@@ -1,6 +1,5 @@
 import { useSelector,useDispatch } from "react-redux"
 import { useEffect } from "react"
- import { useNavigate } from "react-router-dom"
 import { removeWishlist,setWishlist } from "../redux/wishlistSlice"
 import { deleteWishlist,getWishlist } from "../services/wishlistService"
 
@@ -8,7 +7,6 @@ function Wishlist(){
 
     const wishlist=useSelector((state)=>state.wishlist.items)
     const dispatch=useDispatch()
-    const navigate=useNavigate()
     const userid=useSelector((state)=>state.auth.userid)
 
     const fetchWishlist=async()=>{
@@ -43,15 +41,16 @@ function Wishlist(){
     }
 
     return(
-        <div className="flex flex-col items-center gap-5">
-            <h1 className="text-3xl font-serif text-[#5A4030] mb-10">Wishlist</h1>
-            <div className="grid grid-cols-3 gap-32 w-full max-w-6xl">
+        <div className="min-h-screen bg-[#F5EDE2] flex flex-col items-center gap-5 px-4 sm:px-6 py-8 sm:py-12">
+            <h1 className="text-2xl sm:text-3xl font-serif text-[#5A4030] mb-6 sm:mb-10">Wishlist</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4 sm:px-6">
                 {wishlist.map((item)=>(
-                    <div key={item.id}>
+                    <div key={item.id}
+                    className="bg-[#FBF8F3] border border-[#DCCBBC] rounded-xl p-4 sm:p-5">
                         <img src={item.image} alt={item.name}
-                        className="w-32 h-32 object-cover"/>
+                        className="w-full h-56 sm:h-64 object-cover rounded-lg"/>
                         <div className="mt-3">
-                            <h2 className="text-xl font-semibold text-[#5A4030]">{item.name}</h2>
+                            <h2 className="text-base sm:text-xl font-semibold text-[#5A4030]">{item.name}</h2>
                             <p className="font-semibold text-[#5A4030] mt-2">₹{item.price}</p>
                             <button type="button" onClick={()=>handleRemove(item.id)}
                                 className="mt-3 w-full border border-[#6B4632] text-[#6B4632] py-2 rounded-full">Remove from Wishlist</button>

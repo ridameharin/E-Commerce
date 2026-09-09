@@ -4,7 +4,7 @@
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {useState} from "react"
+import {useState,useEffect} from "react"
 import { useDispatch,useSelector } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
 
@@ -24,9 +24,20 @@ function Checkout(){
     const navigate=useNavigate()
     
     const total=cart.reduce((sum,item)=>sum+item.quantity*item.price,0)
-    
+    useEffect(()=>{
+        if(cart.length===0|| total===0){
+            toast.warning("Your cart is empty")
+            navigate("/cart")
+        }
+    },[cart,total,navigate])
+
     const handleCheck=async(e)=>{
         e.preventDefault()
+        if(cart.length===0|| total===0){
+            toast.warning("Your cart is empty")
+            navigate("/cart")
+            return;
+        }
         if(email==="" || name==="" || address==="" || phone==="" || city==="" || pin===""){
             toast.warning("Please fill the blanks")
             return;
@@ -49,34 +60,34 @@ function Checkout(){
     
     return(
         <div className="min-h-screen flex flex-col items-center gap-5 bg-[#F5EDE2]">
-        <h2 className="text-3xl font-bold text-[#5A4030] mb-10 mt-10">CHECKOUT</h2>
-        <div className="grid grid-cols-2 gap-10 w-full max-w-5xl px-6">
+        <h2 className="text-2xl sm:text-3xl font-serif text-[#5A4030] mb-8 sm:mb-10 mt-8 sm:mt-10">CHECKOUT</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl px-4 sm:px-6">
 {/* <div className="w-full max-w-xl bg-[#FBF8F3] px-8 py-12 rounded-3xl shadow-sm"></div> */}
-            <div className="bg-[#FBF8F3] rounded-2xl p-8 mb-10 shadow-sm border border-[#E4D8CC]">
-            <h2 className="text-2xl font-serif text-[#5A4030] mb-2">Shipping Details</h2>
-            <div>
+            <div className="bg-[#FBF8F3] rounded-2xl p-5 sm:p-8 mb-8 shadow-sm border border-[#E4D8CC]">
+            <h2 className="text-xl sm:text-2xl font-serif text-[#5A4030] mb-2">Shipping Details</h2>
+            <div className="mt-4">
                 <input value={name} placeholder="Enter Your Name" onChange={(e)=>setName(e.target.value)}
                  className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
             </div>
-           <div>
+           <div className="mt-4">
                 <input value={email} placeholder="Enter Your Email" onChange={(e)=>setEmail(e.target.value)}
                 className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
            </div>
-           <div>
+           <div className="mt-4">
                 <textarea value={address} placeholder="Address" onChange={(e)=>setAddress(e.target.value)}
                 className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
            </div>
-                <div>
+                <div className="mt-4">
                 <input value={phone} placeholder="Phone Number" onChange={(e)=>setPhone(e.target.value)}
-                 className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
+                 className="mt-1 px-3 py-3 bg-transparent w-full h-24 resize-none border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
                 </div>
          
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
                  <div>
                 <input value={pin} placeholder="Pincode" onChange={(e)=>setPin(e.target.value)}
                  className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
                 </div>
-                <div>
+                <div >
                 <input value={city} placeholder="City" onChange={(e)=>setCity(e.target.value)}
                  className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
            </div>
@@ -85,7 +96,7 @@ function Checkout(){
 
             </div>
 
-            <div className="w-full bg-[#FBF8F3] rounded-2xl p-8 mb-10 shadow-sm border h-fit border-[#E4D8CC]">
+            <div className="w-full bg-[#FBF8F3] rounded-2xl p-5 sm:p-8 mb-8 lg:mb-10 shadow-sm border h-fit border-[#E4D8CC]">
             <h2 className="text-2xl font-serif text-[#5A4030]">Order Summary</h2>
             <div className="border-t border-gray-300 my-6"></div>
             <div>
@@ -103,7 +114,7 @@ function Checkout(){
                 </div>
                
                 <button onClick={handleCheck}
-                className="mx-auto mt-10 block bg-[#6B4632] text-white px-10 py-3 rounded-full hover:bg-[#5A4030]">
+                className="w-full mt-8 bg-[#6B4632] text-white px-6 py-3 rounded-full hover:bg-[#5A4030]">
                 Place Order</button>
             </div>
         

@@ -21,24 +21,31 @@ function Register(){
             toast.error("Incorrect password")
             return;
         }
-        const users={name,email,password,role:"user"}
-        try{
+        try{const response=await axios.get(`http://localhost:3000/users?email=${email}`)
+        if(response.data.length>0){
+            toast.error("Email already exists")
+            return;
+        }
+            const users={name,email,password,role:"user"}
+
             await axios.post(`http://localhost:3000/users`,users)
             toast.success("Registration Successful")
             navigate("/login")
         }
         catch(error){
+            console.log(error)
             toast.warning("Something went wrong.Please try again.")
         }
     }
+    
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[#F5EDE2] px-6 py-10">
-        <div className="w-full max-w-xl bg-[#FBF8F3] px-8 py-12 rounded-3xl shadow-sm">
+        <div className="min-h-screen flex items-center justify-center bg-[#F5EDE2] px-4 sm:px-6 py-8 sm:py-10">
+        <div className="w-full max-w-xl bg-[#FBF8F3] px-5 sm:px-8 py-10 sm:py-12 rounded-3xl shadow-sm">
             <h1 className="text-center font-serif text-3xl text-[#5A4030]">CROCHETTELLA</h1>
 
             <div className="text-center mt-8">
-                <h2 className="font-serif text-2xl text-[#5A4030]">create Account</h2>
+                <h2 className="font-serif text-2xl text-[#5A4030]">Create Account</h2>
                 <p className="text-sm text-[#8A6F5C] mt-2">Join our handmade community</p>
             </div>
 

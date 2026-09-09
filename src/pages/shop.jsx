@@ -67,6 +67,10 @@ console.log("Filtered:", filteredProducts)
         try{
             // const data=await addCart(product,userid)
             // dispatch(addtoCart(data))
+            if(!userid){
+            navigate("/login")
+            return;
+        }
         await addCart(product, userid);
         const data = await getCart(userid);
         dispatch(setCart(data));
@@ -108,11 +112,15 @@ console.log("Filtered:", filteredProducts)
     
     return(
         <div className="min-h-screen">
-            <h1 className="sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-4">
+            <h1 className="text-xl sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-4 px-4">
                 {search ? `"${search}"` : "Explore handmade collections"}</h1>
-            <div className="w-fit mx-auto flex justify-center items-center gap-4 mb-8 px-2 py-4 border border-[#E5D8CA] 
-            flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl">
-                <h3 className="text-[#6B4632] text-2xl">Filter by Price:</h3>
+
+            {/* <div className="w-fit mx-auto flex justify-center items-center gap-4 mb-8 px-2 py-4 border border-[#E5D8CA] 
+            flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl"> */}
+            <div className="w-[95%] sm:w-fit mx-auto flex justify-center items-center gap-3 sm:gap-4 mb-8 px-3 py-4 border 
+            border-[#E5D8CA] flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl">
+
+                <h3 className="text-[#6B4632] text-xl sm:text-2xl">Filter by Price:</h3>
                 <button onClick={()=>setPriceFilter("all")}
                 className={`px-5 py-2 rounded-full border ${
                 priceFilter === "all"
@@ -157,7 +165,7 @@ console.log("Filtered:", filteredProducts)
                     <Link to={`/productdetails/${product.id}`} 
                     className="rounded-lg p-3">
                     <img src={product.image} alt={product.image}
-                    className="w-full h-64 object-cover mb-6"/>
+                    className="w-full h-56 sm:h-64 object-cover mb-5 sm:mb-6"/>
                     <h3 className="font-semibold">{product.name}</h3>
                     <p className="text-gray-500">{product.category}</p>
                     <p className="font-semibold mt-1">₹{product.price}</p>

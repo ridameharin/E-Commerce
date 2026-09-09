@@ -79,20 +79,22 @@ function Categorydetails(){
         }
 
     return(
-        <div className="min-h-screen px-8 py-10">
+        <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
        <div className="text-center mb-10">
-        <h1 className="text-5xl font-serif text-[#5A4030] text-center">{category}</h1>
-        <p className="text-center text-[#8A6F5C] mt-2 text-2xl">Explore our handmade {category.toLowerCase()} collection</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#5A4030] text-center">{category}</h1>
+        <p className="text-center text-[#8A6F5C] mt-2 text-sm sm:text-lg lg:text-2xl">Explore our handmade {category.toLowerCase()} collection</p>
        </div>
-       <div className="mx-auto grid grid-cols-3 max-w-6xl gap-20 px-5 py-2">
+       <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl gap-6 sm:gap-8 lg:gap-10 px-2 sm:px-5 py-2">
         {filterProducts.map((product)=>(
             
-            <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
+                <div key={product.id} 
+                className="border border-[#E5D8CA] rounded-xl p-3 sm:p-4 bg-white hover:-translate-y-1 hover:shadow-md">
                 <div className="relative">
                 <Link to={`/productdetails/${product.id}`}>
                 <img src={product.image} alt={product.name}
-                className="w-full h-72 object-cover rounded-lg"/>
+                className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-lg"/>
                 </Link>
+
                 <button onClick={()=>handleWishlist(product)} type="button"
                 className="absolute top-3 right-3 bg-white rounded-full p-2">
                 <Heart size={25} className={
@@ -101,9 +103,9 @@ function Categorydetails(){
                 }/></button>
                 </div>
                 
-                <h3 className="text-center mt-3 text-[#5A4030]">{product.name}</h3>
-                <p className="text-gray-600 leading-7">{product.description}</p>
-                <p>₹{product.price}</p>
+                <h3 className="text-center mt-3 text-[#5A4030] sm:text-lg ">{product.name}</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-6 sm:leading-7 mt-2">{product.description}</p>
+                <p className="mt-2 font-semibold text-[#5A4030]">₹{product.price}</p>
                 
                     <button onClick={()=>handleAddCart(product)} type="button"
                     className="w-full mt-3 bg-[#6B4632] text-white py-2 rounded-full hover:bg-[#5A4030]">

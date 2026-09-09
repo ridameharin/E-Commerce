@@ -23,23 +23,24 @@ function Orderhistory(){
 }},[userid])
 
     return(
-        <div className="min-h-screen bg-[#F5EDE2] px-6 py-12">
-        <h1 className="text-4xl font-serif text-[#5A4030] text-center">Your Orders</h1>
+        <div className="min-h-screen bg-[#F5EDE2] px-4 sm:px-6 py-8 sm:py-12">
+        <h1 className="text-2xl sm:text-4xl font-serif text-[#5A4030] text-center">Your Orders</h1>
         <div className="max-w-4xl mx-auto mt-10 space-y-6">
             {order.length===0?(
                 <p className="text-center text-gray-500">No orders found</p>
             ):(order.map((ordr)=>(
-                <div key={ordr.id} className="bg-[#FBF8F3] border border-[#E4D8CC] rounded-xl p-6">
-                    <h2 className="text-xl font-semibold text-[#5A4030]">{ordr.name}</h2>
+                <div key={ordr.id} 
+                className="bg-[#FBF8F3] border border-[#E4D8CC] rounded-xl p-4 sm:p-6">
+                    <h2 className="text-base sm:text-xl font-semibold text-[#5A4030]">{ordr.name}</h2>
                     <p className="text-sm text-gray-500 mt-1">Order ID: {ordr.id}</p>
-                    <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]"></div>
-                    <div className="mt-5">
+                    {/* <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]"></div> */}
+                    <div>
                     <div className="mt-5 space-y-3">
                         {ordr.items?.map((item) => (
                             <div key={item.productId}
-                            className="flex justify-between items-center border-b border-[#E5D8CA] pb-3">
+                            className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 border-b border-[#E5D8CA] pb-3">
                                 <div className="flex flex-col gap-2">
-                                <h2 className="text-xl text-[#5A4030]">{item.name}</h2>
+                                <h2 className="text-base sm:text-xl text-[#5A4030]">{item.name}</h2>
                                 <div className="flex flex-col gap-1">
                                 <p>Quantity:{item.quantity}</p>
                                 <p className="text-sm text-gray-500">₹{item.price}</p>
