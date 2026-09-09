@@ -18,6 +18,7 @@ import Category from './components/category';
 import Categorydetails from './pages/categorydetails';
 import Orderhistory from './pages/orderhistory';
 import Profile from './pages/profile';
+import Menu from './components/menu';
 
 
 function App(){
@@ -34,6 +35,7 @@ function App(){
       <Route path='/categories' element={<Categories />}/>
       <Route path='/categorydetails/:category' element={<Categorydetails />}/>
       <Route path='/category' element={<Category/>}/>
+      <Route path='/menu' element={<Menu/>}/>  
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/wishlist' element={<Wishlist />} /> 

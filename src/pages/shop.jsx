@@ -10,18 +10,22 @@ import { setWishlist } from "../redux/wishlistSlice";
 import { addWishlist,getWishlist,deleteWishlist } from "../services/wishlistService";
 import { Heart } from "lucide-react";
 import { toast } from "react-toastify";
-//import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 
 function Shop(){
 
-    // const [searchParams]=useSearchParams()
-     const [products,setProducts]=useState([])
+    const [products,setProducts]=useState([])
+    const [searchParams]=useSearchParams()
+    // const [search,setSearch]=useState(searchParams.get("search") || "")
+    const search = searchParams.get("search") || "";
     // const {addtocart}=useContext(cartContext)
     const navigate=useNavigate()
     const dispatch=useDispatch()
     const userid=useSelector((state)=>state.auth.userid)
     const wishlist=useSelector((state)=>state.wishlist.items)
+    const [priceFilter,setPriceFilter]=useState("all")
+
         const fetchProducts=async()=>{
             try{
             const response=await axios.get("http://localhost:3000/products")
@@ -35,6 +39,29 @@ function Shop(){
     useEffect(()=>{
          fetchProducts();
     },[])
+
+    let filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
+    console.log("Search:", search)
+console.log("Products:", products)
+console.log("Filtered:", filteredProducts)
+    // if( priceFilter==="Low to High"){
+    //     filteredProducts.sort((a,b)=>a.price-b.price)
+    // }
+    // if( priceFilter==="High to Low"){
+    //     filteredProducts.sort((a,b)=>b.price-a.price)
+    // }
+    if(priceFilter==="Under 500"){
+        filteredProducts=filteredProducts.filter((prd)=>prd.price<500)
+    }
+    if(priceFilter==="500-1000"){
+        filteredProducts=filteredProducts.filter((prd)=>prd.price>=500 && prd.price<1000)
+    }
+    if(priceFilter==="1000-2000"){
+        filteredProducts=filteredProducts.filter((prd)=>prd.price>=1000 && prd.price<=2000)
+    }
+    if(priceFilter==="Above 2000"){
+        filteredProducts=filteredProducts.filter((prd)=>prd.price>2000)
+    }
 
     const handleAddCart=async(product)=>{
         try{
@@ -78,12 +105,53 @@ function Shop(){
             toast.error("Failed to remove from wishlist")
         }
     }
-    //const filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
+    
     return(
         <div className="min-h-screen">
-            <h1 className="text-3xl font-bold mb-6">Shop</h1>
-            <div className="grid grid-cols-3 gap-6 px-5 py-2">
-                {products.map((product)=>(
+            <h1 className="sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-4">
+                {search ? `"${search}"` : "Explore handmade collections"}</h1>
+            <div className="w-fit mx-auto flex justify-center items-center gap-4 mb-8 px-2 py-4 border border-[#E5D8CA] 
+            flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl">
+                <h3 className="text-[#6B4632] text-2xl">Filter by Price:</h3>
+                <button onClick={()=>setPriceFilter("all")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "all"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >All</button>
+            <button onClick={()=>setPriceFilter("Under 500")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "Under 500"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >Under 500</button>
+            <button onClick={()=>setPriceFilter("500-1000")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "500-1000"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >500-1000</button>
+            <button onClick={()=>setPriceFilter("1000-2000")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "1000-2000"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >1000-2000</button>
+            <button onClick={()=>setPriceFilter("Above 2000")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "Above 2000"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >Above 2000</button>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 py-2">
+                {filteredProducts.map((product)=>(
                     <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
                     <div className="relative">
                     <Link to={`/productdetails/${product.id}`} 
