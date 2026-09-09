@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShoppingCart,Search,Heart,User, LogOut } from "lucide-react";
+import { ShoppingCart,Search,Heart,User, LogOut, Package } from "lucide-react";
 import { useSelector,useDispatch } from "react-redux";
 import { logoutUser } from "../redux/authSlice";
 import { useNavigate,useSearchParams } from "react-router-dom";
@@ -42,6 +42,7 @@ function Navbar(){
                 </div>
                 <Link to="/wishlist"><Heart className="w-5 h-5"/></Link>
                 <Link to="/cart"><ShoppingCart className="w-5 h-5"/></Link>
+                <Link to="/orderhistory"><Package className="w-5 h-5"/></Link>
                 {userid?(<Link to="/profile">
                 <div className="w-8 h-8 rounded-full bg-[#6B4632] text-white flex items-center justify-center"><User className="w-5 h-5"/></div>
                 </Link>)

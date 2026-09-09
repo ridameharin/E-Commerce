@@ -80,16 +80,16 @@ function Shop(){
     }
     //const filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
     return(
-        <div>
+        <div className="min-h-screen">
             <h1 className="text-3xl font-bold mb-6">Shop</h1>
             <div className="grid grid-cols-3 gap-6 px-5 py-2">
                 {products.map((product)=>(
-                    <div key={product.id}>
+                    <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
                     <div className="relative">
                     <Link to={`/productdetails/${product.id}`} 
                     className="rounded-lg p-3">
                     <img src={product.image} alt={product.image}
-                    className="w-full h-80 object-cover mb-6"/>
+                    className="w-full h-64 object-cover mb-6"/>
                     <h3 className="font-semibold">{product.name}</h3>
                     <p className="text-gray-500">{product.category}</p>
                     <p className="font-semibold mt-1">₹{product.price}</p>

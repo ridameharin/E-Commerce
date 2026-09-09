@@ -19,6 +19,7 @@ function Checkout(){
     // const {cart,setCart,clearCart}=useContext(cartContext)
     const dispatch=useDispatch()
     const cart=useSelector((state)=>state.cart.items)
+    const userid=useSelector((state)=>state.auth.userid)
 
     const navigate=useNavigate()
     
@@ -31,7 +32,7 @@ function Checkout(){
             return;
         }
         const order={
-            name,email,phone,pin,address,city,total
+            name,email,phone,pin,address,city,total,items:cart,userid
         }
         try{
             await axios.post("http://localhost:3000/orders",order)

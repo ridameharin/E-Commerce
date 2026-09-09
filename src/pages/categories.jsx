@@ -13,56 +13,56 @@ function Categories(){
 
        <div className="max-w-6xl grid grid-cols-3 mx-auto gap-6">
          <Link to='/categorydetails/Bags'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
         <div>
-        <div>
-            <img src="/bags.jpg" alt="bags" className="w-full h-64 object-cover"/>
+            <img src="/bags.jpg" alt="bags" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
         </div>
-        <h3 className="text-center mt-3 text-[#5A4030]">Bags</h3>
+        <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Bags</h3>
         </div>
         </Link>
 
         <Link to='/categorydetails/Clothes'>
-        <div>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/clothes.jpg" alt="clothes" className="w-full h-64 object-cover"/>
+                <img src="/clothes.jpg" alt="clothes" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Clothes</h3>
+            <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Clothes</h3>
         </div>
         </Link>
 
         <Link to='/categorydetails/Toys'>
-        <div>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/toys.jpg" alt="toys" className="w-full h-64 object-cover"/>
+                <img src="/toys.jpg" alt="toys" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Toys</h3>
+            <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Toys</h3>
         </div>
         </Link>
 
         <Link to='/categorydetails/Accessories'>
-        <div>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/accessories.jpg" alt="accessories" className="w-full h-64 object-cover"/>
+                <img src="/accessories.jpg" alt="accessories" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Accessories</h3>
+            <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Accessories</h3>
         </div>
         </Link>
 
         <Link to='/categorydetails/Decors'>
-        <div>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/decor.jpg" alt="decors" className="w-full h-64 object-cover"/>
+                <img src="/decor.jpg" alt="decors" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Decors</h3>
+            <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Decors</h3>
         </div>
         </Link>
 
         <Link to='/categorydetails/Gifts'>
-        <div>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/gift.jpg" alt="gifts"  className="w-full h-64 object-cover"/>
+                <img src="/gift.jpg" alt="gifts"  className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Gifts</h3>
+            <h3 className="text-center text-2xl mt-3 text-[#5A4030]">Gifts</h3>
         </div>
         </Link>
 

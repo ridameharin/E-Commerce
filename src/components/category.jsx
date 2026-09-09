@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function Category(){
 
     return(
-        <div>
+        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 bg-white bg-[#FBF8F3]">
 
         <div className="text-center mb-10">
         <h2 className="font-serif text-2xl text-[#5A4030]">OUR COLLECTIONS</h2>
@@ -11,58 +11,57 @@ function Category(){
         </div>
 
        <div className="max-w-6xl grid grid-cols-3 mx-auto gap-6">
-         <Link>
-         {/* <Link to='/productdetails'> */}
+        <Link to='/categorydetails/Bags'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
         <div>
-        <div>
-            <img src="/bags.jpg" alt="bags" className="w-full h-64 object-cover"/>
+            <img src="/bags.jpg" alt="bags" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
         </div>
         <h3 className="text-center mt-3 text-[#5A4030]">Bags</h3>
         </div>
         </Link>
 
-        <Link>
-        <div>
+        <Link to='/categorydetails/Clothes'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/clothes.jpg" alt="clothes" className="w-full h-64 object-cover"/>
+                <img src="/clothes.jpg" alt="clothes" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text=[#5A4030]">Clothes</h3>
+            <h3 className="text-center mt-3 text-[#5A4030]">Clothes</h3>
         </div>
         </Link>
 
-        <Link>
-        <div>
+        <Link to='/categorydetails/Toys'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/toys.jpg" alt="toys" className="w-full h-64 object-cover"/>
+                <img src="/toys.jpg" alt="toys" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
             <h3 className="text-center mt-3 text-[#5A4030]">Toys</h3>
         </div>
         </Link>
 
-        <Link>
-        <div>
+        <Link to='/categorydetails/Accessories'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/accessories.jpg" alt="accessories" className="w-full h-64 object-cover"/>
+                <img src="/accessories.jpg" alt="accessories" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
             <h3 className="text-center mt-3 text-[#5A4030]">Accessories</h3>
         </div>
         </Link>
 
-        <Link>
-        <div>
+        <Link to='/categorydetails/Decors'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/decor.jpg" alt="decors" className="w-full h-64 object-cover"/>
+                <img src="/decor.jpg" alt="decors" className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text=[#5A4030]">Decors</h3>
+            <h3 className="text-center mt-3 text-[#5A4030]">Decors</h3>
         </div>
         </Link>
 
-        <Link>
-        <div>
+        <Link to='/categorydetails/Gifts'>
+        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
             <div>
-                <img src="/gift.jpg" alt="gifts"  className="w-full h-64 object-cover"/>
+                <img src="/gift.jpg" alt="gifts"  className="w-full h-64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text=[#5A4030]">Gifts</h3>
+            <h3 className="text-center mt-3 text-[#5A4030]">Gifts</h3>
         </div>
         </Link>
 

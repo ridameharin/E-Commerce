@@ -16,6 +16,8 @@ import Checkout from './pages/checkout'
 import ProtectedRoute from './route/protectedRoute';
 import Category from './components/category';
 import Categorydetails from './pages/categorydetails';
+import Orderhistory from './pages/orderhistory';
+import Profile from './pages/profile';
 
 
 function App(){
@@ -26,8 +28,7 @@ function App(){
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
-      <Route path='/wishlist' element={<Wishlist />} />      
+      <Route path='/register' element={<Register />} />     
       <Route path='/productdetails/:id' element={<Productdetails />} />
       <Route path='/shop' element={<Shop/>}/>
       <Route path='/categories' element={<Categories />}/>
@@ -35,9 +36,12 @@ function App(){
       <Route path='/category' element={<Category/>}/>
 
       <Route element={<ProtectedRoute/>}>
+        <Route path='/wishlist' element={<Wishlist />} /> 
         <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/order' element={<Order />} />
+        <Route path='/orderhistory' element={<Orderhistory />} />      
+        <Route path='/profile' element={<Profile />} />      
       </Route>
 
     </Routes>

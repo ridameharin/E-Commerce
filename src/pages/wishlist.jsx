@@ -1,6 +1,6 @@
 import { useSelector,useDispatch } from "react-redux"
 import { useEffect } from "react"
-// import { useNavigate } from "react-router-dom"
+ import { useNavigate } from "react-router-dom"
 import { removeWishlist,setWishlist } from "../redux/wishlistSlice"
 import { deleteWishlist,getWishlist } from "../services/wishlistService"
 
@@ -8,7 +8,7 @@ function Wishlist(){
 
     const wishlist=useSelector((state)=>state.wishlist.items)
     const dispatch=useDispatch()
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
     const userid=useSelector((state)=>state.auth.userid)
 
     const fetchWishlist=async()=>{
