@@ -144,6 +144,13 @@
       "password": "1qaz",
       "role": "user",
       "id": "55EuJyWqt10"
+    },
+    {
+      "name": "NIdhal  PK",
+      "email": "nidhal@gmail.com",
+      "password": "opennithu",
+      "role": "user",
+      "id": "-uK-UhnApes"
     }
   ],
   "orders": [
@@ -321,6 +328,67 @@
       ],
       "userid": "rOBrBxBb1dg",
       "id": "4asOyzGDEdE"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "p",
+      "city": "pookki",
+      "total": 299,
+      "items": [
+        {
+          "id": "ZW5R4HPvLZI",
+          "name": "Key Chain",
+          "price": 299,
+          "category": "Clothes",
+          "image": "/images/Clothes/Cloth 2.jpg",
+          "description": "",
+          "userid": "rOBrBxBb1dg",
+          "productId": "12",
+          "quantity": 1
+        }
+      ],
+      "userid": "rOBrBxBb1dg",
+      "payment": "Cash on Delivery",
+      "id": "EhLE2ZGqRMk"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "paredath\n",
+      "city": "pookki",
+      "total": 598,
+      "items": [
+        {
+          "id": "ZW5R4HPvLZI",
+          "name": "Key Chain",
+          "price": 299,
+          "category": "Clothes",
+          "image": "/images/Clothes/Cloth 2.jpg",
+          "description": "",
+          "userid": "rOBrBxBb1dg",
+          "productId": "12",
+          "quantity": 1
+        },
+        {
+          "id": "urkiCDv7m0o",
+          "name": "Key Chain",
+          "price": 299,
+          "category": "Clothes",
+          "image": "/images/Clothes/Cloth 3.jpg",
+          "description": "",
+          "userid": "rOBrBxBb1dg",
+          "productId": "13",
+          "quantity": 1
+        }
+      ],
+      "userid": "rOBrBxBb1dg",
+      "payment": "UPI",
+      "id": "oaxgbDP4VFY"
     }
   ],
   "cart": [
@@ -391,28 +459,50 @@
       "quantity": 1
     },
     {
-      "id": "LQII9vDIngY",
+      "id": "ZW5R4HPvLZI",
+      "name": "Key Chain",
+      "price": 299,
+      "category": "Clothes",
+      "image": "/images/Clothes/Cloth 2.jpg",
+      "description": "",
+      "userid": "rOBrBxBb1dg",
+      "productId": "12",
+      "quantity": 1
+    },
+    {
+      "id": "urkiCDv7m0o",
+      "name": "Key Chain",
+      "price": 299,
+      "category": "Clothes",
+      "image": "/images/Clothes/Cloth 3.jpg",
+      "description": "",
+      "userid": "rOBrBxBb1dg",
+      "productId": "13",
+      "quantity": 1
+    },
+    {
+      "id": "RxJchIkFvlE",
       "name": "Crochet Tote Bag",
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
       "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "rOBrBxBb1dg",
+      "userid": "-uK-UhnApes",
       "productId": "1",
       "quantity": 1
-    }
-  ],
-  "wishlist": [
+    },
     {
-      "id": "TcsiR7gTvqk",
-      "name": "Hair Band",
-      "price": 449,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 1.jpg",
-      "description": "",
-      "userid": "rOBrBxBb1dg",
-      "productId": "5"
+      "id": "zZahsuHpbCc",
+      "name": "Crochet Tote Side Bag",
+      "price": 1499,
+      "category": "bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
+      "userid": "-uK-UhnApes",
+      "productId": "2",
+      "quantity": 6
     }
   ],
+  "wishlist": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -50,9 +50,13 @@ function Orderhistory(){
                                 </div>
                                 ))}
                                 </div>
-                    <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]">
+                                <div className="mt-5 pt-4 border-t border-[#DCCBBC]">
+                                    <p className="text-[#5A4030] text-sm mt-1">
+                                    Payment Method: {ordr.payment}</p>
+                                <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]">
                     <span className="font-semibold text-xl text-[#5A4030]">Total</span>
                     <span className="text-xl font-semibold text-[#6B4632]">₹{ordr.total}</span>
+                    </div>
                     </div>
                 </div>
                 </div>

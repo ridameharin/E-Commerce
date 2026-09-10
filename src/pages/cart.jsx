@@ -51,7 +51,7 @@ function Cart(){
     }
     return(
         <div className="flex flex-col items-center gap-5 px-4 sm:px-6">
-        <h1 className="text-2xl font-serif text-[#5A4030] mb-10 sm:text-3xl ">YOUR CART</h1>
+        <h1 className="text-2xl font-serif text-[#5A4030] mb-10 sm:text-3xl mt-2">YOUR CART</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 w-full max-w-6xl">
             <div className="w-full lg:col-span-2">
