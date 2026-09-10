@@ -27,7 +27,7 @@
     {
       "id": "4",
       "name": "Check Tote Bag",
-      "price": "1999",
+      "price": 1999,
       "category": "Bags",
       "image": "/images/Bags/Bags 5.jpg",
       "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "name": "Hair Band",
-      "price": "449",
+      "price": 449,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 1.jpg",
       "description": ""
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "name": "Bracelet",
-      "price": "499",
+      "price": 499,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 2.jpg",
       "description": ""
@@ -51,7 +51,7 @@
     {
       "id": "7",
       "name": "Hair Clip",
-      "price": "399",
+      "price": 399,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 3.jpg",
       "description": ""
@@ -59,7 +59,7 @@
     {
       "id": "8",
       "name": "Tulip Bracelet",
-      "price": "499",
+      "price": 499,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 4.jpg",
       "description": ""
@@ -67,7 +67,7 @@
     {
       "id": "9",
       "name": "key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 5.jpg",
       "description": ""
@@ -75,7 +75,7 @@
     {
       "id": "10",
       "name": "Key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 6.jpg",
       "description": ""
@@ -83,7 +83,7 @@
     {
       "id": "11",
       "name": "Key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 1.jpg",
       "description": ""
@@ -91,7 +91,7 @@
     {
       "id": "12",
       "name": "Key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 2.jpg",
       "description": ""
@@ -99,7 +99,7 @@
     {
       "id": "13",
       "name": "Key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 3.jpg",
       "description": ""
@@ -107,7 +107,7 @@
     {
       "id": "14",
       "name": "Key Chain",
-      "price": "299",
+      "price": 299,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 4.jpg",
       "description": ""
@@ -181,41 +181,6 @@
       ],
       "userid": "q6V3XmHxb0M",
       "id": "at-fFdGJbIE"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "eq32sd",
-      "pin": "dtfhbt",
-      "address": "erf",
-      "city": "rfhdtr",
-      "total": 3398,
-      "items": [
-        {
-          "id": "GJy6SAcVLq0",
-          "name": "Crochet Tote Side Bag",
-          "price": 1499,
-          "category": "bags",
-          "image": "/images/Bags/Bags 2.jpg",
-          "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "2",
-          "quantity": 1
-        },
-        {
-          "id": "Crn9I6XUPO0",
-          "name": "Crochet Tote Bag",
-          "price": 1899,
-          "category": "Bags",
-          "image": "/images/Bags/Bags 1.jpg",
-          "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "1",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "id": "f_XbFs0qsUQ"
     },
     {
       "name": "Afla amj",
@@ -299,50 +264,63 @@
       "id": "8DPW0JUjdZg"
     },
     {
-      "name": "munaavvar",
-      "email": "munu@gmaail.com",
-      "phone": "1123456789",
-      "pin": "234",
-      "address": "tdhytd",
-      "city": "dfgbnh",
-      "total": 3897,
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "p",
+      "city": "pookki",
+      "total": 3697,
       "items": [
         {
-          "id": "KHo7wjvSieQ",
-          "name": "Crochet Tote Side Bag",
-          "price": 1499,
-          "category": "bags",
-          "image": "/images/Bags/Bags 2.jpg",
+          "id": "HTbRl1ODHRI",
+          "name": "Crochet Tote Bag",
+          "price": 1699,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 3.jpg",
           "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "55EuJyWqt10",
-          "productId": "2",
-          "quantity": 1
+          "userid": "rOBrBxBb1dg",
+          "productId": "3",
+          "quantity": 2
         },
         {
-          "id": "5WeV73zAsOY",
-          "name": "Bracelet",
-          "price": "499",
+          "id": "HG6Xoh4-9Ms",
+          "name": "Key Chain",
+          "price": 299,
           "category": "Accessories",
-          "image": "/images/Accessories/Accessories 2.jpg",
+          "image": "/images/Accessories/Accessories 6.jpg",
           "description": "",
-          "userid": "55EuJyWqt10",
-          "productId": "6",
+          "userid": "rOBrBxBb1dg",
+          "productId": "10",
           "quantity": 1
-        },
+        }
+      ],
+      "userid": "rOBrBxBb1dg",
+      "id": "pprDsnWv8qs"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "p",
+      "city": "pookki",
+      "total": 1899,
+      "items": [
         {
-          "id": "1Tvxeo_uBRw",
+          "id": "565jMQOPRZc",
           "name": "Crochet Tote Bag",
           "price": 1899,
           "category": "Bags",
           "image": "/images/Bags/Bags 1.jpg",
           "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "55EuJyWqt10",
+          "userid": "rOBrBxBb1dg",
           "productId": "1",
           "quantity": 1
         }
       ],
-      "userid": "55EuJyWqt10",
-      "id": "AJPhEB_Gtbc"
+      "userid": "rOBrBxBb1dg",
+      "id": "4asOyzGDEdE"
     }
   ],
   "cart": [
@@ -413,17 +391,28 @@
       "quantity": 1
     },
     {
-      "id": "HTbRl1ODHRI",
+      "id": "LQII9vDIngY",
       "name": "Crochet Tote Bag",
-      "price": 1699,
+      "price": 1899,
       "category": "Bags",
-      "image": "/images/Bags/Bags 3.jpg",
+      "image": "/images/Bags/Bags 1.jpg",
       "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
       "userid": "rOBrBxBb1dg",
-      "productId": "3",
-      "quantity": 2
+      "productId": "1",
+      "quantity": 1
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "TcsiR7gTvqk",
+      "name": "Hair Band",
+      "price": 449,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 1.jpg",
+      "description": "",
+      "userid": "rOBrBxBb1dg",
+      "productId": "5"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

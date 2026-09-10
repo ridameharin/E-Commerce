@@ -19,23 +19,28 @@ import Categorydetails from './pages/categorydetails';
 import Orderhistory from './pages/orderhistory';
 import Profile from './pages/profile';
 import Menu from './components/menu';
+import About from './pages/aboutus';
+import Layout from './components/layout';
 
 
 function App(){
 
   return(
    <>
-   <Navbar/>
+   {/* <Navbar/> */}
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />     
+       <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />  
+    <Route element={<Layout/>}>
+
+      <Route path='/' element={<Home />} />   
       <Route path='/productdetails/:id' element={<Productdetails />} />
       <Route path='/shop' element={<Shop/>}/>
       <Route path='/categories' element={<Categories />}/>
       <Route path='/categorydetails/:category' element={<Categorydetails />}/>
       <Route path='/category' element={<Category/>}/>
       <Route path='/menu' element={<Menu/>}/>  
+      <Route path='/aboutus' element={<About/>}/>
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/wishlist' element={<Wishlist />} /> 
@@ -45,9 +50,10 @@ function App(){
         <Route path='/orderhistory' element={<Orderhistory />} />      
         <Route path='/profile' element={<Profile />} />      
       </Route>
+      </Route>
 
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
     <ToastContainer />
    </>
   )

@@ -25,14 +25,16 @@ function Shop(){
     const userid=useSelector((state)=>state.auth.userid)
     const wishlist=useSelector((state)=>state.wishlist.items)
     const [priceFilter,setPriceFilter]=useState("all")
+    const [sortfilter,setSortfilter]=useState("all")
 
         const fetchProducts=async()=>{
             try{
             const response=await axios.get("http://localhost:3000/products")
+            console.log("Products:", response.data)
             setProducts(response.data)
             }
             catch(error){
-            console.log(error)
+            console.log("fetch error",error)
             }
         }
 
@@ -41,15 +43,7 @@ function Shop(){
     },[])
 
     let filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
-    console.log("Search:", search)
-console.log("Products:", products)
-console.log("Filtered:", filteredProducts)
-    // if( priceFilter==="Low to High"){
-    //     filteredProducts.sort((a,b)=>a.price-b.price)
-    // }
-    // if( priceFilter==="High to Low"){
-    //     filteredProducts.sort((a,b)=>b.price-a.price)
-    // }
+    
     if(priceFilter==="Under 500"){
         filteredProducts=filteredProducts.filter((prd)=>prd.price<500)
     }
@@ -61,6 +55,12 @@ console.log("Filtered:", filteredProducts)
     }
     if(priceFilter==="Above 2000"){
         filteredProducts=filteredProducts.filter((prd)=>prd.price>2000)
+    }
+    if( sortfilter==="Low to High"){
+        filteredProducts.sort((a,b)=>a.price-b.price)
+    }
+    if( sortfilter==="High to Low"){
+        filteredProducts.sort((a,b)=>b.price-a.price)
     }
 
     const handleAddCart=async(product)=>{
@@ -120,7 +120,14 @@ console.log("Filtered:", filteredProducts)
             <div className="w-[95%] sm:w-fit mx-auto flex justify-center items-center gap-3 sm:gap-4 mb-8 px-3 py-4 border 
             border-[#E5D8CA] flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl">
 
+
                 <h3 className="text-[#6B4632] text-xl sm:text-2xl">Filter by Price:</h3>
+                <select value={sortfilter} onChange={(e)=>setSortfilter(e.target.value)}
+                    className="w-full sm:w-auto px-4 py-2 rounded-full border border-[#6B4632] bg-[#F5EDE2] text-[#6B4632]">
+                        <option value="all">Sort by Price</option>
+                        <option value="Low to High">Low to High</option>
+                        <option value="High to Low">High to Low</option>
+                </select>
                 <button onClick={()=>setPriceFilter("all")}
                 className={`px-5 py-2 rounded-full border ${
                 priceFilter === "all"
@@ -156,6 +163,20 @@ console.log("Filtered:", filteredProducts)
                 : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
                 }`}
                 >Above 2000</button>
+                {/* <button onClick={()=>setSortfilter("Low to high")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "Low to High"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >Low to High</button>
+                <button onClick={()=>setSortfilter("High to Low")}
+                className={`px-5 py-2 rounded-full border ${
+                priceFilter === "High to Low"
+                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
+                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
+                }`}
+                >High to Low</button> */}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 py-2">

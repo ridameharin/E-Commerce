@@ -40,6 +40,7 @@ function Navbar(){
                 <Link to='/'>Home</Link>
                 <Link to='/shop'>Shop</Link>
                 <Link to='/categories'>Categories</Link>
+                <Link to='/aboutus'>About Us</Link>
             </div>
 
             <div className="hidden lg:flex items-center gap-5">

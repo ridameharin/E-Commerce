@@ -4,7 +4,7 @@
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {useState,useEffect} from "react"
+import {useState} from "react"
 import { useDispatch,useSelector } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
 
@@ -16,20 +16,28 @@ function Checkout(){
     const [city,setCity]=useState("")
     const [pin,setPin]=useState("")
     const [phone,setPhone]=useState("")
+    const [payment,setPayment]=useState("")
     // const {cart,setCart,clearCart}=useContext(cartContext)
     const dispatch=useDispatch()
     const cart=useSelector((state)=>state.cart.items)
+    console.log("Checkout cart:",cart)
     const userid=useSelector((state)=>state.auth.userid)
+    // const [load,setLoad]=useState(true)
 
     const navigate=useNavigate()
     
     const total=cart.reduce((sum,item)=>sum+item.quantity*item.price,0)
-    useEffect(()=>{
-        if(cart.length===0|| total===0){
-            toast.warning("Your cart is empty")
-            navigate("/cart")
-        }
-    },[cart,total,navigate])
+    // useEffect(()=>{
+    //     if(cart.length===0|| total===0){
+    //         toast.warning("Your cart is empty")
+    //         navigate("/cart")
+    //     }
+    // },[cart,total,navigate])
+    // useEffect(()=>{
+    //      if(cart.length > 0){
+    //     setLoad(false)
+    //      }
+    //     },[cart])
 
     const handleCheck=async(e)=>{
         e.preventDefault()
@@ -42,8 +50,50 @@ function Checkout(){
             toast.warning("Please fill the blanks")
             return;
         }
+
+        // if(name.trim()===""){
+        //     toast.warning("Please enter your name")
+        //     return
+        // }
+        // if(email.trim()===""){
+        //     toast.warning("Please enter your email")
+        //     return
+        // }
+        if(!email.includes("@")){
+            toast.warning("Please enter a valid email")
+            return
+        }
+        // if(address.trim()===""){
+        //     toast.warning("Please enter your address")
+        //     return
+        // }
+        // if(phone.trim()===""){
+        //     toast.warning("Please enter your phone")
+        //     return
+        // }
+        if(!/^\d{10}$/.test(phone)){
+            toast.warning("Number must be 10 digits")
+            return
+        }
+        // if(city.trim()===""){
+        //     toast.warning("Please enter your city")
+        //     return
+        // }
+        // if(pin.trim()===""){
+        //     toast.warning("Please enter your pin")
+        //     return
+        // }
+        if(!/^\d{6}$/.test(pin)){
+            toast.warning("Pin must be 6 digits")
+            return
+        }
+
+        if(payment===""){
+            toast.warning("Please select a payment method")
+            return;
+        }
         const order={
-            name,email,phone,pin,address,city,total,items:cart,userid
+            name,email,phone,pin,address,city,total,items:cart,userid,payment
         }
         try{
             await axios.post("http://localhost:3000/orders",order)
@@ -56,6 +106,7 @@ function Checkout(){
             
             toast.warning("Something went wrong.Please try again.")
         }
+        
     }
     
     return(
@@ -108,6 +159,29 @@ function Checkout(){
                     <span>Shipping</span>
                     <span>Free</span>
                 </div>
+
+                <div className="mt-6">
+                    <h3 className="font-semibold text-[#5A4030] mb-3">Payment Method</h3>
+
+                    <div className="space-y-3">
+                    <label className="flex items-center gap-3 border border-[#DCCBBC] rounded-lg p-3 cursor-pointer">
+                        <input type="radio" name="payment" value="Cash on Delivery"
+                        onChange={(e)=>setPayment(e.target.value)}/>
+                        <span>Cash on Delivery</span>
+                    </label>
+                    <label className="flex items-center gap-3 border border-[#DCCBBC] rounded-lg p-3 cursor-pointer">
+                        <input type="radio" name="payment" value="UPI"
+                        onChange={(e)=>setPayment(e.target.value)}/>
+                        <span>UPI</span>
+                    </label>
+                    <label className="flex items-center gap-3 border border-[#DCCBBC] rounded-lg p-3 cursor-pointer">
+                        <input type="radio" name="payment" value="Credit/Debit Card"
+                        onChange={(e)=>setPayment(e.target.value)}/>
+                        <span>Credit/Debit Card</span>
+                    </label>
+                    </div>
+                </div>
+
                 <div className="flex justify-between text-lg font-semibold text-[#5A4030] mt-2">
                     <span>Total</span>
                     <span>₹{total}</span>

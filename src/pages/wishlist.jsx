@@ -41,7 +41,7 @@ function Wishlist(){
     }
 
     return(
-        <div className="min-h-screen bg-[#F5EDE2] flex flex-col items-center gap-5 px-4 sm:px-6 py-8 sm:py-12">
+        <div className="min-h-screen flex flex-col items-center gap-5 px-4 sm:px-6 py-8 sm:py-12">
             <h1 className="text-2xl sm:text-3xl font-serif text-[#5A4030] mb-6 sm:mb-10">Wishlist</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4 sm:px-6">
                 {wishlist.map((item)=>(
