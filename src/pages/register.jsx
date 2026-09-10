@@ -17,6 +17,14 @@ function Register(){
             toast.error("Try to fill the blanks")
             return;
         }
+        if(!email.includes("@")){
+         toast.error("Please enter a valid email")
+         return;
+        }
+        if(password.length < 4){
+         toast.warning("Password must be at least 4 characters")
+         return;
+        }
         if(password!==confirm){
             toast.error("Incorrect password")
             return;

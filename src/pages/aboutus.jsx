@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function About(){
 
     return(
-        <div className="min-h-screen bg-[#FBF8F3] px-4 sm:px-6 py-10 sm:py-16">
+        <div className="min-h-screen bg-[#FEFCFA] px-4 sm:px-6 py-10 sm:py-16">
 
             <div className="max-w-5xl mx-auto text-center">
 

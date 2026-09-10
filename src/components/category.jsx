@@ -3,11 +3,11 @@ import { Link } from "react-router-dom"
 function Category(){
 
     return(
-        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 sm:p-6 bg-[#FBF8F3]">
+        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 sm:p-6 bg-[#FDFBF8]">
 
         <div className="text-center mb-8 sm:mb-10">
-        <h2 className="font-serif text-xl sm:text-2xl text-[#5A4030]">OUR COLLECTIONS</h2>
-        <p className="text-[#8A6F5C] text-sm mt-2">Explore our handmade pieces</p>
+        <h2 className="font-serif text-xl sm:text-3xl text-[#5A4030]">OUR COLLECTIONS</h2>
+        <p className="text-[#8A6F5C] sm:text-xl mt-2">Explore our handmade pieces</p>
         </div>
 
        <div className="max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-6 px-4">
@@ -66,7 +66,6 @@ function Category(){
         </Link>
 
        </div>
-
         </div>
     )
 }

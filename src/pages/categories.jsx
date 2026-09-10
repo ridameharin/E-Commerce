@@ -4,7 +4,7 @@ function Categories(){
 
     return(
         <>
-         <div className="min-h-screen bg-[#FBF8F3] px-4 sm:px-6 py-6">
+         <div className="min-h-screen bg-[#FEFCFA] px-4 sm:px-6 py-6">
 
         <div className="text-center mb-8 sm:mb-10">
         <h2 className="font-serif text-xl sm:text-2xl text-[#5A4030] py-2">CATEGORIES</h2>

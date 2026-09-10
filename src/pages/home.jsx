@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Category from "../components/category";
+import Featured from "../components/featured";
 function Home(){
 
     return (
@@ -12,6 +13,7 @@ function Home(){
         transition top-[60%] left-[7%]">SHOP NOW →</Link>
          </div>   
          <Category/>  
+         <Featured/>
          </>
     )
 }

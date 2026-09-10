@@ -1,8 +1,8 @@
 import {Routes,Route} from 'react-router-dom'
 import { ToastContainer } from "react-toastify";
 
-import Navbar from './components/Navbar'
-import Footer from './components/footer'
+// import Navbar from './components/Navbar'
+// import Footer from './components/footer'
 import Home from './pages/home'
 import Cart from './pages/cart'
 import Login from './pages/login'
@@ -21,6 +21,7 @@ import Profile from './pages/profile';
 import Menu from './components/menu';
 import About from './pages/aboutus';
 import Layout from './components/layout';
+import Featured from './components/featured';
 
 
 function App(){
@@ -41,6 +42,7 @@ function App(){
       <Route path='/category' element={<Category/>}/>
       <Route path='/menu' element={<Menu/>}/>  
       <Route path='/aboutus' element={<About/>}/>
+      <Route path='/featured' element={<Featured/>}/>
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/wishlist' element={<Wishlist />} /> 

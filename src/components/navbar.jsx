@@ -23,7 +23,12 @@ function Navbar(){
         navigate("/shop")
     }
     const handleSearch=()=>{
+        if(search.trim() === ""){
+        navigate("/shop")
+        return
+    }
         navigate(`/shop?search=${search}`)
+        setSearch("")
     }
     useEffect(()=>{
         if(!searchParams.get("search")){
@@ -31,8 +36,10 @@ function Navbar(){
     }},[searchParams])
     return(
 
-         <nav className="flex w-full items-center justify-between px-8 py-4 text-[#5A4030] sm:px-8 border-b border-[#D8C5B3]">
-             <div>
+        //  <nav className="sticky top-0 z-50 bg-[#F5EDE2] flex w-full items-center justify-between py-4 text-[#5A4030] sm:px-8 border-b border-[#D8C5B3]">
+            <nav className="sticky top-0 z-50 flex w-full items-center justify-between px-4 sm:px-8 py-4 text-[#5A4030] bg-[#FAF7F2] border-b border-[#D8C5B3]">
+            
+            <div>
                 <h2 className="text-3xl font-serif">CROCHETTELLA</h2>
             </div>
             
@@ -48,13 +55,20 @@ function Navbar(){
                 <div className="flex items-center w-64 border border-gray-300 rounded-full px-4 py-2">
                 {/* </button> */}
                 <input value={search} onChange={(e)=>setSearch(e.target.value)}
+                onKeyDown={(e)=>{
+                    if(e.key==="Enter"){
+                        handleSearch()
+                    }
+                }}
                 className="outline-none w-full bg-transparent"
                 type="text" placeholder="Search..."/>
+                {/* {searchParams.get("search") ? (
+                      <button type="button" onClick={clearSearch}
+                        className="text-[#5A4030] text-xl">×</button>
+                     ) : ( */}
                 <button onClick={handleSearch}>
                 <Search className="w-5 h-5 text-[#5A4030] bg-transparent"/></button>
-                {search && (
-                <button type="button" onClick={clearSearch}>×</button>
-                )}
+                {/* )} */}
                 </div>
 
                 <Link to="/wishlist"><Heart className="w-5 h-5"/></Link>

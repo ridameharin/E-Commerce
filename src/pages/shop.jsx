@@ -42,20 +42,20 @@ function Shop(){
          fetchProducts();
     },[])
 
-    let filteredProducts=products.filter((prd)=>prd.name.toLowerCase().includes(search.toLowerCase()))
+    let filteredProducts=products.filter((prd)=>{
     
-    if(priceFilter==="Under 500"){
-        filteredProducts=filteredProducts.filter((prd)=>prd.price<500)
-    }
-    if(priceFilter==="500-1000"){
-        filteredProducts=filteredProducts.filter((prd)=>prd.price>=500 && prd.price<1000)
-    }
-    if(priceFilter==="1000-2000"){
-        filteredProducts=filteredProducts.filter((prd)=>prd.price>=1000 && prd.price<=2000)
-    }
-    if(priceFilter==="Above 2000"){
-        filteredProducts=filteredProducts.filter((prd)=>prd.price>2000)
-    }
+    const matchesearch =
+        prd.name.toLowerCase().includes(search.toLowerCase())
+
+    const matcheprice =
+        priceFilter === "all" ||
+        (priceFilter === "Under 500" && prd.price < 500) ||
+        (priceFilter === "500-1000" && prd.price >= 500 && prd.price < 1000) ||
+        (priceFilter === "1000-2000" && prd.price >= 1000 && prd.price <= 2000) ||
+        (priceFilter === "Above 2000" && prd.price > 2000)
+
+    return matchesearch && matcheprice
+})
     if( sortfilter==="Low to High"){
         filteredProducts.sort((a,b)=>a.price-b.price)
     }
@@ -111,81 +111,39 @@ function Shop(){
     }
     
     return(
-        <div className="min-h-screen">
-            <h1 className="text-xl sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-4 px-4">
-                {search ? `"${search}"` : "Explore handmade collections"}</h1>
+        <div className="min-h-screen bg-[#FEFCFA] px-4 sm:px-6 py-6">
+            <h1 className="text-xl sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-2 px-4">Explore handmade collections</h1>
 
             {/* <div className="w-fit mx-auto flex justify-center items-center gap-4 mb-8 px-2 py-4 border border-[#E5D8CA] 
             flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl"> */}
             <div className="w-[95%] sm:w-fit mx-auto flex justify-center items-center gap-3 sm:gap-4 mb-8 px-3 py-4 border 
-            border-[#E5D8CA] flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl">
+            border-[#E5D8CA] flex-col sm:flex-row bg-[#F5EDE2] rounded-xl">
 
 
-                <h3 className="text-[#6B4632] text-xl sm:text-2xl">Filter by Price:</h3>
+                <h3 className="text-[#6B4632] text-xl sm:text-2xl">Filter & Sort</h3>
                 <select value={sortfilter} onChange={(e)=>setSortfilter(e.target.value)}
-                    className="w-full sm:w-auto px-4 py-2 rounded-full border border-[#6B4632] bg-[#F5EDE2] text-[#6B4632]">
+                    className="w-full sm:w-auto px-4 py-2 rounded-lg border border-[#6B4632] bg-[#FBF8F3] text-[#6B4632] outline-none">
                         <option value="all">Sort by Price</option>
                         <option value="Low to High">Low to High</option>
                         <option value="High to Low">High to Low</option>
                 </select>
-                <button onClick={()=>setPriceFilter("all")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "all"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >All</button>
-            <button onClick={()=>setPriceFilter("Under 500")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "Under 500"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >Under 500</button>
-            <button onClick={()=>setPriceFilter("500-1000")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "500-1000"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >500-1000</button>
-            <button onClick={()=>setPriceFilter("1000-2000")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "1000-2000"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >1000-2000</button>
-            <button onClick={()=>setPriceFilter("Above 2000")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "Above 2000"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "border-[#6B4632] bg-[#F5EDE2] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >Above 2000</button>
-                {/* <button onClick={()=>setSortfilter("Low to high")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "Low to High"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >Low to High</button>
-                <button onClick={()=>setSortfilter("High to Low")}
-                className={`px-5 py-2 rounded-full border ${
-                priceFilter === "High to Low"
-                ? "bg-[#6B4632] text-white border-[#6B4632] shadow-sm"
-                : "bg-[#F5EDE2] border-[#6B4632] text-[#6B4632] hover:bg-[#E9DCCB]"
-                }`}
-                >High to Low</button> */}
+                <select value={priceFilter} onChange={(e)=>setPriceFilter(e.target.value)}
+                  className="w-full sm:w-48 px-4 py-2 rounded-lg border border-[#6B4632] bg-[#FBF8F3] text-[#6B4632] outline-none">
+                        <option value="all">All Prices</option>
+                        <option value="Under 500">Under ₹500</option>
+                        <option value="500-1000">₹500 - ₹1000</option>
+                        <option value="1000-2000">₹1000 - ₹2000</option>
+                        <option value="Above 2000">Above ₹2000</option>
+                 </select>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 py-2">
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 py-2">
                 {filteredProducts.map((product)=>(
-                    <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-4 bg-white">
+                    <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-2 bg-white">
                     <div className="relative">
                     <Link to={`/productdetails/${product.id}`} 
-                    className="rounded-lg p-3">
-                    <img src={product.image} alt={product.image}
+                    className="block rounded-lg p-3">
+                    <img src={product.image} alt={product.name}
                     className="w-full h-56 sm:h-64 object-cover mb-5 sm:mb-6"/>
                     <h3 className="font-semibold">{product.name}</h3>
                     <p className="text-gray-500">{product.category}</p>
@@ -202,18 +160,12 @@ function Shop(){
                     <button onClick={()=>handleAddCart(product)} type="button"
                     className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
                      Add to Cart</button>
-                     {/* <button
-                     type="button"
-                    onClick={() => handleWishlist(product)}
-                     className="mt-2 w-full border border-[#6B4632] text-[#6B4632] py-2 rounded-full"
-                    >
-                     ❤️ Add to Wishlist
-                    </button> */}
                     </div>
                     
                     
-                ))}
-            </div>
+               ))}
+             </div> 
+      
         </div>
     )
 }

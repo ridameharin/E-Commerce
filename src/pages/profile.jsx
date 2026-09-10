@@ -31,16 +31,16 @@ function Profile(){
         navigate("/login")
     }
     return(
-        <div className="min-h-screen bg-[#F5EDE2] px-4 sm:px-6 py-8 sm:py-12">
+        <div className="min-h-screen bg-[#FBF8F3] px-4 sm:px-6 py-8 sm:py-12">
 
-            <div className="bg-[#FBF8F3] border border-[#DCCBBC] max-w-5xl mx-auto rounded-2xl p-5 sm:p-10">
+            <div className="bg-[#F5EDE2] border border-[#DCCBBC] max-w-5xl mx-auto rounded-2xl p-5 sm:p-10">
                 <h1 className="text-2xl sm:text-4xl font-serif text-[#5A4030] text-center">
                 My Profile
             </h1>
 
             <div className="max-w-4xl mx-auto mt-10">
 
-                <div className="bg-[#FBF8F3] border border-[#E4D8CC] rounded-xl p-5 sm:p-6 text-center">
+                <div className="bg-[#F5EDE2] border border-[#E4D8CC] rounded-xl p-5 sm:p-6 text-center">
                     <h2 className="text-xl sm:text-2xl font-serif text-[#5A4030]">
                         Welcome {user?.name}
                     </h2>
@@ -53,20 +53,20 @@ function Profile(){
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-8">
                     
                     <Link to="/cart"
-                     className="bg-[#FBF8F3] border border-[#DCCBBC] p-5 sm:p-6 rounded-xl text-center hover:bg-white transition">
+                     className="bg-[#F5EDE2] border border-[#DCCBBC] p-5 sm:p-6 rounded-xl text-center hover:bg-[#FBF8F3]">
                     <h2 className="text-base sm:text-xl text-[#5A4030]">My Cart</h2>
                     <ShoppingCart className="w-7 h-7 mx-auto mt-3 text-[#6B4632]"/>
                     </Link>
                   
 
                     <Link to="/wishlist"
-                    className="bg-[#FBF8F3] border border-[#DCCBBC] p-6 rounded-xl text-center hover:bg-white">  
+                    className="bg-[#F5EDE2] border border-[#DCCBBC] p-6 rounded-xl text-center hover:bg-[#FBF8F3]">  
                     <h2 className="text-xl text-[#5A4030]">My Wishlist</h2>
                     <Heart className="w-7 h-7 mx-auto mt-3 text-[#6B4632]"/>                    
                     </Link>
 
                     <Link to="/orderhistory"
-                    className="bg-[#FBF8F3] border border-[#DCCBBC] p-6 rounded-xl text-center hover:bg-white">
+                    className="bg-[#F5EDE2] border border-[#DCCBBC] p-6 rounded-xl text-center hover:bg-[#FBF8F3]">
                     <h2 className="text-xl text-[#5A4030]">My Orders</h2>
                     <Package className="w-7 h-7 mx-auto mt-3 text-[#6B4632]"/></Link>
 

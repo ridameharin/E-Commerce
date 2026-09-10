@@ -102,7 +102,7 @@ function Cart(){
                
             </div>
         
-        <div className="w-full lg:w-[350px] bg-[#F5EDE2] rounded-xl p-5 mb-5 sm:p-6 lg:ml-auto">
+        <div className="w-full lg:w-[350px] bg-[#F5EDE2] rounded-xl p-5 mb-5 sm:p-6 lg:ml-auto lg:h-[300px]">
             <h2 className="text-2xl font-serif text-[#5A4030]">Order Summary</h2>
             <div className="border-t border-gray-300 my-6"></div>
             <div>

@@ -2,115 +2,251 @@
   "products": [
     {
       "id": "1",
-      "name": "Crochet Tote Bag",
+      "name": "Classic Brown Crochet Bag",
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use."
     },
     {
       "id": "2",
-      "name": "Crochet Tote Side Bag",
+      "name": "Cream Floral Crochet Bag",
       "price": 1499,
-      "category": "bags",
+      "category": "Bags",
       "image": "/images/Bags/Bags 2.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
-    },
-    {
-      "id": "3",
-      "name": "Crochet Tote Bag",
-      "price": 1699,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 3.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
-    },
-    {
-      "id": "4",
-      "name": "Check Tote Bag",
-      "price": 1999,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 5.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use."
+      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look."
     },
     {
       "id": "5",
-      "name": "Hair Band",
+      "name": "Daisy Crochet Headband",
       "price": 449,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 1.jpg",
-      "description": ""
+      "description": "Crochet flower headband with small white and yellow flowers."
     },
     {
-      "id": "6",
-      "name": "Bracelet",
-      "price": 499,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 2.jpg",
-      "description": ""
-    },
-    {
-      "id": "7",
-      "name": "Hair Clip",
-      "price": 399,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 3.jpg",
-      "description": ""
+      "id": "31",
+      "name": "Crochet Bunny Plushie",
+      "price": 1799,
+      "category": "Toys",
+      "image": "/images/Toys/Toys 3.jpg",
+      "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift."
     },
     {
       "id": "8",
-      "name": "Tulip Bracelet",
+      "name": "Floral Crochet Tulip Bracelet",
       "price": 499,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 4.jpg",
-      "description": ""
-    },
-    {
-      "id": "9",
-      "name": "key Chain",
-      "price": 299,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 5.jpg",
-      "description": ""
-    },
-    {
-      "id": "10",
-      "name": "Key Chain",
-      "price": 299,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 6.jpg",
-      "description": ""
+      "description": "A delicate crochet floral bracelet.Decorated with tiny colorful flowers for a charming look."
     },
     {
       "id": "11",
-      "name": "Key Chain",
-      "price": 299,
+      "name": "Blue Crochet Tie-Front Top",
+      "price": 1799,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 1.jpg",
-      "description": ""
+      "description": "A soft blue crochet top with a delicate tie-front design.Simple, stylish, and perfect for casual wear."
     },
     {
-      "id": "12",
-      "name": "Key Chain",
-      "price": 299,
+      "id": "22",
+      "name": "Brown Crochet Bell-Sleeve Top",
+      "price": 2599,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 2.jpg",
-      "description": ""
+      "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look."
     },
     {
       "id": "13",
-      "name": "Key Chain",
+      "name": "Navy Bow Handbag",
+      "price": 1999,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 4.jpg",
+      "description": "A navy crochet handbag with a small bow.Stylish and minimal for everyday wear."
+    },
+    {
+      "id": "10",
+      "name": "Sunflower Keychain",
       "price": 299,
-      "category": "Clothes",
-      "image": "/images/Clothes/Cloth 3.jpg",
-      "description": ""
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 6.jpg",
+      "description": "Crochet sunflower keychain with a small green leaf."
     },
     {
       "id": "14",
-      "name": "Key Chain",
-      "price": 299,
+      "name": "Floral Crochet Cardigan",
+      "price": 2499,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 4.jpg",
-      "description": ""
+      "description": "A soft crochet cardigan decorated with delicate blue flowers.Feminine, cozy, and perfect for everyday wear"
+    },
+    {
+      "id": "9",
+      "name": "Crochet Star Keychain",
+      "price": 299,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 5.jpg",
+      "description": "Cute crochet star-shaped keychain in yellow."
+    },
+    {
+      "id": "15",
+      "name": "Blue Crochet Flower Bouquet",
+      "price": 1799,
+      "category": "Gifts",
+      "image": "/images/Gifts/Gifts 1.jpg",
+      "description": "A beautiful handmade flower bouquet with a blue crochet flower.A thoughtful and elegant gift for someone special."
+    },
+    {
+      "id": "16",
+      "name": "Checkerboard Crochet Tote",
+      "price": 2499,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 6.jpg",
+      "description": "A brown crochet checkerboard tote bag.Spacious, stylish, and beautifully handmade."
+    },
+    {
+      "id": "17",
+      "name": "Croche Phone Case",
+      "price": 699,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 8.jpg",
+      "description": "Set of colorful crochet floral phone cases."
+    },
+    {
+      "id": "18",
+      "name": "Black & White Crochet Vest",
+      "price": 2399,
+      "category": "Clothes",
+      "image": "/images/Clothes/Cloth 3.jpg",
+      "description": "A modern crochet vest with a classic checkerboard pattern.Perfect for creating a trendy layered outfit."
+    },
+    {
+      "id": "19",
+      "name": "Crochet Mushroom Accessory Organiser",
+      "price": 1299,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 7.jpg",
+      "description": "A cute crochet mushroom decoration.Handmade with colorful details and a cozy feel."
+    },
+    {
+      "id": "20",
+      "name": "Striped Crochet Vest",
+      "price": 799,
+      "category": "Clothes",
+      "image": "/images/Clothes/Cloth 5.jpg",
+      "description": "A cream and brown striped crochet vest with floral details.Minimal and charming for effortless styling."
+    },
+    {
+      "id": "24",
+      "name": "Daisy Curtain Tieback",
+      "price": 799,
+      "category": "Decors",
+      "image": "/images/Decors/Decor 4.jpg",
+      "description": "A simple crochet tieback decorated with white daisiesFresh, elegant, and perfect for curtains."
+    },
+    {
+      "id": "3",
+      "name": "Bow Crochet Shoulder Bag",
+      "price": 1699,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 3.jpg",
+      "description": "A dark crochet shoulder bag with a bow.Cute, simple, and perfect for casual outfits."
+    },
+    {
+      "id": "4",
+      "name": "Heart Pattern Crochet Tote",
+      "price": 1999,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 5.jpg",
+      "description": "A cream crochet tote with a heart pattern.Playful, charming, and perfect for casual outings."
+    },
+    {
+      "id": "25",
+      "name": "Hanging Crochet Plant Holder",
+      "price": 599,
+      "category": "Decors",
+      "image": "/images/Decors/Decor 5.jpg",
+      "description": "A beautiful hanging crochet planter with greenery.Adds a natural and cozy feel to your home."
+    },
+    {
+      "id": "27",
+      "name": "Mini Crochet Sunflower",
+      "price": 899,
+      "category": "Gifts",
+      "image": "/images/Gifts/Gifts 4.jpg",
+      "description": "A charming handmade sunflower in a tiny pot.A simple and cheerful gift for any occasion."
+    },
+    {
+      "id": "23",
+      "name": "Crochet Table Runner",
+      "price": 999,
+      "category": "Decors",
+      "image": "/images/Decors/Decor 3.jpg",
+      "description": "An elegant crochet table runner with a beautiful pattern.Perfect for creating a cozy dining atmosphere."
+    },
+    {
+      "id": "28",
+      "name": "Crochet Flower Bouquet",
+      "price": 2399,
+      "category": "Gifts",
+      "image": "/images/Gifts/Gifts 5.jpg",
+      "description": "A delicate bouquet of handmade crochet flowers.Elegant, timeless, and perfect for gifting."
+    },
+    {
+      "id": "21",
+      "name": "Floral Curtain Tieback",
+      "price": 799,
+      "category": "Decors",
+      "image": "/images/Decors/Decor 1.jpg",
+      "description": "A delicate crochet tieback with soft floral details.Adds a charming touch to any room."
+    },
+    {
+      "id": "29",
+      "name": "Floral Crochet Notebook",
+      "price": 1799,
+      "category": "Gifts",
+      "image": "/images/Gifts/Gifts 6.jpg",
+      "description": "A lovely handmade notebook with a floral crochet cover.Perfect for notes, journaling, or as a thoughtful gift."
+    },
+    {
+      "id": "12",
+      "name": "Crochet Bear Curtain Holder",
+      "price": 1299,
+      "category": "Decors",
+      "image": "/images/Decors/Decor 2.jpg",
+      "description": "A cute handmade bear curtain holder.Perfect for adding warmth and character to your space."
+    },
+    {
+      "id": "30",
+      "name": "Classic Crochet Teddy Bear",
+      "price": 2199,
+      "category": "Toys",
+      "image": "/images/Toys/Toys 1.jpg",
+      "description": "A soft handmade teddy bear in warm brown.Perfect for cuddling or gifting."
+    },
+    {
+      "id": "6",
+      "name": "Sunflower Crochet Bracelet",
+      "price": 499,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 2.jpg",
+      "description": "Crochet sunflower bracelet with a simple white strap."
+    },
+    {
+      "id": "26",
+      "name": "Crochet Lavender Pot",
+      "price": 1299,
+      "category": "Gifts",
+      "image": "/images/Gifts/Gifts 2.jpg",
+      "description": "A cute crochet pot decorated with lavender flowers.Perfect for adding a cozy touch to any space."
+    },
+    {
+      "id": "7",
+      "name": "Colorful Bow Hair Clips",
+      "price": 399,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 3.jpg",
+      "description": "Colorful crochet bow hair clips.Perfect for adding a cute touch to any hairstyle."
     }
   ],
   "users": [
@@ -389,6 +525,111 @@
       "userid": "rOBrBxBb1dg",
       "payment": "UPI",
       "id": "oaxgbDP4VFY"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "fffdffhf dhgf",
+      "city": "pookki",
+      "total": 7396,
+      "items": [
+        {
+          "id": "yXQ7hXdXIcI",
+          "name": "Checkerboard Crochet Tote",
+          "price": 2499,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 6.jpg",
+          "description": "A brown crochet checkerboard tote bag.Spacious, stylish, and beautifully handmade.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "16",
+          "quantity": 1
+        },
+        {
+          "id": "FdDgkvrnl2c",
+          "name": "Crochet Mushroom Accessory Organiser",
+          "price": 1299,
+          "category": "Accessories",
+          "image": "/images/Accessories/Accessories 7.jpg",
+          "description": "A cute crochet mushroom decoration.Handmade with colorful details and a cozy feel.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "19",
+          "quantity": 1
+        },
+        {
+          "id": "X7qK_AdrMBY",
+          "name": "Crochet Table Runner",
+          "price": 999,
+          "category": "Decors",
+          "image": "/images/Decors/Decor 3.jpg",
+          "description": "An elegant crochet table runner with a beautiful pattern.Perfect for creating a cozy dining atmosphere.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "23",
+          "quantity": 1
+        },
+        {
+          "id": "h-Na4ZT6O5U",
+          "name": "Brown Crochet Bell-Sleeve Top",
+          "price": 2599,
+          "category": "Clothes",
+          "image": "/images/Clothes/Cloth 2.jpg",
+          "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "22",
+          "quantity": 1
+        }
+      ],
+      "userid": "rOBrBxBb1dg",
+      "payment": "Cash on Delivery",
+      "id": "OUsuRDyCUPk"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "p",
+      "city": "pookki",
+      "total": 4645,
+      "items": [
+        {
+          "id": "hp0NKH3ZpmM",
+          "name": "Cream Floral Crochet Bag",
+          "price": 1499,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 2.jpg",
+          "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "2",
+          "quantity": 1
+        },
+        {
+          "id": "XQoiSVLbfnk",
+          "name": "Daisy Crochet Headband",
+          "price": 449,
+          "category": "Accessories",
+          "image": "/images/Accessories/Accessories 1.jpg",
+          "description": "Crochet flower headband with small white and yellow flowers.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "5",
+          "quantity": 3
+        },
+        {
+          "id": "GF9iopLutWw",
+          "name": "Crochet Bunny Plushie",
+          "price": 1799,
+          "category": "Toys",
+          "image": "/images/Toys/Toys 3.jpg",
+          "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift.",
+          "userid": "rOBrBxBb1dg",
+          "productId": "31",
+          "quantity": 1
+        }
+      ],
+      "userid": "rOBrBxBb1dg",
+      "payment": "Cash on Delivery",
+      "id": "-QcgZb8w01Y"
     }
   ],
   "cart": [
@@ -448,59 +689,48 @@
       "quantity": 1
     },
     {
-      "id": "1Tvxeo_uBRw",
-      "name": "Crochet Tote Bag",
-      "price": 1899,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 1.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "55EuJyWqt10",
-      "productId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "ZW5R4HPvLZI",
-      "name": "Key Chain",
-      "price": 299,
-      "category": "Clothes",
-      "image": "/images/Clothes/Cloth 2.jpg",
-      "description": "",
-      "userid": "rOBrBxBb1dg",
-      "productId": "12",
-      "quantity": 1
-    },
-    {
-      "id": "urkiCDv7m0o",
-      "name": "Key Chain",
-      "price": 299,
-      "category": "Clothes",
-      "image": "/images/Clothes/Cloth 3.jpg",
-      "description": "",
-      "userid": "rOBrBxBb1dg",
-      "productId": "13",
-      "quantity": 1
-    },
-    {
-      "id": "RxJchIkFvlE",
-      "name": "Crochet Tote Bag",
-      "price": 1899,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 1.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "-uK-UhnApes",
-      "productId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "zZahsuHpbCc",
-      "name": "Crochet Tote Side Bag",
+      "id": "hp0NKH3ZpmM",
+      "name": "Cream Floral Crochet Bag",
       "price": 1499,
-      "category": "bags",
+      "category": "Bags",
       "image": "/images/Bags/Bags 2.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "-uK-UhnApes",
+      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+      "userid": "rOBrBxBb1dg",
       "productId": "2",
-      "quantity": 6
+      "quantity": 1
+    },
+    {
+      "id": "XQoiSVLbfnk",
+      "name": "Daisy Crochet Headband",
+      "price": 449,
+      "category": "Accessories",
+      "image": "/images/Accessories/Accessories 1.jpg",
+      "description": "Crochet flower headband with small white and yellow flowers.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "5",
+      "quantity": 3
+    },
+    {
+      "id": "GF9iopLutWw",
+      "name": "Crochet Bunny Plushie",
+      "price": 1799,
+      "category": "Toys",
+      "image": "/images/Toys/Toys 3.jpg",
+      "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "31",
+      "quantity": 1
+    },
+    {
+      "id": "6rFEpJ7x7NI",
+      "name": "Classic Brown Crochet Bag",
+      "price": 1899,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 1.jpg",
+      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "1",
+      "quantity": 1
     }
   ],
   "wishlist": [],

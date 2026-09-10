@@ -18,6 +18,14 @@ function Login(){
             toast.warning("Please fill the blanks")
             return;
         }
+        if(!email.includes("@")){
+         toast.error("Please enter a valid email")
+         return;
+        }
+        if(password.length < 4){
+         toast.warning("Password must be at least 4 characters")
+         return;
+        }
 
     try{
         const response=await axios.get(`http://localhost:3000/users?email=${email}`)

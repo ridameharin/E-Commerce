@@ -89,14 +89,14 @@ function Productdetails(){
             )
          }
     return (
-        <div className="min-h-screen border border-[#E5D8CA] rounded-xl p-4 sm:p-6 bg-white">
+        <div className="min-h-screen w-full max-w-7xl mx-auto p-4 sm:p-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="relative bg-[#F5EDE2] rounded-lg overflow-hidden">
                 <img src={product.image} alt={product.name}
                 className="w-full h-72 sm:h-96 lg:h-[600px] object-cover m-auto my-5 px-4 sm:px-7"/>
                 <button onClick={()=>handleWishlist(product)} type="button"
-                className="absolute top-3 right-3 bg-white rounded-full p-2">
-                <Heart size={25} className={
+                className="absolute top-4 right-6 bg-white rounded-full p-2">
+                <Heart size={35} className={
                 wishlist.some((item)=>item.productId===product.id)?
                  "fill-[#6B4632] text-[#6B4632]":"text-[#6B4632]"
                 }/></button>
