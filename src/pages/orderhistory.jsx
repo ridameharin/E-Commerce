@@ -33,7 +33,7 @@ function Orderhistory(){
                 className="bg-[#F5EDE2] border border-[#E4D8CC] rounded-xl p-4 sm:p-6">
                     <h2 className="text-base sm:text-xl font-semibold text-[#5A4030]">{ordr.name}</h2>
                     <p className="text-sm text-gray-500 mt-1">Order ID: {ordr.id}</p>
-                    {/* <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]"></div> */}
+                    <div className="flex justify-between items-center mt-5 pt-4 border-t border-[#DCCBBC]"></div>
                     <div>
                     <div className="mt-5 space-y-3">
                         {ordr.items?.map((item) => (

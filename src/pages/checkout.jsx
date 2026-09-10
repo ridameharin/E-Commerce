@@ -22,23 +22,10 @@ function Checkout(){
     const cart=useSelector((state)=>state.cart.items)
     console.log("Checkout cart:",cart)
     const userid=useSelector((state)=>state.auth.userid)
-    // const [load,setLoad]=useState(true)
-
+   
     const navigate=useNavigate()
     
     const total=cart.reduce((sum,item)=>sum+item.quantity*item.price,0)
-    // useEffect(()=>{
-    //     if(cart.length===0|| total===0){
-    //         toast.warning("Your cart is empty")
-    //         navigate("/cart")
-    //     }
-    // },[cart,total,navigate])
-    // useEffect(()=>{
-    //      if(cart.length > 0){
-    //     setLoad(false)
-    //      }
-    //     },[cart])
-
     const handleCheck=async(e)=>{
         e.preventDefault()
         if(cart.length===0|| total===0){
@@ -51,38 +38,14 @@ function Checkout(){
             return;
         }
 
-        // if(name.trim()===""){
-        //     toast.warning("Please enter your name")
-        //     return
-        // }
-        // if(email.trim()===""){
-        //     toast.warning("Please enter your email")
-        //     return
-        // }
         if(!email.includes("@")){
             toast.warning("Please enter a valid email")
             return
         }
-        // if(address.trim()===""){
-        //     toast.warning("Please enter your address")
-        //     return
-        // }
-        // if(phone.trim()===""){
-        //     toast.warning("Please enter your phone")
-        //     return
-        // }
         if(!/^\d{10}$/.test(phone)){
             toast.warning("Number must be 10 digits")
             return
         }
-        // if(city.trim()===""){
-        //     toast.warning("Please enter your city")
-        //     return
-        // }
-        // if(pin.trim()===""){
-        //     toast.warning("Please enter your pin")
-        //     return
-        // }
         if(!/^\d{6}$/.test(pin)){
             toast.warning("Pin must be 6 digits")
             return
@@ -113,7 +76,7 @@ function Checkout(){
         <div className="min-h-screen flex flex-col items-center gap-5 bg-[#F5EDE2]">
         <h2 className="text-2xl sm:text-3xl font-serif text-[#5A4030] mb-8 sm:mb-10 mt-8 sm:mt-10">CHECKOUT</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl px-4 sm:px-6">
-{/* <div className="w-full max-w-xl bg-[#FBF8F3] px-8 py-12 rounded-3xl shadow-sm"></div> */}
+        <div className="w-full max-w-xl bg-[#FBF8F3] px-8 py-12 rounded-3xl shadow-sm"></div>
             <div className="bg-[#FBF8F3] rounded-2xl p-5 sm:p-8 mb-8 shadow-sm border border-[#E4D8CC]">
             <h2 className="text-xl sm:text-2xl font-serif text-[#5A4030] mb-2">Shipping Details</h2>
             <div className="mt-4">
