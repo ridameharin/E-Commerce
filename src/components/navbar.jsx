@@ -36,7 +36,6 @@ function Navbar(){
     }},[searchParams])
     return(
 
-        //  <nav className="sticky top-0 z-50 bg-[#F5EDE2] flex w-full items-center justify-between py-4 text-[#5A4030] sm:px-8 border-b border-[#D8C5B3]">
             <nav className="sticky top-0 z-50 flex w-full items-center justify-between px-4 sm:px-8 py-4 text-[#5A4030] bg-[#FAF7F2] border-b border-[#D8C5B3]">
             
             <div>

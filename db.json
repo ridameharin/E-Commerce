@@ -253,8 +253,8 @@
     {
       "name": "amna",
       "email": "amnaa@gmail.com",
-      "password": "12345",
-      "confirm": "12345",
+      "password": "1234",
+      "confirm": "1234",
       "role": "user",
       "id": "q6V3XmHxb0M"
     },
@@ -293,8 +293,8 @@
     {
       "name": "amna",
       "email": "amnaa@gmail.com",
-      "phone": "1234",
-      "pin": "1234321fdr",
+      "phone": "1234098765",
+      "pin": "123456",
       "address": "pv",
       "city": "dfgdetrg",
       "total": 3398,
@@ -323,6 +323,7 @@
         }
       ],
       "userid": "q6V3XmHxb0M",
+      "payment": "Cash on Delivery",
       "id": "at-fFdGJbIE"
     },
     {
@@ -358,6 +359,7 @@
         }
       ],
       "userid": "1YfKLqB9KpQ",
+      "payment": "Cash on Delivery",
       "id": "88jzSG0TRW8"
     },
     {
@@ -404,6 +406,7 @@
         }
       ],
       "userid": "q6V3XmHxb0M",
+      "payment": "Cash on Delivery",
       "id": "8DPW0JUjdZg"
     },
     {
@@ -413,210 +416,10 @@
       "pin": "123456",
       "address": "p",
       "city": "pookki",
-      "total": 3697,
+      "total": 1799,
       "items": [
         {
-          "id": "HTbRl1ODHRI",
-          "name": "Crochet Tote Bag",
-          "price": 1699,
-          "category": "Bags",
-          "image": "/images/Bags/Bags 3.jpg",
-          "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "3",
-          "quantity": 2
-        },
-        {
-          "id": "HG6Xoh4-9Ms",
-          "name": "Key Chain",
-          "price": 299,
-          "category": "Accessories",
-          "image": "/images/Accessories/Accessories 6.jpg",
-          "description": "",
-          "userid": "rOBrBxBb1dg",
-          "productId": "10",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "id": "pprDsnWv8qs"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "1234567890",
-      "pin": "123456",
-      "address": "p",
-      "city": "pookki",
-      "total": 1899,
-      "items": [
-        {
-          "id": "565jMQOPRZc",
-          "name": "Crochet Tote Bag",
-          "price": 1899,
-          "category": "Bags",
-          "image": "/images/Bags/Bags 1.jpg",
-          "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "1",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "id": "4asOyzGDEdE"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "1234567890",
-      "pin": "123456",
-      "address": "p",
-      "city": "pookki",
-      "total": 299,
-      "items": [
-        {
-          "id": "ZW5R4HPvLZI",
-          "name": "Key Chain",
-          "price": 299,
-          "category": "Clothes",
-          "image": "/images/Clothes/Cloth 2.jpg",
-          "description": "",
-          "userid": "rOBrBxBb1dg",
-          "productId": "12",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "payment": "Cash on Delivery",
-      "id": "EhLE2ZGqRMk"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "1234567890",
-      "pin": "123456",
-      "address": "paredath\n",
-      "city": "pookki",
-      "total": 598,
-      "items": [
-        {
-          "id": "ZW5R4HPvLZI",
-          "name": "Key Chain",
-          "price": 299,
-          "category": "Clothes",
-          "image": "/images/Clothes/Cloth 2.jpg",
-          "description": "",
-          "userid": "rOBrBxBb1dg",
-          "productId": "12",
-          "quantity": 1
-        },
-        {
-          "id": "urkiCDv7m0o",
-          "name": "Key Chain",
-          "price": 299,
-          "category": "Clothes",
-          "image": "/images/Clothes/Cloth 3.jpg",
-          "description": "",
-          "userid": "rOBrBxBb1dg",
-          "productId": "13",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "payment": "UPI",
-      "id": "oaxgbDP4VFY"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "1234567890",
-      "pin": "123456",
-      "address": "fffdffhf dhgf",
-      "city": "pookki",
-      "total": 7396,
-      "items": [
-        {
-          "id": "yXQ7hXdXIcI",
-          "name": "Checkerboard Crochet Tote",
-          "price": 2499,
-          "category": "Bags",
-          "image": "/images/Bags/Bags 6.jpg",
-          "description": "A brown crochet checkerboard tote bag.Spacious, stylish, and beautifully handmade.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "16",
-          "quantity": 1
-        },
-        {
-          "id": "FdDgkvrnl2c",
-          "name": "Crochet Mushroom Accessory Organiser",
-          "price": 1299,
-          "category": "Accessories",
-          "image": "/images/Accessories/Accessories 7.jpg",
-          "description": "A cute crochet mushroom decoration.Handmade with colorful details and a cozy feel.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "19",
-          "quantity": 1
-        },
-        {
-          "id": "X7qK_AdrMBY",
-          "name": "Crochet Table Runner",
-          "price": 999,
-          "category": "Decors",
-          "image": "/images/Decors/Decor 3.jpg",
-          "description": "An elegant crochet table runner with a beautiful pattern.Perfect for creating a cozy dining atmosphere.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "23",
-          "quantity": 1
-        },
-        {
-          "id": "h-Na4ZT6O5U",
-          "name": "Brown Crochet Bell-Sleeve Top",
-          "price": 2599,
-          "category": "Clothes",
-          "image": "/images/Clothes/Cloth 2.jpg",
-          "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "22",
-          "quantity": 1
-        }
-      ],
-      "userid": "rOBrBxBb1dg",
-      "payment": "Cash on Delivery",
-      "id": "OUsuRDyCUPk"
-    },
-    {
-      "name": "rida",
-      "email": "rida@gmail.com",
-      "phone": "1234567890",
-      "pin": "123456",
-      "address": "p",
-      "city": "pookki",
-      "total": 4645,
-      "items": [
-        {
-          "id": "hp0NKH3ZpmM",
-          "name": "Cream Floral Crochet Bag",
-          "price": 1499,
-          "category": "Bags",
-          "image": "/images/Bags/Bags 2.jpg",
-          "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "2",
-          "quantity": 1
-        },
-        {
-          "id": "XQoiSVLbfnk",
-          "name": "Daisy Crochet Headband",
-          "price": 449,
-          "category": "Accessories",
-          "image": "/images/Accessories/Accessories 1.jpg",
-          "description": "Crochet flower headband with small white and yellow flowers.",
-          "userid": "rOBrBxBb1dg",
-          "productId": "5",
-          "quantity": 3
-        },
-        {
-          "id": "GF9iopLutWw",
+          "id": "vCD8ksGt79U",
           "name": "Crochet Bunny Plushie",
           "price": 1799,
           "category": "Toys",
@@ -628,111 +431,55 @@
         }
       ],
       "userid": "rOBrBxBb1dg",
-      "payment": "Cash on Delivery",
-      "id": "-QcgZb8w01Y"
+      "payment": "UPI",
+      "id": "wtw_kv01c3o"
     }
   ],
   "cart": [
     {
-      "id": "iM8aI2kIu4U",
-      "name": "Crochet Tote Bag",
-      "price": 1899,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 1.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "q6V3XmHxb0M",
-      "productId": "1",
-      "quantity": 1
-    },
-    {
-      "id": "Fu0B0klbTsM",
-      "name": "Key Chain",
-      "price": "299",
-      "category": "Clothes",
-      "image": "/images/Clothes/Cloth 2.jpg",
-      "description": "",
-      "userid": "q6V3XmHxb0M",
-      "productId": "12",
-      "quantity": 1
-    },
-    {
-      "id": "4pfUJqd5hDY",
-      "name": "Tulip Bracelet",
-      "price": "499",
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 4.jpg",
-      "description": "",
-      "userid": "q6V3XmHxb0M",
-      "productId": "8",
-      "quantity": 2
-    },
-    {
-      "id": "KHo7wjvSieQ",
-      "name": "Crochet Tote Side Bag",
-      "price": 1499,
-      "category": "bags",
-      "image": "/images/Bags/Bags 2.jpg",
-      "description": "A beautifully handcrafted crochet tote bag, perfect for everyday use.",
-      "userid": "55EuJyWqt10",
-      "productId": "2",
-      "quantity": 1
-    },
-    {
-      "id": "5WeV73zAsOY",
-      "name": "Bracelet",
-      "price": "499",
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 2.jpg",
-      "description": "",
-      "userid": "55EuJyWqt10",
-      "productId": "6",
-      "quantity": 1
-    },
-    {
-      "id": "hp0NKH3ZpmM",
-      "name": "Cream Floral Crochet Bag",
-      "price": 1499,
-      "category": "Bags",
-      "image": "/images/Bags/Bags 2.jpg",
-      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
-      "userid": "rOBrBxBb1dg",
-      "productId": "2",
-      "quantity": 1
-    },
-    {
-      "id": "XQoiSVLbfnk",
-      "name": "Daisy Crochet Headband",
-      "price": 449,
-      "category": "Accessories",
-      "image": "/images/Accessories/Accessories 1.jpg",
-      "description": "Crochet flower headband with small white and yellow flowers.",
-      "userid": "rOBrBxBb1dg",
-      "productId": "5",
-      "quantity": 3
-    },
-    {
-      "id": "GF9iopLutWw",
-      "name": "Crochet Bunny Plushie",
-      "price": 1799,
-      "category": "Toys",
-      "image": "/images/Toys/Toys 3.jpg",
-      "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift.",
-      "userid": "rOBrBxBb1dg",
-      "productId": "31",
-      "quantity": 1
-    },
-    {
-      "id": "6rFEpJ7x7NI",
+      "id": "sx7pQKYn8-g",
       "name": "Classic Brown Crochet Bag",
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
       "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
       "userid": "rOBrBxBb1dg",
-      "productId": "1",
+      "productId": "IyOr0rrC9CY",
+      "quantity": 1
+    },
+    {
+      "id": "rv0OIBaniJg",
+      "name": "Cream Floral Crochet Bag",
+      "price": 1499,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "tMpAttbISJQ",
       "quantity": 1
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "BUV0N_wTNL0",
+      "name": "Classic Brown Crochet Bag",
+      "price": 1899,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 1.jpg",
+      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
+      "userid": "1YfKLqB9KpQ",
+      "productId": "1"
+    },
+    {
+      "id": "tMpAttbISJQ",
+      "name": "Cream Floral Crochet Bag",
+      "price": 1499,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 2.jpg",
+      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+      "userid": "rOBrBxBb1dg",
+      "productId": "2"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

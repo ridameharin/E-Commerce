@@ -22,6 +22,8 @@ import Menu from './components/menu';
 import About from './pages/aboutus';
 import Layout from './components/layout';
 import Featured from './components/featured';
+import Notfound from './pages/Notfound';
+import Protect from './route/protect';
 
 
 function App(){
@@ -30,8 +32,11 @@ function App(){
    <>
    {/* <Navbar/> */}
     <Routes>
-       <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />  
+      <Route element={<Protect/>}>
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      </Route>
+         
     <Route element={<Layout/>}>
 
       <Route path='/' element={<Home />} />   
@@ -53,7 +58,7 @@ function App(){
         <Route path='/profile' element={<Profile />} />      
       </Route>
       </Route>
-
+      <Route path='*' element={<Notfound/>}/>
     </Routes>
     {/* <Footer/> */}
     <ToastContainer />

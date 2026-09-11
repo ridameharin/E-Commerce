@@ -88,7 +88,6 @@ function Shop(){
             navigate("/login")
             return;
         }
-       
         try{
         const current=await getWishlist(userid)
         const exist=current.find((prod)=>prod.productId===product.id)
@@ -136,8 +135,16 @@ function Shop(){
                         <option value="Above 2000">Above ₹2000</option>
                  </select>
             </div>
-
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 py-2">
+            
+            {filteredProducts.length === 0 ? (
+                <div className="text-center mt-30">
+                 <p className="text-center text-[#8A6F5C]-2xl text-lg mt-10">No products found</p>
+                 <button onClick={() => navigate("/shop")}
+                 className="mt-5 bg-[#6B4632] text-white px-8 py-3 hover:bg-[#5A4030] transition">
+                Explore More</button>
+                 </div>
+                ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 py-2">
                 {filteredProducts.map((product)=>(
                     <div key={product.id} className="border border-[#E5D8CA] rounded-xl p-2 bg-white">
                     <div className="relative">
@@ -165,6 +172,7 @@ function Shop(){
                     
                ))}
              </div> 
+                )}
       
         </div>
     )

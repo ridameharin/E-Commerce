@@ -2,6 +2,10 @@ import { useSelector,useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { removeWishlist,setWishlist } from "../redux/wishlistSlice"
 import { deleteWishlist,getWishlist } from "../services/wishlistService"
+import { getCart,addCart } from "../services/cartService"
+import { setCart } from "../redux/cartSlice"
+import { toast } from "react-toastify"
+import { Heart } from "lucide-react"
 
 function Wishlist(){
 
@@ -27,9 +31,25 @@ function Wishlist(){
         try{
         await deleteWishlist(id)
         dispatch(removeWishlist(id))
+        toast.info("Item removed from wishlist")
         }
         catch(error){
             console.log(error)
+        }
+    }
+    const handleAddCart=async(product)=>{
+        // if(!userid){
+        //     Navigate("/login")
+        // }
+        try{
+            await addCart(product,userid)
+            const data=await getCart(userid)
+            dispatch(setCart(data))
+            toast.success("Item added to cart")
+        }
+        catch(error){
+            toast.info("Something is wrong")
+            console.log(error);
         }
     }
     if(wishlist.length===0){
@@ -47,13 +67,17 @@ function Wishlist(){
                 {wishlist.map((item)=>(
                     <div key={item.id}
                     className="bg-[#FBF8F3] border border-[#DCCBBC] rounded-xl p-4 sm:p-5">
+                        <div className="relative">
                         <img src={item.image} alt={item.name}
                         className="w-full h-56 sm:h-64 object-cover rounded-lg"/>
+                        <button onClick={()=>handleRemove(item.id)} className="absolute top-3 right-3 bg-white rounded-full p-2">
+                        <Heart size={24} className="fill-[#6B4632] text-[#6B4632]"/></button>
+                        </div>
                         <div className="mt-3">
                             <h2 className="text-base sm:text-xl font-semibold text-[#5A4030]">{item.name}</h2>
                             <p className="font-semibold text-[#5A4030] mt-2">₹{item.price}</p>
-                            <button type="button" onClick={()=>handleRemove(item.id)}
-                                className="mt-3 w-full border border-[#6B4632] text-[#6B4632] py-2 rounded-full">Remove from Wishlist</button>
+                            <button type="button" onClick={()=>handleAddCart(item)}
+                                className="mt-3 w-full border border-[#6B4632] text-[#6B4632] py-2 rounded-full">Move to cart</button>
                         </div>
                     </div>
                 ))}

@@ -25,14 +25,11 @@ function Productdetails(){
          const fetchProduct=async()=>{
             try{
                 const response=await axios.get(`http://localhost:3000/products/${id}`)
-                setProduct(response.data);
-               
+                setProduct(response.data)
             }
             catch(error){
-                console.log(error);
-                
+                console.log(error);   
             }
-            
          }
 
          useEffect(()=>{
@@ -81,6 +78,21 @@ function Productdetails(){
             toast.error("Failed to remove from wishlist")
             }
             }
+            const handleBuynow=async()=>{
+                if(!userid){
+                    navigate("/login")
+                    return
+                }
+                try{
+                    await addCart(product,userid)
+                    const data=await getCart(userid)
+                    dispatch(setCart(data))
+                    navigate("/checkout")
+                }
+                catch(error){
+                    console.log(error);
+                }
+            }
          if(!product){
             return(
                 <div className="flex justify-center items-center h-96">
@@ -109,11 +121,16 @@ function Productdetails(){
                 <p className="text-xl sm:text-2xl font-semibold text-[#5A4030] mt-5">₹{product.price}</p>
 
                <div className="border-t border-gray-200 my-6 pt-5">
-                 <p className="text-gray-600 leading-7">{product.description}</p>
+                 <p className="text-gray-600 text-xl leading-7">{product.description}</p>
                
-                 <button onClick={handleCartAdd} 
+                 <div className="mt-15">
+                <button onClick={handleCartAdd} 
                 className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
                  Add to Cart</button>
+                 <button onClick={handleBuynow}
+                 className="w-full mt-3 bg-[#6B4632] text-white py-2 hover:bg-[#5A4030]">
+                 Buy Now</button>
+                 </div>
 
                </div>
             </div>

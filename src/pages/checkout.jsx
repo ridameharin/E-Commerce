@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import {useState} from "react"
 import { useDispatch,useSelector } from "react-redux";
 import { clearCart } from "../redux/cartSlice";
+import { deleteCart } from "../services/cartService";
 
 function Checkout(){
 
@@ -60,13 +61,15 @@ function Checkout(){
         }
         try{
             await axios.post("http://localhost:3000/orders",order)
+            for (const item of cart) {
+            await deleteCart(item.id)
+            }
             toast.success("Order Placed")
             navigate("/order")
             dispatch(clearCart())
         }
         catch(error){
             console.log(error);
-            
             toast.warning("Something went wrong.Please try again.")
         }
         

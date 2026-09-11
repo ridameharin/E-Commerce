@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
 
 function Category(){
 
@@ -12,56 +13,79 @@ function Category(){
 
        <div className="max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-6 px-4">
         <Link to='/categorydetails/Bags'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
         <div>
             <img src="/bags.jpg" alt="bags" className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
         </div>
+        <div className="flex justify-center items-center gap-2 mt-3">
         <h3 className="text-center mt-3 text-[#5A4030]">Bags</h3>
+        <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/> 
+        </div>
         </div>
         </Link>
 
         <Link to='/categorydetails/Clothes'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
             <div>
                 <img src="/clothes.jpg" alt="clothes" className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
+            <div className="flex justify-center items-center gap-2 mt-3">
             <h3 className="text-center mt-3 text-[#5A4030]">Clothes</h3>
+            <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/> 
+        </div>
         </div>
         </Link>
 
         <Link to='/categorydetails/Toys'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
             <div>
                 <img src="/toys.jpg" alt="toys" className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
+            <div className="flex justify-center items-center gap-2 mt-3">
             <h3 className="text-center mt-3 text-[#5A4030]">Toys</h3>
+            <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/> 
+        </div>
         </div>
         </Link>
 
         <Link to='/categorydetails/Accessories'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
             <div>
                 <img src="/accessories.jpg" alt="accessories" className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
+            <div className="flex justify-center items-center gap-2 mt-3">
             <h3 className="text-center mt-3 text-[#5A4030]">Accessories</h3>
+            <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/> 
+        </div>
         </div>
         </Link>
 
         <Link to='/categorydetails/Decors'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
             <div>
                 <img src="/decor.jpg" alt="decors" className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
-            <h3 className="text-center mt-3 text-[#5A4030]">Decors</h3>
+            <div className="flex justify-center items-center gap-2 mt-3">
+            <h3 className="text-center mt-2 text-[#5A4030]">Decors</h3>
+            <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/>     </div>
         </div>
         </Link>
 
         <Link to='/categorydetails/Gifts'>
-        <div className="border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
+        <div className="group relative border border-[#E5D8CA] rounded-xl p-4 bg-white hover:border-[#C9AD96] hover:-translate-y-1 hover:shadow-md">
             <div>
                 <img src="/gift.jpg" alt="gifts"  className="w-full h-56 sm:64 object-cover rounded-lg border border-[#E5D8CA] mb-6"/>
             </div>
+            <div className="flex justify-center items-center gap-2 mt-3">
             <h3 className="text-center mt-3 text-[#5A4030]">Gifts</h3>
+            <ArrowRight size={24}
+             className="text-[#6B4632] opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 translate-x-5"/>
+        </div>
         </div>
         </Link>
 
