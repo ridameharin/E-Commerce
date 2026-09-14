@@ -1,79 +1,79 @@
-import { createContext,useState,useEffect } from "react";
-import { toast } from "react-toastify";
-import axios from "axios";
+// import { createContext,useState,useEffect } from "react";
+// import { toast } from "react-toastify";
+// import axios from "axios";
 
-export const cartContext=createContext()
+// export const cartContext=createContext()
 
-function Addcart({children}){
+// function Addcart({children}){
 
-    const [cart,setCart]=useState([])
+//     const [cart,setCart]=useState([])
 
-    const fetchingCart=async()=>{
-        try{
-            const response=await axios.get("http://localhost:3000/cart")
-            setCart(response.data)
-        }
-        catch(error){
-            console.log(error);
+//     const fetchingCart=async()=>{
+//         try{
+//             const response=await axios.get("http://localhost:3000/cart")
+//             setCart(response.data)
+//         }
+//         catch(error){
+//             console.log(error);
             
-        }
-    }
+//         }
+//     }
 
-    useEffect(()=>{
-        fetchingCart();
-    },[])
+//     useEffect(()=>{
+//         fetchingCart();
+//     },[])
 
-    const addtocart=async(product)=>{
-        const existing=cart.find((item)=>item.id===product.id)
-        if(!existing){ 
-            await axios.post("http://localhost:3000/cart",{
-            ...product,quantity:1
-         })}
-         else{
-            await axios.patch(`http://localhost:3000/cart/${existing.id}`,{
-                quantity:existing.quantity+1
-            })
-         }
-         toast.success("Item added to Cart")
+//     const addtocart=async(product)=>{
+//         const existing=cart.find((item)=>item.id===product.id)
+//         if(!existing){ 
+//             await axios.post("http://localhost:3000/cart",{
+//             ...product,quantity:1
+//          })}
+//          else{
+//             await axios.patch(`http://localhost:3000/cart/${existing.id}`,{
+//                 quantity:existing.quantity+1
+//             })
+//          }
+//          toast.success("Item added to Cart")
         
-        // setCart([...cart,product])
-        setCart((prv)=>{
-            const existing=prv.find((item)=>item.id===product.id)
-            if(existing){
-                return prv.map((item)=>(
-                    item.id===product.id?{...item,quantity:item.quantity+1}:item
-                ))
-            }
-            return [...prv,{...product,quantity:1}]
-        });
-    }
+//         // setCart([...cart,product])
+//         setCart((prv)=>{
+//             const existing=prv.find((item)=>item.id===product.id)
+//             if(existing){
+//                 return prv.map((item)=>(
+//                     item.id===product.id?{...item,quantity:item.quantity+1}:item
+//                 ))
+//             }
+//             return [...prv,{...product,quantity:1}]
+//         });
+//     }
 
-    const remove=((id)=>{
-        setCart((prv)=>(
-           prv.filter((item)=>item.id!==id)
-        ))
-    })
+//     const remove=((id)=>{
+//         setCart((prv)=>(
+//            prv.filter((item)=>item.id!==id)
+//         ))
+//     })
 
-    const increase=(id)=>{
-        setCart((prv)=>
-        prv.map((item)=>item.id===id?
-        {...item,quantity:item.quantity+1}:item))
-    }
+//     const increase=(id)=>{
+//         setCart((prv)=>
+//         prv.map((item)=>item.id===id?
+//         {...item,quantity:item.quantity+1}:item))
+//     }
 
-    const decrease=(id)=>{
-        setCart((prv)=>
-        prv.map((item)=>item.id===id && item.quantity > 1?
-       {...item,quantity:item.quantity-1}:item))
-    }
+//     const decrease=(id)=>{
+//         setCart((prv)=>
+//         prv.map((item)=>item.id===id && item.quantity > 1?
+//        {...item,quantity:item.quantity-1}:item))
+//     }
 
-    const clearCart=async()=>{
-            setCart([])
-    }
+//     const clearCart=async()=>{
+//             setCart([])
+//     }
 
-    return(
-        <cartContext.Provider value={{cart,setCart,addtocart,remove,increase,decrease,clearCart}}>
-            {children}
-        </cartContext.Provider>
-    )
-}
-export default Addcart;
+//     return(
+//         <cartContext.Provider value={{cart,setCart,addtocart,remove,increase,decrease,clearCart}}>
+//             {children}
+//         </cartContext.Provider>
+//     )
+// }
+// export default Addcart;

@@ -275,18 +275,11 @@
       "id": "1YfKLqB9KpQ"
     },
     {
-      "name": "munavvar",
-      "email": "munu@gmail.com",
-      "password": "1qaz",
+      "name": "ridap",
+      "email": "ridap@gmail.com",
+      "password": "1q2w",
       "role": "user",
-      "id": "55EuJyWqt10"
-    },
-    {
-      "name": "NIdhal  PK",
-      "email": "nidhal@gmail.com",
-      "password": "opennithu",
-      "role": "user",
-      "id": "-uK-UhnApes"
+      "id": "NdLLaX6nyVs"
     }
   ],
   "orders": [
@@ -433,6 +426,31 @@
       "userid": "rOBrBxBb1dg",
       "payment": "UPI",
       "id": "wtw_kv01c3o"
+    },
+    {
+      "name": "rida",
+      "email": "rida@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "p",
+      "city": "pookki",
+      "total": 5996,
+      "items": [
+        {
+          "id": "PCDNVNE0gwQ",
+          "name": "Cream Floral Crochet Bag",
+          "price": 1499,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 2.jpg",
+          "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+          "userid": "NdLLaX6nyVs",
+          "productId": "2",
+          "quantity": 4
+        }
+      ],
+      "userid": "NdLLaX6nyVs",
+      "payment": "Cash on Delivery",
+      "id": "rJOEX8j3kXs"
     }
   ],
   "cart": [
@@ -471,7 +489,7 @@
       "productId": "1"
     },
     {
-      "id": "tMpAttbISJQ",
+      "id": "sU_wjocMfXo",
       "name": "Cream Floral Crochet Bag",
       "price": 1499,
       "category": "Bags",

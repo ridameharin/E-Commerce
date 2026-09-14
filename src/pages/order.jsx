@@ -10,10 +10,10 @@ function Order(){
         <h1 className="text-2xl sm:text-3xl font-serif text-[#5A4030]">ORDER PLACED SUCCESSFULLY!!!</h1>
         <p className="text-base sm:text-lg text-[#5A4030] mt-4">Thankyou for shopping with us</p>
         <button onClick={()=>navigate("/shop")}
-        className="mx-auto mt-10 block bg-[#6B4632] text-white px-8 sm:px-10 py-3 rounded-full hover:bg-[#5A4030]">
+        className="mx-auto mt-10 block bg-[#6B4632] text-white px-8 sm:px-10 py-3 hover:bg-[#5A4030]">
         Continue Shopping</button>
         <button onClick={()=>navigate("/orderhistory")}
-        className="mx-auto mt-10 block bg-[#6B4632] text-white px-8 sm:px-10 py-3 rounded-full hover:bg-[#5A4030]">
+        className="mx-auto mt-10 block bg-[#6B4632] text-white px-8 sm:px-10 py-3 hover:bg-[#5A4030]">
         View Order Summary</button>
 
         </div>

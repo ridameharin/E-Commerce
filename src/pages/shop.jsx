@@ -1,5 +1,3 @@
-// import { useContext, useEffect, useState } from "react";
-// import { cartContext } from "../contexts/cartContext";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { Link,useNavigate } from "react-router-dom";
@@ -17,9 +15,9 @@ function Shop(){
 
     const [products,setProducts]=useState([])
     const [searchParams]=useSearchParams()
-    // const [search,setSearch]=useState(searchParams.get("search") || "")
+
     const search = searchParams.get("search") || "";
-    // const {addtocart}=useContext(cartContext)
+   
     const navigate=useNavigate()
     const dispatch=useDispatch()
     const userid=useSelector((state)=>state.auth.userid)
@@ -113,8 +111,6 @@ function Shop(){
         <div className="min-h-screen bg-[#FEFCFA] px-4 sm:px-6 py-6">
             <h1 className="text-xl sm:text-2xl font-serif text-[#5A4030] text-center mb-6 mt-2 px-4">Explore handmade collections</h1>
 
-            {/* <div className="w-fit mx-auto flex justify-center items-center gap-4 mb-8 px-2 py-4 border border-[#E5D8CA] 
-            flex-col sm:flex-row bg-[#F5EDE2] rounded-3xl"> */}
             <div className="w-[95%] sm:w-fit mx-auto flex justify-center items-center gap-3 sm:gap-4 mb-8 px-3 py-4 border 
             border-[#E5D8CA] flex-col sm:flex-row bg-[#F5EDE2] rounded-xl">
 

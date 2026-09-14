@@ -1,6 +1,3 @@
-// import { useContext, useState } from "react";
-// import { cartContext } from "../contexts/cartContext";
-
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

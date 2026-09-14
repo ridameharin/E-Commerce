@@ -1,8 +1,6 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
 import axios from 'axios'
-// import { useContext } from "react"
-// import { cartContext } from "../contexts/cartContext"
 import { useDispatch,useSelector } from "react-redux"
 import { addCart,getCart } from "../services/cartService"
 import { addWishlist,getWishlist,deleteWishlist } from "../services/wishlistService";
@@ -14,7 +12,6 @@ import { useNavigate } from "react-router-dom"
 
 function Productdetails(){
 
-        //  const {addtocart}=useContext(cartContext)
          const {id}=useParams();
          const [product,setProduct]=useState("")
          const navigate=useNavigate()
