@@ -30,6 +30,7 @@ function Login(){
     try{
         const response=await axios.get(`http://localhost:3000/users?email=${email}`)
         const user=response.data[0];
+        
         if(!user){
             toast.error("User Not Found")
             return;
@@ -43,7 +44,13 @@ function Login(){
          role: user.role
         }))
         toast.success("Login Successful")
+
+        // navigate("/")
+        if(user.role === "admin"){
+         navigate("/admin/dashboard")
+        }else{
         navigate("/")
+        }
     }
     catch(error){
         toast.warning("Something went wrong.Please try again.")

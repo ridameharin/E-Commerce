@@ -24,6 +24,8 @@ import Layout from './components/layout';
 import Featured from './components/featured';
 import Notfound from './pages/Notfound';
 import Protect from './route/protect';
+import Dashboard from './pages/Admin/Dashboard';
+import AdminProtected from './route/AdminProtect';
 
 
 function App(){
@@ -58,6 +60,11 @@ function App(){
         <Route path='/profile' element={<Profile />} />      
       </Route>
       </Route>
+
+      <Route element={<AdminProtected/>}>
+        <Route path="/admin/dashboard" element={<Dashboard />}/>
+      </Route>
+      
       <Route path='*' element={<Notfound/>}/>
     </Routes>
     {/* <Footer/> */}
