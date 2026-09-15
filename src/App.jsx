@@ -24,8 +24,11 @@ import Layout from './components/layout';
 import Featured from './components/featured';
 import Notfound from './pages/Notfound';
 import Protect from './route/protect';
+
 import Dashboard from './pages/Admin/Dashboard';
 import AdminProtected from './route/AdminProtect';
+import AdminLayout from './components/Admin/AdminLayout';
+import Products from './components/Admin/Products';
 
 
 function App(){
@@ -62,9 +65,12 @@ function App(){
       </Route>
 
       <Route element={<AdminProtected/>}>
-        <Route path="/admin/dashboard" element={<Dashboard />}/>
+        <Route element={<AdminLayout/>}>
+          <Route path="/admin/dashboard" element={<Dashboard />}/>
+          <Route path="/admin/products" element={<Products />}/>
+        </Route>
       </Route>
-      
+
       <Route path='*' element={<Notfound/>}/>
     </Routes>
     {/* <Footer/> */}
