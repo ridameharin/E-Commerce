@@ -54,7 +54,7 @@ function Checkout(){
             return;
         }
         const order={
-            name,email,phone,pin,address,city,total,items:cart,userid,payment
+            name,email,phone,pin,address,city,total,items:cart,userid,payment,status:"pending"
         }
         try{
             await axios.post("http://localhost:3000/orders",order)

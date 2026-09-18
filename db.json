@@ -6,7 +6,9 @@
       "price": 1899,
       "category": "Bags",
       "image": "/images/Bags/Bags 1.jpg",
-      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use."
+      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
+      "deleted": false,
+      "stock": 1
     },
     {
       "id": "2",
@@ -54,7 +56,8 @@
       "price": 2599,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 2.jpg",
-      "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look."
+      "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
+      "stock": "23"
     },
     {
       "id": "13",
@@ -238,7 +241,9 @@
       "price": 1299,
       "category": "Gifts",
       "image": "/images/Gifts/Gifts 2.jpg",
-      "description": "A cute crochet pot decorated with lavender flowers.Perfect for adding a cozy touch to any space."
+      "description": "A cute crochet pot decorated with lavender flowers.Perfect for adding a cozy touch to any space.",
+      "deleted": false,
+      "stock": 1
     },
     {
       "id": "7",
@@ -246,7 +251,9 @@
       "price": 399,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 3.jpg",
-      "description": "Colorful crochet bow hair clips.Perfect for adding a cute touch to any hairstyle."
+      "description": "Colorful crochet bow hair clips.Perfect for adding a cute touch to any hairstyle.",
+      "stock": 1,
+      "deleted": false
     }
   ],
   "users": [
