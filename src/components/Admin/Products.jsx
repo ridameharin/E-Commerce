@@ -11,6 +11,9 @@ function Products(){
     const [show,setShow]=useState(false)
     const [deleteId,setDeleteId]=useState(null)
     const [search,setSearch]=useState("")
+    const [currentpage,setCurrentpage]=useState(1)
+    const productsperPage=7
+
     const [forms,setForms]=useState({
         name:"",image:"",category:"",price:"",stock:""
     })
@@ -132,13 +135,19 @@ function Products(){
     const filteredProducts=products.filter((product)=>!product.deleted)
     .filter((product)=>product.name.toLowerCase().includes(search.toLowerCase()))
 
+    const lastIndex=currentpage*productsperPage
+    const firstIndex=lastIndex-productsperPage
+    const currentProducts=filteredProducts.slice(firstIndex,lastIndex)
+    const totalPages=Math.ceil(filteredProducts.length/productsperPage)
+
     return(
         <div>
         <div className="flex justify-between items-center mb-6">
             <div className="flex flex-col items-center gap-3">
             <h1 className="text-2xl mr-20 font-serif text-[#5A4030]">Products</h1>
-            <input type="text" placeholder="Search product..." value={search}
-             onChange={(e)=>setSearch(e.target.value)} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none"/>
+            <input type="text" placeholder="Search product..." value={search} 
+             onChange={(e)=>{setSearch(e.target.value) 
+             setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none"/>
             <h3 className="text-sm mr-20 text-[#5A4030]">Total Products : {products.length}</h3>
             </div>
             <button onClick={()=>setShow(true)} className="bg-[#6B4632] text-white px-5 py-2 rounded-lg">
@@ -188,7 +197,7 @@ function Products(){
                         <td colSpan="6" className="text-center p-8 text-[#5A4030]">No products found.</td>
                     </tr>
                 ):(
-                    filteredProducts.map((product)=>(
+                    currentProducts.map((product)=>(
                     <tr key={product.id} className="border-t border-[#DCCBBC]">
                         <td className="p-4">
                             <div className="flex items-center gap-4">
@@ -261,6 +270,15 @@ function Products(){
             </table>
             )}
             </div>
+            {totalPages >1 && (
+                <div className="flex justify-center items-center gap-3 mt-6">
+                    <button onClick={()=>setCurrentpage(currentpage-1)} disabled={currentpage===1}
+                    className="px-4 py-2 rounded-lg bg-[#E9DED1] text-[#5A4030] disabled:opacity-50">Previous</button>
+                    <span className="text-[#5A4030]">Page {currentpage} of {totalPages}</span>
+                    <button onClick={()=>setCurrentpage(currentpage+1)} disabled={currentpage===totalPages}
+                    className="px-4 py-2 rounded-lg bg-[#E9DED1] text-[#5A4030] disabled:opacity-50">Next</button>
+                    </div>
+            )}
 
                 {deleteId && (
                     <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
