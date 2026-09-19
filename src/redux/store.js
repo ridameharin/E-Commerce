@@ -4,6 +4,7 @@ import authReducer from './authSlice'
 import wishlistReducer from "./wishlistSlice";
 import productReducer from "./AdminSlice/productSlice"
 import userReducer from "./AdminSlice/userSlice"
+import orderReducer from "./AdminSlice/orderSlice"
 
 
 export const store=configureStore({
@@ -12,6 +13,7 @@ export const store=configureStore({
         auth:authReducer,
         wishlist:wishlistReducer,
         products:productReducer,
-        users:userReducer
+        users:userReducer,
+        orders:orderReducer
     }
 })

@@ -30,6 +30,7 @@ import AdminProtected from './route/AdminProtect';
 import AdminLayout from './components/Admin/AdminLayout';
 import Products from './components/Admin/Products';
 import Users from './components/Admin/Users';
+import Orders from './components/Admin/Orders'
 
 
 function App(){
@@ -70,6 +71,7 @@ function App(){
           <Route path="/admin/dashboard" element={<Dashboard />}/>
           <Route path="/admin/products" element={<Products />}/>
           <Route path="/admin/users" element={<Users />}/>
+          <Route path="/admin/orders" element={<Orders />}/>
         </Route>
       </Route>
 
