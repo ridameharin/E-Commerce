@@ -44,18 +44,6 @@ function Products(){
             console.log(error)
         }
     }
-    const deleteProducts=async(id)=>{
-        try{
-        await deleteProduct(id)
-        const dlt=products.filter((item)=>item.id!==id)
-        dispatch(setProducts(dlt))
-        console.log(response.data);
-        
-        }
-        catch(error){
-            console.log(error)
-        }
-    }
     const softDelete=async()=>{
         try{
             const data=await updateProduct(deleteId,{
@@ -100,7 +88,7 @@ function Products(){
             console.log(error)
         }
     }
-    const editProducts=async(id)=>{
+    const editProducts=async()=>{
         try{
             const data = await updateProduct(edit, forms)
             const update=products.map((item)=>item.id === edit ?data:item)
@@ -207,7 +195,7 @@ function Products(){
                             </div>
                         </td>
                         <td className="p-4">{product.category}</td>
-                        <td className="p-4">₹{product.price}</td>                        
+                        <td className="p-4">₹{product.price}/-</td>                        
                         <td className="p-4">{product.stock}</td>                        
 
                         <td className="p-4">
@@ -222,9 +210,10 @@ function Products(){
                     )))}
                 </tbody>
             </table>
+        </div>
 
-            <div className="mt-8">
-            <h2 className="text-xl font-serif text-[#5A4030] mb-4 text-center border-b border-[#DCCBBC] pb-3">Soft Deleted Products</h2>
+            <div className="mt-8 bg-[#FBF8F3] rounded-lg overflow-hidden">
+            <h2 className="text-xl font-serif text-[#5A4030] text-center border-b border-[#DCCBBC] py-4">Soft Deleted Products</h2>
                 {products.filter((product) => product.deleted).length === 0 ?(
                     <div className="bg-[#FBF8F3] text-center p-8 text-[#5A4030] rounded-lg">
                         No soft deleted products.</div>
@@ -240,13 +229,7 @@ function Products(){
              </thead>
 
              <tbody>
-                {products.filter((product) => product.deleted).length === 0 ? (
-                 <tr>
-                 <td colSpan="4" className="text-center p-8 text-[#5A4030]">
-                  No soft deleted products.</td>
-                 </tr>
-                  ) : (
-                products.filter((product) => product.deleted)
+                {products.filter((product) => product.deleted)
                 .map((product) => (
                     <tr key={product.id}
                         className="border-t border-[#DCCBBC]">
@@ -265,7 +248,7 @@ function Products(){
                                 className="px-4 py-2 rounded-lg bg-[#6B4632] text-white">Restock</button>
                         </td>
                     </tr>
-                )))}
+                ))}
              </tbody>
             </table>
             )}
@@ -295,7 +278,7 @@ function Products(){
                      </div>
                 )}
 
-        </div>
+        
         </div>
     )
 }

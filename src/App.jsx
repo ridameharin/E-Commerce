@@ -29,6 +29,7 @@ import Dashboard from './pages/Admin/Dashboard';
 import AdminProtected from './route/AdminProtect';
 import AdminLayout from './components/Admin/AdminLayout';
 import Products from './components/Admin/Products';
+import Users from './components/Admin/Users';
 
 
 function App(){
@@ -68,6 +69,7 @@ function App(){
         <Route element={<AdminLayout/>}>
           <Route path="/admin/dashboard" element={<Dashboard />}/>
           <Route path="/admin/products" element={<Products />}/>
+          <Route path="/admin/users" element={<Users />}/>
         </Route>
       </Route>
 

@@ -8,7 +8,7 @@
       "image": "/images/Bags/Bags 1.jpg",
       "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
       "deleted": false,
-      "stock": 1
+      "stock": "7"
     },
     {
       "id": "2",
@@ -16,7 +16,8 @@
       "price": 1499,
       "category": "Bags",
       "image": "/images/Bags/Bags 2.jpg",
-      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look."
+      "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+      "stock": "4"
     },
     {
       "id": "5",
@@ -24,7 +25,8 @@
       "price": 449,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 1.jpg",
-      "description": "Crochet flower headband with small white and yellow flowers."
+      "description": "Crochet flower headband with small white and yellow flowers.",
+      "stock": "0"
     },
     {
       "id": "31",
@@ -32,7 +34,8 @@
       "price": 1799,
       "category": "Toys",
       "image": "/images/Toys/Toys 3.jpg",
-      "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift."
+      "description": "A sweet little bunny with soft pastel colors.Perfect for children or as a cute gift.",
+      "stock": "3"
     },
     {
       "id": "8",
@@ -40,7 +43,8 @@
       "price": 499,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 4.jpg",
-      "description": "A delicate crochet floral bracelet.Decorated with tiny colorful flowers for a charming look."
+      "description": "A delicate crochet floral bracelet.Decorated with tiny colorful flowers for a charming look.",
+      "stock": "2"
     },
     {
       "id": "11",
@@ -48,7 +52,8 @@
       "price": 1799,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 1.jpg",
-      "description": "A soft blue crochet top with a delicate tie-front design.Simple, stylish, and perfect for casual wear."
+      "description": "A soft blue crochet top with a delicate tie-front design.Simple, stylish, and perfect for casual wear.",
+      "stock": "4"
     },
     {
       "id": "22",
@@ -57,7 +62,8 @@
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 2.jpg",
       "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
-      "stock": "23"
+      "stock": 1,
+      "deleted": false
     },
     {
       "id": "13",
@@ -65,7 +71,9 @@
       "price": 1999,
       "category": "Bags",
       "image": "/images/Bags/Bags 4.jpg",
-      "description": "A navy crochet handbag with a small bow.Stylish and minimal for everyday wear."
+      "description": "A navy crochet handbag with a small bow.Stylish and minimal for everyday wear.",
+      "stock": 1,
+      "deleted": false
     },
     {
       "id": "10",
@@ -73,7 +81,8 @@
       "price": 299,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 6.jpg",
-      "description": "Crochet sunflower keychain with a small green leaf."
+      "description": "Crochet sunflower keychain with a small green leaf.",
+      "stock": "5"
     },
     {
       "id": "14",
@@ -81,7 +90,8 @@
       "price": 2499,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 4.jpg",
-      "description": "A soft crochet cardigan decorated with delicate blue flowers.Feminine, cozy, and perfect for everyday wear"
+      "description": "A soft crochet cardigan decorated with delicate blue flowers.Feminine, cozy, and perfect for everyday wear",
+      "stock": "1"
     },
     {
       "id": "9",
@@ -89,7 +99,8 @@
       "price": 299,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 5.jpg",
-      "description": "Cute crochet star-shaped keychain in yellow."
+      "description": "Cute crochet star-shaped keychain in yellow.",
+      "stock": "2"
     },
     {
       "id": "15",
@@ -97,7 +108,8 @@
       "price": 1799,
       "category": "Gifts",
       "image": "/images/Gifts/Gifts 1.jpg",
-      "description": "A beautiful handmade flower bouquet with a blue crochet flower.A thoughtful and elegant gift for someone special."
+      "description": "A beautiful handmade flower bouquet with a blue crochet flower.A thoughtful and elegant gift for someone special.",
+      "stock": "1"
     },
     {
       "id": "16",
@@ -105,7 +117,8 @@
       "price": 2499,
       "category": "Bags",
       "image": "/images/Bags/Bags 6.jpg",
-      "description": "A brown crochet checkerboard tote bag.Spacious, stylish, and beautifully handmade."
+      "description": "A brown crochet checkerboard tote bag.Spacious, stylish, and beautifully handmade.",
+      "stock": "2"
     },
     {
       "id": "17",
@@ -113,7 +126,8 @@
       "price": 699,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 8.jpg",
-      "description": "Set of colorful crochet floral phone cases."
+      "description": "Set of colorful crochet floral phone cases.",
+      "stock": "3"
     },
     {
       "id": "18",
@@ -121,7 +135,8 @@
       "price": 2399,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 3.jpg",
-      "description": "A modern crochet vest with a classic checkerboard pattern.Perfect for creating a trendy layered outfit."
+      "description": "A modern crochet vest with a classic checkerboard pattern.Perfect for creating a trendy layered outfit.",
+      "stock": "1"
     },
     {
       "id": "19",
@@ -129,7 +144,8 @@
       "price": 1299,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 7.jpg",
-      "description": "A cute crochet mushroom decoration.Handmade with colorful details and a cozy feel."
+      "description": "A cute crochet mushroom decoration.Handmade with colorful details and a cozy feel.",
+      "stock": "2"
     },
     {
       "id": "20",
@@ -137,7 +153,8 @@
       "price": 799,
       "category": "Clothes",
       "image": "/images/Clothes/Cloth 5.jpg",
-      "description": "A cream and brown striped crochet vest with floral details.Minimal and charming for effortless styling."
+      "description": "A cream and brown striped crochet vest with floral details.Minimal and charming for effortless styling.",
+      "stock": "2"
     },
     {
       "id": "24",
@@ -145,7 +162,8 @@
       "price": 799,
       "category": "Decors",
       "image": "/images/Decors/Decor 4.jpg",
-      "description": "A simple crochet tieback decorated with white daisiesFresh, elegant, and perfect for curtains."
+      "description": "A simple crochet tieback decorated with white daisiesFresh, elegant, and perfect for curtains.",
+      "stock": "0"
     },
     {
       "id": "3",
@@ -153,7 +171,8 @@
       "price": 1699,
       "category": "Bags",
       "image": "/images/Bags/Bags 3.jpg",
-      "description": "A dark crochet shoulder bag with a bow.Cute, simple, and perfect for casual outfits."
+      "description": "A dark crochet shoulder bag with a bow.Cute, simple, and perfect for casual outfits.",
+      "stock": "1"
     },
     {
       "id": "4",
@@ -161,7 +180,8 @@
       "price": 1999,
       "category": "Bags",
       "image": "/images/Bags/Bags 5.jpg",
-      "description": "A cream crochet tote with a heart pattern.Playful, charming, and perfect for casual outings."
+      "description": "A cream crochet tote with a heart pattern.Playful, charming, and perfect for casual outings.",
+      "stock": "3"
     },
     {
       "id": "25",
@@ -169,7 +189,8 @@
       "price": 599,
       "category": "Decors",
       "image": "/images/Decors/Decor 5.jpg",
-      "description": "A beautiful hanging crochet planter with greenery.Adds a natural and cozy feel to your home."
+      "description": "A beautiful hanging crochet planter with greenery.Adds a natural and cozy feel to your home.",
+      "stock": "0"
     },
     {
       "id": "27",
@@ -177,7 +198,8 @@
       "price": 899,
       "category": "Gifts",
       "image": "/images/Gifts/Gifts 4.jpg",
-      "description": "A charming handmade sunflower in a tiny pot.A simple and cheerful gift for any occasion."
+      "description": "A charming handmade sunflower in a tiny pot.A simple and cheerful gift for any occasion.",
+      "stock": "2"
     },
     {
       "id": "23",
@@ -185,7 +207,8 @@
       "price": 999,
       "category": "Decors",
       "image": "/images/Decors/Decor 3.jpg",
-      "description": "An elegant crochet table runner with a beautiful pattern.Perfect for creating a cozy dining atmosphere."
+      "description": "An elegant crochet table runner with a beautiful pattern.Perfect for creating a cozy dining atmosphere.",
+      "stock": "5"
     },
     {
       "id": "28",
@@ -193,7 +216,8 @@
       "price": 2399,
       "category": "Gifts",
       "image": "/images/Gifts/Gifts 5.jpg",
-      "description": "A delicate bouquet of handmade crochet flowers.Elegant, timeless, and perfect for gifting."
+      "description": "A delicate bouquet of handmade crochet flowers.Elegant, timeless, and perfect for gifting.",
+      "stock": "1"
     },
     {
       "id": "21",
@@ -201,7 +225,8 @@
       "price": 799,
       "category": "Decors",
       "image": "/images/Decors/Decor 1.jpg",
-      "description": "A delicate crochet tieback with soft floral details.Adds a charming touch to any room."
+      "description": "A delicate crochet tieback with soft floral details.Adds a charming touch to any room.",
+      "stock": "2"
     },
     {
       "id": "29",
@@ -209,7 +234,8 @@
       "price": 1799,
       "category": "Gifts",
       "image": "/images/Gifts/Gifts 6.jpg",
-      "description": "A lovely handmade notebook with a floral crochet cover.Perfect for notes, journaling, or as a thoughtful gift."
+      "description": "A lovely handmade notebook with a floral crochet cover.Perfect for notes, journaling, or as a thoughtful gift.",
+      "stock": "0"
     },
     {
       "id": "12",
@@ -217,7 +243,8 @@
       "price": 1299,
       "category": "Decors",
       "image": "/images/Decors/Decor 2.jpg",
-      "description": "A cute handmade bear curtain holder.Perfect for adding warmth and character to your space."
+      "description": "A cute handmade bear curtain holder.Perfect for adding warmth and character to your space.",
+      "stock": "0"
     },
     {
       "id": "30",
@@ -225,7 +252,8 @@
       "price": 2199,
       "category": "Toys",
       "image": "/images/Toys/Toys 1.jpg",
-      "description": "A soft handmade teddy bear in warm brown.Perfect for cuddling or gifting."
+      "description": "A soft handmade teddy bear in warm brown.Perfect for cuddling or gifting.",
+      "stock": "2"
     },
     {
       "id": "6",
@@ -233,7 +261,8 @@
       "price": 499,
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 2.jpg",
-      "description": "Crochet sunflower bracelet with a simple white strap."
+      "description": "Crochet sunflower bracelet with a simple white strap.",
+      "stock": "2"
     },
     {
       "id": "26",
@@ -254,6 +283,15 @@
       "description": "Colorful crochet bow hair clips.Perfect for adding a cute touch to any hairstyle.",
       "stock": 1,
       "deleted": false
+    },
+    {
+      "name": "amna",
+      "image": "bhbjuhh",
+      "category": "bags",
+      "price": "0.00",
+      "stock": 1,
+      "id": "QLYlNPrknmo",
+      "deleted": false
     }
   ],
   "users": [
@@ -263,7 +301,8 @@
       "password": "1234",
       "confirm": "1234",
       "role": "user",
-      "id": "q6V3XmHxb0M"
+      "id": "q6V3XmHxb0M",
+      "blocked": false
     },
     {
       "name": "Rida",
@@ -290,9 +329,11 @@
     },
     {
       "id": "1",
+      "name": "Admin",
       "email": "admin@gmail.com",
       "password": "1234",
-      "role": "admin"
+      "role": "admin",
+      "blocked": false
     }
   ],
   "orders": [
