@@ -302,7 +302,7 @@
       "confirm": "1234",
       "role": "user",
       "id": "q6V3XmHxb0M",
-      "blocked": false
+      "blocked": true
     },
     {
       "name": "Rida",
@@ -310,7 +310,8 @@
       "password": "9876",
       "confirm": "9876",
       "role": "user",
-      "id": "rOBrBxBb1dg"
+      "id": "rOBrBxBb1dg",
+      "blocked": true
     },
     {
       "name": "afla amj",
@@ -466,6 +467,7 @@
       "address": "p",
       "city": "pookki",
       "total": 1799,
+      "date": "2026-09-17",
       "items": [
         {
           "id": "vCD8ksGt79U",

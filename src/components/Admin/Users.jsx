@@ -55,22 +55,22 @@ function Users() {
             <h1 className="text-2xl font-serif text-[#5A4030] mb-6">User Management</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
 
-                <div className="bg-[#FBF8F3] p-5 rounded-lg">
+                <div className="bg-[#FBF8F3] p-5 rounded-lg border border-[#DCCBBC]">
                     <p className="text-sm text-[#5A4030]">Total Users</p>
                     <h2 className="text-2xl font-serif text-[#5A4030] mt-2">{totalUsers}</h2>
                 </div>
 
-                <div className="bg-[#FBF8F3] p-5 rounded-lg">
+                <div className="bg-[#FBF8F3] p-5 rounded-lg border border-[#DCCBBC]">
                     <p className="text-sm text-[#5A4030]">Customer Users</p>
                     <h2 className="text-2xl font-serif text-[#5A4030] mt-2">{customerUsers}</h2>
                 </div>
 
-                <div className="bg-[#FBF8F3] p-5 rounded-lg">
+                <div className="bg-[#FBF8F3] p-5 rounded-lg border border-[#DCCBBC]">
                     <p className="text-sm text-[#5A4030]">Admin Users</p>
                     <h2 className="text-2xl font-serif text-[#5A4030] mt-2">{adminUsers}</h2>
                 </div>
 
-                <div className="bg-[#FBF8F3] p-5 rounded-lg">
+                <div className="bg-[#FBF8F3] p-5 rounded-lg border border-[#DCCBBC]">
                     <p className="text-sm text-[#5A4030]">
                         Blocked Users
                     </p>
