@@ -1,40 +1,22 @@
-import { useState } from "react"
+import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import axios from "axios"
 
 function Register(){
 
-    const [name,setName]=useState("")
-    const [email,setEmail]=useState("")
-    const [password,setPassword]=useState("")
-    const [confirm,setConfirm]=useState("")
     const navigate=useNavigate()
+    const {register,handleSubmit,formState:{errors}}=useForm()
 
-    const handleRegister=async(e)=>{
-        e.preventDefault();
-        if(name==="" || email ==="" || password==="" || confirm===""){
-            toast.error("Try to fill the blanks")
-            return;
-        }
-        if(!email.includes("@")){
-         toast.error("Please enter a valid email")
-         return;
-        }
-        if(password.length < 4){
-         toast.warning("Password must be at least 4 characters")
-         return;
-        }
-        if(password!==confirm){
-            toast.error("Incorrect password")
-            return;
-        }
-        try{const response=await axios.get(`http://localhost:3000/users?email=${email}`)
+    const handleRegister=async(data)=>{
+        
+        try{
+            const response=await axios.get(`http://localhost:3000/users?email=${data.email}`)
         if(response.data.length>0){
             toast.error("Email already exists")
             return;
         }
-            const users={name,email,password,role:"user"}
+            const users={name:data.name,email:data.email,password:data.password,role:"user"}
 
             await axios.post(`http://localhost:3000/users`,users)
             toast.success("Registration Successful")
@@ -57,29 +39,37 @@ function Register(){
                 <p className="text-sm text-[#8A6F5C] mt-2">Join our handmade community</p>
             </div>
 
-            <form onSubmit={handleRegister} className="mt-8">
+            <form onSubmit={handleSubmit(handleRegister)} className="mt-8">
                 <div className="mt-6">
                     <label>Name:</label>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Enter Your Name"
-                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
+                    <input type="text" placeholder="Enter Your Name"
+                    {...register("name", { required: "Name is required" })} 
+                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]" /> 
+                    {errors.name && ( <p className="text-red-500 text-sm mt-1"> {errors.name.message} </p> )}
                 </div>
 
                 <div className="mt-3">
                     <label>Email:</label>
-                    <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Your Email"
-                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
+                    <input type="email" placeholder="Enter Your Email" 
+                    {...register("email", { required: "Email is required",pattern: { value: /^\S+@\S+\.\S+$/, message: "Please enter a valid email" }})} 
+                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]" /> 
+                    {errors.email && ( <p className="text-red-500 text-sm mt-1"> {errors.email.message} </p> )}
                 </div>
 
                 <div className="mt-3">
                     <label>Password:</label>
-                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Your Password"
-                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
+                    <input type="password" placeholder="Enter Your Password" 
+                    {...register("password", { required: "Password is required", minLength: { value: 4, message: "Password must be at least 4 characters" } })} 
+                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]" /> 
+                    {errors.password && ( <p className="text-red-500 text-sm mt-1"> {errors.password.message} </p> )}
                 </div>
 
                 <div className="mt-3">
-                    <label>Confirm Password:</label>
-                    <input type="password" value={confirm} onChange={(e)=>setConfirm(e.target.value)} placeholder="Confirm Your Password"
-                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]"/>
+                    <label>Confirm Password:</label> 
+                    <input type="password" placeholder="Confirm Your Password" 
+                    {...register("confirm", { required: "Please confirm your password", validate: (value, formValues) => value === formValues.password || "Passwords do not match" })} 
+                    className="mt-1 px-3 py-3 bg-transparent w-full border border-[#DCCBBC] outline-none focus:border-[#6B4632]" /> 
+                    {errors.confirm && ( <p className="text-red-500 text-sm mt-1"> {errors.confirm.message} </p> )}
                 </div>
                 <button type="submit"
                 className="px-4 py-3 text-white w-full hover:bg-[#5A4030] bg-[#6B4632] mt-6">Create Account</button>
