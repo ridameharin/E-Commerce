@@ -30,7 +30,8 @@ import AdminProtected from './route/AdminProtect';
 import AdminLayout from './components/Admin/AdminLayout';
 import Products from './components/Admin/Products';
 import Users from './components/Admin/Users';
-import Orders from './components/Admin/Orders'
+import Orders from './components/Admin/Orders';
+import User from './route/user';
 
 
 function App(){
@@ -46,6 +47,7 @@ function App(){
          
     <Route element={<Layout/>}>
 
+      <Route element={<User/>}>
       <Route path='/' element={<Home />} />   
       <Route path='/productdetails/:id' element={<Productdetails />} />
       <Route path='/shop' element={<Shop/>}/>
@@ -55,6 +57,7 @@ function App(){
       <Route path='/menu' element={<Menu/>}/>  
       <Route path='/aboutus' element={<About/>}/>
       <Route path='/featured' element={<Featured/>}/>
+      </Route>
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/wishlist' element={<Wishlist />} /> 

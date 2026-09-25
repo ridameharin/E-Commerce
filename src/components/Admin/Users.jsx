@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setUsers } from "../../redux/AdminSlice/userSlice";
 import { getUsers, updateUser } from "../../services/AdminService/userService";
 
 function Users() {
 
+    const [search,setSearch]=useState("")
+    const [status,setStatus]=useState("All")
     const users = useSelector((state) => state.users.users)
     const dispatch = useDispatch()
 
@@ -26,7 +28,6 @@ function Users() {
             const data = await updateUser(user.id, {
                 blocked: !user.blocked
             })
-            console.log("Updated user:", data)
             const updatedUsers = users.map((item) =>
                 item.id === user.id ? data : item
             )
@@ -36,6 +37,25 @@ function Users() {
             console.log(error)
         }
     }
+    const filteredUsers = users
+    .filter((user) =>
+        (user.fullName || user.name || "")
+            .toLowerCase()
+            .includes(search.toLowerCase()) ||
+        user.email?.toLowerCase().includes(search.toLowerCase())
+    )
+    .filter((user) => {
+        if (status === "All") {
+            return true
+        }
+        if (status === "Active") {
+            return !user.blocked
+        }
+        if (status === "Blocked") {
+            return user.blocked
+        }
+    })
+
     const totalUsers = users.length;
 
     const customerUsers = users.filter(
@@ -77,6 +97,29 @@ function Users() {
                     <h2 className="text-2xl font-serif text-[#5A4030] mt-2">{blockedUsers}</h2>
                 </div>
             </div>
+            <div className="bg-[#FBF8F3] rounded-lg p-4 mb-5 border border-[#DCCBBC]">
+    <div className="flex gap-4 items-center max-sm:flex-col max-sm:items-stretch">
+
+        <input
+            type="text"
+            placeholder="Search by name or email"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="border border-[#DCCBBC] rounded-lg px-4 py-2 outline-none flex-1"
+        />
+
+        <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            className="border border-[#DCCBBC] rounded-lg px-4 py-2 outline-none"
+        >
+            <option value="All">All Users</option>
+            <option value="Active">Active</option>
+            <option value="Blocked">Blocked</option>
+        </select>
+
+    </div>
+</div>
 
             <div className="bg-[#FBF8F3] rounded-lg overflow-x-auto">
                 <table className="w-full min-w-[800px]">
@@ -92,12 +135,12 @@ function Users() {
                     </thead>
 
                     <tbody>
-                        {users.length === 0 ? (
+                        {filteredUsers.length === 0 ? (
                             <tr>
                                 <td colSpan="6" className="text-center p-8 text-[#5A4030]">No users found.</td>
                             </tr>
                         ) : (
-                            users.map((user) => (
+                            filteredUsers.map((user) => (
                                 <tr key={user.id} className="border-t border-[#DCCBBC]">
                                     <td className="p-4">{user.id}</td>
                                     <td className="p-4">{user.fullName || user.name}</td>

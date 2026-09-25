@@ -26,7 +26,8 @@
       "category": "Accessories",
       "image": "/images/Accessories/Accessories 1.jpg",
       "description": "Crochet flower headband with small white and yellow flowers.",
-      "stock": "0"
+      "stock": 1,
+      "deleted": false
     },
     {
       "id": "31",
@@ -283,15 +284,6 @@
       "description": "Colorful crochet bow hair clips.Perfect for adding a cute touch to any hairstyle.",
       "stock": 1,
       "deleted": false
-    },
-    {
-      "name": "amna",
-      "image": "bhbjuhh",
-      "category": "bags",
-      "price": "0.00",
-      "stock": 1,
-      "id": "QLYlNPrknmo",
-      "deleted": false
     }
   ],
   "users": [
@@ -335,6 +327,13 @@
       "password": "1234",
       "role": "admin",
       "blocked": false
+    },
+    {
+      "name": "meharin",
+      "email": "meharin@gmail.com",
+      "password": "9813",
+      "role": "user",
+      "id": "iZVgBmqRhNw"
     }
   ],
   "orders": [
@@ -346,6 +345,7 @@
       "address": "pv",
       "city": "dfgdetrg",
       "total": 3398,
+      "date": "2026-09-7",
       "items": [
         {
           "id": "GJy6SAcVLq0",
@@ -383,6 +383,7 @@
       "address": "vengara ",
       "city": "vengara",
       "total": 2298,
+      "date": "2026-08-17",
       "items": [
         {
           "id": "VMYCYkQSi-Y",
@@ -420,6 +421,7 @@
       "address": "pv",
       "city": "athanikkal",
       "total": 3196,
+      "date": "2026-09-09",
       "items": [
         {
           "id": "iM8aI2kIu4U",
@@ -511,6 +513,76 @@
       "payment": "Cash on Delivery",
       "id": "rJOEX8j3kXs",
       "status": "cancelled"
+    },
+    {
+      "name": "meharin",
+      "email": "meharin@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "paredath",
+      "city": "kottakkal",
+      "total": 3398,
+      "date": "2026-09-23",
+      "items": [
+        {
+          "id": "xQ3gct8iu-s",
+          "name": "Classic Brown Crochet Bag",
+          "price": 1899,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 1.jpg",
+          "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
+          "deleted": false,
+          "stock": "7",
+          "userid": "iZVgBmqRhNw",
+          "productId": "1",
+          "quantity": 1
+        },
+        {
+          "id": "OFz7eMVoGhM",
+          "name": "Cream Floral Crochet Bag",
+          "price": 1499,
+          "category": "Bags",
+          "image": "/images/Bags/Bags 2.jpg",
+          "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
+          "stock": "4",
+          "userid": "iZVgBmqRhNw",
+          "productId": "2",
+          "quantity": 1
+        }
+      ],
+      "userid": "iZVgBmqRhNw",
+      "payment": "Cash on Delivery",
+      "status": "Cancelled",
+      "id": "St5LDSdaxDg"
+    },
+    {
+      "name": "meharin",
+      "email": "meharin@gmail.com",
+      "phone": "1234567890",
+      "pin": "123456",
+      "address": "paredath",
+      "city": "kottakkal",
+      "total": 2599,
+      "date": "2026-09-24",
+      "items": [
+        {
+          "id": "PfA1xPKVyJ8",
+          "name": "Brown Crochet Bell-Sleeve Top",
+          "price": 2599,
+          "category": "Clothes",
+          "image": "/images/Clothes/Cloth 2.jpg",
+          "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
+          "stock": 1,
+          "deleted": false,
+          "userid": "iZVgBmqRhNw",
+          "productId": "j1NHGOaWrd0",
+          "quantity": 1
+        }
+      ],
+      "userid": "iZVgBmqRhNw",
+      "payment": "UPI",
+      "status": "Cancelled",
+      "id": "HlccmLAY9r0"
     }
   ],
   "cart": [
@@ -568,6 +640,30 @@
       "description": "A delicate cream crochet crossbody bag.Minimal and elegant for a soft, feminine look.",
       "userid": "rOBrBxBb1dg",
       "productId": "2"
+    },
+    {
+      "id": "wEj53aPlLyU",
+      "name": "Classic Brown Crochet Bag",
+      "price": 1899,
+      "category": "Bags",
+      "image": "/images/Bags/Bags 1.jpg",
+      "description": "A classic brown crochet shoulder bag.Simple, elegant, and perfect for everyday use.",
+      "deleted": false,
+      "stock": "7",
+      "userid": "iZVgBmqRhNw",
+      "productId": "1"
+    },
+    {
+      "id": "j1NHGOaWrd0",
+      "name": "Brown Crochet Bell-Sleeve Top",
+      "price": 2599,
+      "category": "Clothes",
+      "image": "/images/Clothes/Cloth 2.jpg",
+      "description": "A warm brown crochet top with elegant flared sleeves.Cozy and stylish for a relaxed look.",
+      "stock": 1,
+      "deleted": false,
+      "userid": "iZVgBmqRhNw",
+      "productId": "22"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

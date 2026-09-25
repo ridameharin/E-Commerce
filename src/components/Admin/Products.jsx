@@ -11,6 +11,7 @@ function Products(){
     const [show,setShow]=useState(false)
     const [deleteId,setDeleteId]=useState(null)
     const [search,setSearch]=useState("")
+    const [stock,setStock]=useState("All")
     const [currentpage,setCurrentpage]=useState(1)
     const productsperPage=7
 
@@ -122,6 +123,17 @@ function Products(){
     }
     const filteredProducts=products.filter((product)=>!product.deleted)
     .filter((product)=>product.name.toLowerCase().includes(search.toLowerCase()))
+    .filter((product) =>{
+        if (stock === "All") {
+            return true
+        }
+        if (stock === "In Stock") {
+            return Number(product.stock) > 0
+        }
+        if (stock === "Out of Stock") {
+            return Number(product.stock) === 0
+        }
+    })
 
     const lastIndex=currentpage*productsperPage
     const firstIndex=lastIndex-productsperPage
@@ -130,13 +142,21 @@ function Products(){
 
     return(
         <div className="w-full">
-        <div className="flex justify-between items-center mb-6 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <div className="flex flex-col items-center gap-3">
-            <h1 className="text-2xl mr-20 font-serif text-[#5A4030]">Products</h1>
+        <div className="flex justify-between items-start mb-4 max-sm:flex-col max-sm:gap-3">
+            <div className="flex flex-col items-start gap-3">
+            <h1 className="text-2xl font-serif text-[#5A4030]">Products</h1>
+            <div className="flex gap-3 items-center">
             <input type="text" placeholder="Search product..." value={search} 
              onChange={(e)=>{setSearch(e.target.value) 
              setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none max-sm:w-full"/>
-            <h3 className="text-sm mr-20 text-[#5A4030]">Total Products : {products.length}</h3>
+             <select value={stock} onChange={(e)=>{setStock(e.target.value) 
+                setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none">
+                <option value="All">All Stock</option>
+                <option value="In Stock">In Stock</option>
+                <option value="Out of Stock">Out of Stock</option>
+             </select>
+            </div>
+            <h3 className="text-sm text-[#5A4030]">Total Products : {products.length}</h3>
             </div>
             <button onClick={()=>setShow(true)} className="bg-[#6B4632] text-white px-5 py-2 rounded-lg">
                 + Add Product</button>

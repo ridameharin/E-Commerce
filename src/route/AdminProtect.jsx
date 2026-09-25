@@ -7,7 +7,6 @@ function AdminProtected(){
     if (!userid || role !== "admin") {
         return <Navigate to="/login" replace/>;
     }
-    
     return <Outlet/>
 }
 export default AdminProtected

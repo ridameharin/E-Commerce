@@ -53,10 +53,6 @@ function AdminLayout() {
             </aside>
 
             <div className="ml-64 min-h-screen min-w-0 max-lg:ml-0">
-                <header className="h-20 bg-[#FBF8F3] border-b border-[#DCCBBC] px-8 flex items-center justify-between max-sm:h-16 max-sm:px-4">
-                    <h2 className="text-xl font-serif text-[#5A4030] max-sm:text-lg">Admin Dashboard</h2>
-                    <span className="text-[#5A4030] max-sm:text-sm">Admin</span>
-                </header>
                 <main className="p-6 sm:p-8 max-sm:p-4">
                     <Outlet />
                 </main>
