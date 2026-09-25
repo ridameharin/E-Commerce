@@ -373,7 +373,7 @@
       "userid": "q6V3XmHxb0M",
       "payment": "Cash on Delivery",
       "id": "at-fFdGJbIE",
-      "status": "cancelled"
+      "status": "confirmed"
     },
     {
       "name": "Afla amj",
@@ -509,7 +509,8 @@
       ],
       "userid": "NdLLaX6nyVs",
       "payment": "Cash on Delivery",
-      "id": "rJOEX8j3kXs"
+      "id": "rJOEX8j3kXs",
+      "status": "cancelled"
     }
   ],
   "cart": [

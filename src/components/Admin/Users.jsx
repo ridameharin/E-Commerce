@@ -52,7 +52,7 @@ function Users() {
 
     return (
         <div>
-            <h1 className="text-2xl font-serif text-[#5A4030] mb-6">User Management</h1>
+            <h1 className="text-2xl font-serif text-[#5A4030] mb-6 max-sm:text-xl">User Management</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
 
                 <div className="bg-[#FBF8F3] p-5 rounded-lg border border-[#DCCBBC]">
@@ -78,8 +78,8 @@ function Users() {
                 </div>
             </div>
 
-            <div className="bg-[#FBF8F3] rounded-lg overflow-hidden">
-                <table className="w-full">
+            <div className="bg-[#FBF8F3] rounded-lg overflow-x-auto">
+                <table className="w-full min-w-[800px]">
                     <thead className="bg-[#E9DED1]">
                         <tr>
                             <th className="text-left p-4">User ID</th>

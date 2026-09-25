@@ -129,23 +129,23 @@ function Products(){
     const totalPages=Math.ceil(filteredProducts.length/productsperPage)
 
     return(
-        <div>
-        <div className="flex justify-between items-center mb-6">
+        <div className="w-full">
+        <div className="flex justify-between items-center mb-6 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <div className="flex flex-col items-center gap-3">
             <h1 className="text-2xl mr-20 font-serif text-[#5A4030]">Products</h1>
             <input type="text" placeholder="Search product..." value={search} 
              onChange={(e)=>{setSearch(e.target.value) 
-             setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none"/>
+             setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none max-sm:w-full"/>
             <h3 className="text-sm mr-20 text-[#5A4030]">Total Products : {products.length}</h3>
             </div>
             <button onClick={()=>setShow(true)} className="bg-[#6B4632] text-white px-5 py-2 rounded-lg">
                 + Add Product</button>
         </div>
-        <div className="bg-[#FBF8F3] rounded-lg overflow-hidden">
+        <div className="bg-[#FBF8F3] rounded-lg overflow-x-auto">
             {show && (
                 <div className="bg-[#FBF8F3] p-6 rounded-lg mb-6">
                     <h2 className="text-xl font-serif text-[#5A4030] mb-4">Add Product</h2>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
                         <input type="text" placeholder="Product Name" name="name" value={forms.name}
                         onChange={handle} className="border p-3 rounded-lg"/>
                         <input type="text" placeholder="Image URL" name="image" value={forms.image}
@@ -164,7 +164,7 @@ function Products(){
                     </div>
                 </div>
             )}
-            <table className="w-full">
+            <table className="w-full min-w-[800px]">
                 <thead className="bg-[#E9DED1]">
                     <tr>
                         <th className="text-left p-4">Products</th>
@@ -212,13 +212,13 @@ function Products(){
             </table>
         </div>
 
-            <div className="mt-8 bg-[#FBF8F3] rounded-lg overflow-hidden">
+            <div className="mt-8 bg-[#FBF8F3] rounded-lg overflow-x-auto">
             <h2 className="text-xl font-serif text-[#5A4030] text-center border-b border-[#DCCBBC] py-4">Soft Deleted Products</h2>
                 {products.filter((product) => product.deleted).length === 0 ?(
                     <div className="bg-[#FBF8F3] text-center p-8 text-[#5A4030] rounded-lg">
                         No soft deleted products.</div>
             ):(
-                <table className="w-full">
+                <table className="w-full min-w-[600px]">
              <thead className="bg-[#E9DED1]">
              <tr>
                 <th className="text-left p-4">Product</th>
@@ -265,10 +265,10 @@ function Products(){
 
                 {deleteId && (
                     <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
-                         <div className="bg-[#FBF8F3] p-6 rounded-lg shadow-lg w-96">
+                         <div className="bg-[#FBF8F3] p-6 rounded-lg shadow-lg w-96 max-sm:w-[90%]">
                             <h2 className="text-xl font-serif text-[#5A4030]">Delete Product</h2>
                             <p className="text-sm text-[#5A4030] mt-2">How would you like to delete this product?</p>
-                            <div className="flex gap-3 mt-6">
+                            <div className="flex gap-3  mt-6 max-sm:flex-col">
                                 <button onClick={softDelete} className="px-4 py-2 rounded-lg bg-[#E9DED1] text-[#5A4030]">Soft Delete</button>
                                 <button onClick={hardDelete} className="px-4 py-2 rounded-lg bg-[#6B4632] text-white">Hard Delete</button>
                                 <button onClick={()=>setDeleteId(null)} className="px-4 py-2 rounded-lg border border-[#DCCBBC] text-[#5A4030]">

@@ -41,20 +41,20 @@ function Orders() {
         return (order.status || "pending").toLowerCase()===statusfilter.toLowerCase()
     })
     return (
-        <div>
+        <div className="w-full">
             <div className="mb-6">
-                <h1 className="text-2xl font-serif text-[#5A4030]">Order Management</h1>
+                <h1 className="text-2xl font-serif text-[#5A4030] max-sm:text-xl">Order Management</h1>
                <p className="text-[#7A6252] mt-2">View customer orders, filter by status, and update statuses in real-time</p>
             </div>
-            <div className="bg-[#FBF8F3] border border-[#DCCBBC] rounded-xl p-5 w-52 shadow-sm mb-6">
+            <div className="bg-[#FBF8F3] border border-[#DCCBBC] rounded-xl p-5 w-52 shadow-sm mb-6 max-sm:w-full">
                 <p className="text-sm text-[#7A6252]">Total Orders</p>
                 <p className="text-3xl font-semibold text-[#5A4030] mt-2">{orders.length}</p>
             </div>
             <div className="bg-[#FBF8F3] rounded-xl px-5 py-4 mb-5 border border-[#DCCBBC] shadow-sm">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start max-sm:gap-3">
                     <label className="text-sm text-[#5A4030]">Filter Status:</label>
                     <select value={statusfilter} onChange={(e)=>setStatusfilter(e.target.value)}
-                        className="border border-[#DCCBBC] rounded-lg px-4 py-3 bg-[#FBF8F3] text-[#5A4030] outline-none">
+                        className="border border-[#DCCBBC] rounded-lg px-4 py-3 bg-[#FBF8F3] text-[#5A4030] outline-none max-sm:w-full">
                         <option value="All">All Status</option>
                         <option value="pending">Pending</option>
                         <option value="confirmed">Confirmed</option>
@@ -64,8 +64,8 @@ function Orders() {
                     </select>
                 </div>
             </div>
-            <div className="bg-[#FBF8F3] rounded-lg overflow-hidden">
-                <table className="w-full">
+            <div className="bg-[#FBF8F3] rounded-lg overflow-x-auto">
+                <table className="w-full min-w-[1000px]">
                     <thead className="bg-[#E9DED1]">
                         <tr>
                             <th className="text-left p-4">ORDER ID</th>
@@ -113,9 +113,9 @@ function Orders() {
                 </table>
             </div>
             {selectorder && (
-                <div className="mt-8 bg-[#FBF8F3] rounded-lg p-6 border border-[#DCCBBC]">
+                <div className="mt-8 bg-[#FBF8F3] rounded-lg p-6 border border-[#DCCBBC] max-sm:p-4">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-xl font-serif text-[#5A4030]">Order Details</h2>
+                        <h2 className="text-xl font-serif text-[#5A4030] max-sm:text-lg">Order Details</h2>
                         <button onClick={() => setSelectorder(null)}
                             className="px-4 py-2 rounded-lg bg-[#E9DED1] text-[#5A4030]">Close</button>
                     </div>
@@ -136,7 +136,7 @@ function Orders() {
 
                         {selectorder.items.map((item) => (
                             <div key={item.id} className="flex items-center gap-4 border-t border-[#DCCBBC] pt-4">
-                                <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded-lg"/>
+                                <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded-lg max-sm:w-16 max-sm:h-16"/>
                                 <div>
                                     <p className="font-medium text-[#5A4030]">{item.name}</p>
                                     <p>₹{item.price} × {item.quantity}</p>
