@@ -16,22 +16,6 @@ function Orderhistory() {
             console.log(error)
         }
     }
-    const cancelOrder = async (orderId) => {
-        try{
-            await axios.patch(
-                `http://localhost:3000/orders/${orderId}`,
-                {
-                    status: "Cancelled"
-                }
-            )
-            setOrder(order.map((ordr) =>
-                ordr.id === orderId ? { ...ordr, status: "Cancelled" }: ordr
-            ))
-        }
-        catch(error){
-            console.log(error)
-        }
-    }
     useEffect(() => {
         if (userid) {
             fetchOrder()
@@ -56,13 +40,8 @@ function Orderhistory() {
                         <div className="flex flex-col items-end gap-2">
                         <div className="text-right">
                             <p className="text-sm text-gray-500">Status</p>
-                            <span className="font-semibold text-[#6B4632]">{ordr.status || "Placed"}</span>
+                            <span className="font-semibold text-[#6B4632]">{ordr.status || "Pending"}</span>
                             </div>
-                            {ordr.status?.toLowerCase() !== "delivered" && ordr.status?.toLowerCase() !== "cancelled" && (
-                                    <button onClick={() => cancelOrder(ordr.id)}
-                                        className="px-4 py-2 border border-[#B56B5F] text-[#B56B5F] rounded-lg hover:bg-[#B56B5F] hover:text-white transition"
-                                    >Cancel Order</button>
-                                )}
                             </div>
                         </div>
 

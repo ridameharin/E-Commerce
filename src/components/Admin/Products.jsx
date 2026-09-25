@@ -2,6 +2,7 @@ import { useState,useEffect } from "react"
 import { useSelector,useDispatch } from "react-redux";
 import { setProducts } from "../../redux/AdminSlice/productSlice";
 import { getProducts,addProduct,deleteProduct,updateProduct } from "../../services/AdminService/productService";
+import { useSearchParams } from "react-router-dom";
 
 function Products(){
 
@@ -10,7 +11,15 @@ function Products(){
     const [edit,setEdit]=useState(null)
     const [show,setShow]=useState(false)
     const [deleteId,setDeleteId]=useState(null)
-    const [search,setSearch]=useState("")
+
+    const [searchParams,setsearchPrams]=useSearchParams()
+    const search=searchParams.get("search")||""
+    const handleSearch=(e)=>{
+        setsearchPrams({
+            search:e.target.value
+        })
+    }
+
     const [stock,setStock]=useState("All")
     const [currentpage,setCurrentpage]=useState(1)
     const productsperPage=7
@@ -147,7 +156,7 @@ function Products(){
             <h1 className="text-2xl font-serif text-[#5A4030]">Products</h1>
             <div className="flex gap-3 items-center">
             <input type="text" placeholder="Search product..." value={search} 
-             onChange={(e)=>{setSearch(e.target.value) 
+             onChange={(e)=>{handleSearch(e)
              setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none max-sm:w-full"/>
              <select value={stock} onChange={(e)=>{setStock(e.target.value) 
                 setCurrentpage(1)}} className="border border-[#DCCBBC] px-4 py-2 rounded-lg outline-none">
